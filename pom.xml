@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.summer26.section1.group3.badc/com.summer26.section1.group3.badc.HelloApplication
+                                com.summer26.section1.group3.badc/com.summer26.section1.group3.badc.common.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -1,4 +1,4 @@
-package com.summer26.section1.group3.badc;
+package com.summer26.section1.group3.badc.common;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

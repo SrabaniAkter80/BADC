@@ -3,6 +3,6 @@ module com.summer26.section1.group3.badc {
     requires javafx.fxml;
 
 
-    opens com.summer26.section1.group3.badc to javafx.fxml;
-    exports com.summer26.section1.group3.badc;
+    exports com.summer26.section1.group3.badc.common;
+    opens com.summer26.section1.group3.badc.common to javafx.fxml;
 }
