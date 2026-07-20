@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="451.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_Farmer.G6_Farmer_NotificationsController">
+<AnchorPane prefHeight="451.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G6_Farmer_NotificationsController">
    <children>
       <Label fx:id="notificationsLabel" layoutX="214.0" layoutY="23.0" text="Notifications" />
       <Button layoutX="190.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleBackToDashboardButton" text="Back to Dashboard" />

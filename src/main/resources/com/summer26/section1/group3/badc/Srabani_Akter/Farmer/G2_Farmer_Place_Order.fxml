@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="471.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_Farmer.G2_Farmer_Place_OrderController">
+<AnchorPane prefHeight="471.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G2_Farmer_Place_OrderController">
    <children>
       <ComboBox fx:id="productCategoryComboBox" layoutX="263.0" layoutY="95.0" prefWidth="150.0" promptText="Select a product" />
       <Text layoutX="191.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="438.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G3_Maintenance_Request_ViewController">
+<AnchorPane prefHeight="438.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G3_Maintenance_Request_ViewController">
    <children>
       <ComboBox fx:id="equipmentTypeComboBox" layoutX="199.0" layoutY="98.0" prefWidth="150.0" promptText="Equipment Type" />
       <Text layoutX="27.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintenance Issue Description " />

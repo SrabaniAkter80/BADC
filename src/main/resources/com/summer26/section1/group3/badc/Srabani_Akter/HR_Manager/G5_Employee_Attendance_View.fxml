@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="542.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G5_Employee_Attendance_ViewController">
+<AnchorPane prefHeight="542.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G5_Employee_Attendance_ViewController">
    <children>
       <Label fx:id="employeeAttendanceLabel" layoutX="305.0" layoutY="26.0" text="Employee Attendance" />
       <Text layoutX="224.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" />

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="526.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G8_Update_ProfileViewController">
+<AnchorPane prefHeight="526.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G8_Update_ProfileViewController">
    <children>
       <Button layoutX="216.0" layoutY="360.0" mnemonicParsing="false" onAction="#HandleBacktoDashboardButton" text="Back to Dashboard" />
       <Text layoutX="88.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />

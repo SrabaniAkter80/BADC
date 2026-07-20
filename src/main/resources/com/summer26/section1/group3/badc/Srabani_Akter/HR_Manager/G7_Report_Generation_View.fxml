@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="413.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G7_Report_Generation_ViewController">
+<AnchorPane prefHeight="413.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G7_Report_Generation_ViewController">
    <children>
       <Text layoutX="112.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Report Type " />
       <Label fx:id="StaffActivityReportsLabel" layoutX="275.0" layoutY="60.0" text="Staff Activity Reports" />
