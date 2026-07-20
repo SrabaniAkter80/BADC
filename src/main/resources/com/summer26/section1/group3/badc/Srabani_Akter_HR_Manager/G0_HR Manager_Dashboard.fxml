@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="535.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G0_HRManager_DashboardController">
+   <children>
+      <Button layoutX="259.0" layoutY="24.0" mnemonicParsing="false" onAction="#HandleEmployeeDirectoryButton" prefHeight="43.0" prefWidth="127.0" text="Employee Directory" />
+      <Button layoutX="262.0" layoutY="78.0" mnemonicParsing="false" onAction="#HandleSendAnnouncementButton" prefHeight="43.0" prefWidth="127.0" text="Send Announcement" />
+      <Button layoutX="264.0" layoutY="131.0" mnemonicParsing="false" onAction="#HandleMaintenanceRequestButton" prefHeight="43.0" prefWidth="127.0" text="Maintenance Request" />
+      <Button layoutX="264.0" layoutY="185.0" mnemonicParsing="false" onAction="#HandleAssignTaskButton" prefHeight="34.0" prefWidth="127.0" text="Assign Task" />
+      <Button layoutX="266.0" layoutY="233.0" mnemonicParsing="false" onAction="#HandleEmployeeAttendanceButton" prefHeight="43.0" prefWidth="127.0" text="Employee Attendance" />
+      <Button layoutX="266.0" layoutY="291.0" mnemonicParsing="false" onAction="#HandleLeaveRequestButton" prefHeight="43.0" prefWidth="127.0" text="Leave Requests" />
+      <Button layoutX="266.0" layoutY="411.0" mnemonicParsing="false" onAction="#HandleUpdateProfileButton" prefHeight="43.0" prefWidth="134.0" text="Update Profile" />
+      <Button layoutX="266.0" layoutY="349.0" mnemonicParsing="false" onAction="#HandleStaffActivityReportsButton" prefHeight="43.0" prefWidth="127.0" text="Staff Activity Reports" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="471.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_Farmer.G2_Farmer_Place_OrderController">
+   <children>
+      <ComboBox fx:id="productCategoryComboBox" layoutX="263.0" layoutY="95.0" prefWidth="150.0" promptText="Select a product" />
+      <Text layoutX="191.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+      <TextField fx:id="quantityTextField" layoutX="263.0" layoutY="150.0" />
+      <Button layoutX="292.0" layoutY="210.0" mnemonicParsing="false" onAction="#HandlePlaceOrderButton" text="Place Order" />
+      <Button layoutX="280.0" layoutY="298.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" text="Back to Dashboard" />
+      <Label fx:id="placeOrderPageLabel" layoutX="292.0" layoutY="39.0" text="Place Order Page" />
+      <Label fx:id="confirmationMessageLabel" layoutX="278.0" layoutY="258.0" text="Confirmation Message" />
+   </children>
+</AnchorPane>

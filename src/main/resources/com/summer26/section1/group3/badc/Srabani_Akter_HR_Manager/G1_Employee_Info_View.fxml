@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="530.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.badc_project_2310593.Srabani_Akter_HR_Manager.G1_Employee_Info_ViewController">
+   <children>
+      <Text layoutX="68.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" />
+      <TextField fx:id="FilterEmployeeIDTextField" layoutX="168.0" layoutY="92.0" />
+      <Button layoutX="207.0" layoutY="148.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" text="Search Filter" />
+      <Button layoutX="218.0" layoutY="478.0" mnemonicParsing="false" onAction="#HandleBackToDashBoardButton" text="Back to Dashboard " />
+      <TableView fx:id="Employee_Information_TableView" layoutX="81.0" layoutY="219.0" prefHeight="200.0" prefWidth="394.0">
+        <columns>
+          <TableColumn fx:id="EmployeeIDColumn" prefWidth="108.79998779296875" text="Employee ID" />
+          <TableColumn fx:id="NameColumn" prefWidth="74.40000915527344" text="Name" />
+            <TableColumn fx:id="DesignationColumn" prefWidth="89.60003662109375" text="Designation" />
+            <TableColumn fx:id="ContactInformationColumn" prefWidth="121.5999755859375" text="Contact Information" />
+        </columns>
+      </TableView>
+      <Label fx:id="EmployeeDirectoryLabel" layoutX="247.0" layoutY="20.0" text="Employee Directory" />
+      <Button layoutX="338.0" layoutY="148.0" mnemonicParsing="false" onAction="#HandleViewAllEmployeesButton" text="View All Employees" />
+   </children>
+</AnchorPane>

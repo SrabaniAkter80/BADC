@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="494.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="org.example.badc_project_2310593.Srabani_Akter_Farmer.G7_Submit_ComplaintController">
+   <children>
+      <ComboBox fx:id="complaintCategoryComboBox" layoutX="211.0" layoutY="94.0" prefWidth="150.0" promptText="Complaint Category" />
+      <Text layoutX="97.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint Details" />
+      <TextArea fx:id="complaintDetailsTextArea" layoutX="211.0" layoutY="165.0" prefHeight="79.0" prefWidth="200.0" />
+      <Button layoutX="273.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleSubmitButton" text="Submit" />
+      <Label fx:id="confirmationMessageLabel" layoutX="371.0" layoutY="262.0" text="Confirmation Message" />
+      <Button layoutX="240.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBacktoDashboardButton" text="Back to Dashboard " />
+   </children>
+</AnchorPane>

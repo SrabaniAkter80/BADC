@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="org.example.badc_project_2310593.Srabani_Akter_Farmer.G3_Farmer_Update_ProfileController">
+   <children>
+      <Label fx:id="updateProfilePageLabel" layoutX="219.0" layoutY="32.0" prefHeight="18.0" prefWidth="116.0" text=" Update Profile Page" />
+      <Text layoutX="59.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="NameTextField" layoutX="122.0" layoutY="80.0" />
+      <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+      <TextField fx:id="PhoneNumberTextField" layoutX="123.0" layoutY="123.0" />
+      <TextArea fx:id="addressTextArea" layoutX="119.0" layoutY="154.0" prefHeight="45.0" prefWidth="200.0" />
+      <Text layoutX="36.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+      <Button layoutX="145.0" layoutY="229.0" mnemonicParsing="false" onAction="#HandleUpdateInformationButton" text="Update Information" />
+      <Label fx:id="confirmationMessageLabel" layoutX="145.0" layoutY="272.0" text="Confirmation Message" />
+      <Button layoutX="145.0" layoutY="312.0" mnemonicParsing="false" onAction="#HandleBacktoDashBoardButton" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
