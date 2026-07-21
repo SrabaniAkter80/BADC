@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager.G2_TLM_TransportAssignmentController">
+   <children>
+      <Label layoutX="159.0" layoutY="33.0" prefHeight="48.0" prefWidth="328.0" text="Transport Assignment">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="driver" layoutX="56.0" layoutY="135.0" prefHeight="25.0" prefWidth="207.0" promptText="Driver" />
+      <TextField fx:id="vehicle" layoutX="56.0" layoutY="169.0" prefHeight="25.0" prefWidth="207.0" promptText="Vehicle" />
+      <ComboBox fx:id="status" layoutX="56.0" layoutY="200.0" prefHeight="25.0" prefWidth="207.0" promptText="Status" />
+      <Button layoutX="59.0" layoutY="238.0" mnemonicParsing="false" onAction="#confirm" text="Confirm Assignment" />
+      <ComboBox fx:id="statusfilter" layoutX="59.0" layoutY="91.0" prefHeight="25.0" prefWidth="124.0" promptText="Status" />
+      <Button layoutX="198.0" layoutY="91.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="65.0" text="Filter" />
+      <TableView fx:id="tableview" layoutX="281.0" layoutY="91.0" prefHeight="212.0" prefWidth="262.0">
+        <columns>
+          <TableColumn fx:id="coldriver" prefWidth="95.0" text="Driver" />
+          <TableColumn fx:id="colvehicle" prefWidth="90.0" text="Vehicle" />
+            <TableColumn fx:id="colstatus" prefWidth="76.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="confirmlabel" layoutX="59.0" layoutY="276.0" prefHeight="39.0" prefWidth="207.0" />
+      <Button layoutX="234.0" layoutY="342.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="94.0" text="Back" />
+   </children>
+</AnchorPane>
