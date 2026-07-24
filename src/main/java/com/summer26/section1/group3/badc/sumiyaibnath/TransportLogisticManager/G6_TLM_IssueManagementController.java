@@ -1,5 +1,8 @@
 package com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class G6_TLM_IssueManagementController
 {
     @javafx.fxml.FXML

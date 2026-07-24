@@ -3,33 +3,43 @@ package com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-public class G4_TLM_WarehouseTransportController
+public class G8_TLM_PerformanceReportController
 {
     @javafx.fxml.FXML
     private TableColumn colfarm;
     @javafx.fxml.FXML
+    private TableColumn coldeliverystatus;
+    @javafx.fxml.FXML
+    private ComboBox reporttype;
+    @javafx.fxml.FXML
+    private DatePicker todate;
+    @javafx.fxml.FXML
     private TableColumn colwarehouse;
     @javafx.fxml.FXML
-    private Label confirmlabel;
+    private TableColumn colvehicle;
     @javafx.fxml.FXML
-    private TextField transportid;
+    private TableColumn colperformance;
     @javafx.fxml.FXML
-    private TextField farm;
+    private TableColumn coldeliverydate;
     @javafx.fxml.FXML
     private TableView tableview;
     @javafx.fxml.FXML
-    private TextField warehouse;
+    private Label performancelabel;
     @javafx.fxml.FXML
     private TableColumn coltransportid;
     @javafx.fxml.FXML
-    private DatePicker transportdate;
+    private DatePicker fromdate;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void confirm(ActionEvent actionEvent) {
+    public void generatereport(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void download(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
