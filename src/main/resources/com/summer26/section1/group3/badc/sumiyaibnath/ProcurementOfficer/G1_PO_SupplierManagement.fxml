@@ -9,25 +9,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="425.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G1_PO_SupplierManagementController">
+<AnchorPane prefHeight="510.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G1_PO_SupplierManagementController">
    <children>
-      <TextField fx:id="supplierid" layoutX="52.0" layoutY="93.0" prefHeight="25.0" prefWidth="219.0" promptText="SupplierID" />
-      <Label layoutX="114.0" layoutY="32.0" prefHeight="53.0" prefWidth="314.0" text="Supplier Management">
+      <TextField fx:id="supplierid" layoutX="36.0" layoutY="74.0" prefHeight="25.0" prefWidth="153.0" promptText="SupplierID" />
+      <Label layoutX="175.0" layoutY="6.0" prefHeight="53.0" prefWidth="314.0" text="Supplier Management">
          <font>
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="status" layoutX="52.0" layoutY="137.0" prefHeight="25.0" prefWidth="97.0" promptText="Status" />
-      <Button layoutX="174.0" layoutY="137.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="97.0" text="Search" />
-      <TableView fx:id="tableview" layoutX="52.0" layoutY="176.0" prefHeight="200.0" prefWidth="219.0">
+      <Button layoutX="207.0" layoutY="74.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="97.0" text="Search" />
+      <TableView fx:id="tableview" layoutX="36.0" layoutY="211.0" prefHeight="200.0" prefWidth="521.0">
         <columns>
-          <TableColumn fx:id="colsupplierid" prefWidth="111.0" text="SupplierID" />
-            <TableColumn fx:id="colstatus" prefWidth="107.0" text="Status" />
+          <TableColumn fx:id="colsupplierid" prefWidth="84.0" text="SupplierID" />
+            <TableColumn fx:id="colname" prefWidth="121.0" text="Supplier Name" />
+            <TableColumn fx:id="colcompany" prefWidth="104.0" text="Company Name" />
+            <TableColumn fx:id="colproduct" prefWidth="104.0" text="Supplied Product" />
+            <TableColumn fx:id="colstatus" prefWidth="105.0" text="Supplier Status" />
         </columns>
       </TableView>
-      <TextField fx:id="supplieridfilter" layoutX="285.0" layoutY="176.0" prefHeight="25.0" prefWidth="128.0" promptText="SupplierID" />
-      <Button layoutX="285.0" layoutY="209.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="97.0" text="Filter" />
-      <Button layoutX="162.0" layoutY="386.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="153.0" text="Back" />
+      <Button layoutX="249.0" layoutY="471.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="97.0" text="Back" />
+      <TextField fx:id="supplieridupdate" layoutX="36.0" layoutY="114.0" prefHeight="25.0" prefWidth="153.0" promptText="SupplierID" />
+      <TextField fx:id="nameupdate" layoutX="207.0" layoutY="114.0" prefHeight="25.0" prefWidth="153.0" promptText="Supplier Name" />
+      <TextField fx:id="companyupdate" layoutX="380.0" layoutY="114.0" prefHeight="25.0" prefWidth="153.0" promptText="Company Name" />
+      <ComboBox fx:id="productupdate" layoutX="38.0" layoutY="151.0" prefHeight="25.0" prefWidth="153.0" promptText="Supplied Product" />
+      <ComboBox fx:id="statusupdate" layoutX="207.0" layoutY="151.0" prefHeight="25.0" prefWidth="153.0" promptText="Supplier Status" />
+      <Button layoutX="382.0" layoutY="151.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="83.0" text="Update" />
+      <Label fx:id="label" layoutX="149.0" layoutY="423.0" prefHeight="36.0" prefWidth="269.0" />
    </children>
 </AnchorPane>
