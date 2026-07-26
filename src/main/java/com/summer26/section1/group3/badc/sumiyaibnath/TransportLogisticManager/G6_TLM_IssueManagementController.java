@@ -3,36 +3,38 @@ package com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-public class G4_TLM_WarehouseTransportController
+public class G6_TLM_IssueManagementController
 {
     @javafx.fxml.FXML
-    private TableColumn colfarm;
+    private ComboBox issuetype;
     @javafx.fxml.FXML
-    private TableColumn colwarehouse;
-    @javafx.fxml.FXML
-    private Label confirmlabel;
+    private TableColumn coldeliverystatus;
     @javafx.fxml.FXML
     private TextField transportid;
     @javafx.fxml.FXML
-    private TextField farm;
+    private ComboBox deliverystatus;
+    @javafx.fxml.FXML
+    private TableColumn colissuetype;
     @javafx.fxml.FXML
     private TableView tableview;
     @javafx.fxml.FXML
-    private TextField warehouse;
+    private Label label;
     @javafx.fxml.FXML
     private TableColumn coltransportid;
     @javafx.fxml.FXML
-    private DatePicker transportdate;
+    private TableColumn colremarks;
+    @javafx.fxml.FXML
+    private TextField remarks;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void confirm(ActionEvent actionEvent) {
+    public void back(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void back(ActionEvent actionEvent) {
+    public void update(ActionEvent actionEvent) {
     }
 }

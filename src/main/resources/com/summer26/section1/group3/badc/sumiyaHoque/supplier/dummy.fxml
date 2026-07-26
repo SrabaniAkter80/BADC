@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.dummycontroller">
+   <children>
+      <TextField fx:id="dummy" layoutX="231.0" layoutY="174.0" promptText="dummy" />
+   </children>
+</AnchorPane>

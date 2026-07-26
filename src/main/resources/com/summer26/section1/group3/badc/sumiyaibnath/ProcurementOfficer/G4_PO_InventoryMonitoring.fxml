@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="476.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G4_PO_InventoryMonitoringController">
+   <children>
+      <Label layoutX="117.0" layoutY="21.0" prefHeight="49.0" prefWidth="260.0" text="Inventory Monitoring">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentstock" layoutX="27.0" layoutY="120.0" prefHeight="25.0" prefWidth="173.0" promptText="current Stock" />
+      <TextField fx:id="productid" layoutX="27.0" layoutY="84.0" prefHeight="25.0" prefWidth="173.0" promptText="ProductID" />
+      <ComboBox fx:id="stockstatus" layoutX="214.0" layoutY="120.0" prefHeight="25.0" prefWidth="173.0" promptText="Stock Status" />
+      <Button layoutX="214.0" layoutY="156.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="92.0" text="Update Stock" />
+      <TableView fx:id="tableview" layoutX="27.0" layoutY="199.0" prefHeight="200.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="colproductid" prefWidth="75.0" text="ProductID" />
+          <TableColumn fx:id="colproductname" prefWidth="91.0" text="Product Name" />
+            <TableColumn fx:id="colcurrentstock" prefWidth="87.0" text="Current Stock" />
+            <TableColumn fx:id="colstockstatus" prefWidth="81.0" text="Stock Status" />
+            <TableColumn fx:id="coldeliverydate" prefWidth="93.0" text="Delivery Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="productname" layoutX="214.0" layoutY="84.0" prefHeight="25.0" prefWidth="173.0" promptText="Product Name" />
+      <DatePicker fx:id="deliverydate" layoutX="27.0" layoutY="156.0" prefHeight="25.0" prefWidth="173.0" promptText="Delivery Dtae" />
+      <Label fx:id="label" layoutX="125.0" layoutY="405.0" prefHeight="25.0" prefWidth="233.0" />
+      <Button layoutX="221.0" layoutY="437.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>

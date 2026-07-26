@@ -6,8 +6,6 @@ import javafx.scene.control.*;
 public class G1_PO_SupplierManagementController
 {
     @javafx.fxml.FXML
-    private TextField supplieridfilter;
-    @javafx.fxml.FXML
     private TextField supplierid;
     @javafx.fxml.FXML
     private TableColumn colsupplierid;
@@ -16,13 +14,29 @@ public class G1_PO_SupplierManagementController
     @javafx.fxml.FXML
     private TableView tableview;
     @javafx.fxml.FXML
-    private ComboBox status;
+    private ComboBox statusupdate;
+    @javafx.fxml.FXML
+    private TableColumn colcompany;
+    @javafx.fxml.FXML
+    private TextField nameupdate;
+    @javafx.fxml.FXML
+    private Label label;
+    @javafx.fxml.FXML
+    private ComboBox productupdate;
+    @javafx.fxml.FXML
+    private TableColumn colproduct;
+    @javafx.fxml.FXML
+    private TableColumn colname;
+    @javafx.fxml.FXML
+    private TextField companyupdate;
+    @javafx.fxml.FXML
+    private TextField supplieridupdate;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void filter(ActionEvent actionEvent) {
     }
 
@@ -33,5 +47,9 @@ public class G1_PO_SupplierManagementController
 
     @javafx.fxml.FXML
     public void back(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void update(ActionEvent actionEvent) {
     }
 }
