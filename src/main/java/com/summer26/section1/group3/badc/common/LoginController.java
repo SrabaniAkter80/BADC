@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.List;
 
 public class LoginController
@@ -24,7 +25,8 @@ public class LoginController
     }
 
     @javafx.fxml.FXML
-    public void signuplink(ActionEvent actionEvent) {
+    public void signuplink(ActionEvent ActionEvent ) throws IOException {
+        SceneSwitcher.switchTo("signup.fxml");
     }
 
     @javafx.fxml.FXML
