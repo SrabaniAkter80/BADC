@@ -32,5 +32,30 @@ public class SignupController
 
     @javafx.fxml.FXML
     public void signup(ActionEvent actionEvent) {
+        String user = username.getText();
+        String pass = password.getText();
+        String confirm = confirmpassword.getText();
+        String userRole = role.getValue();
+
+        if(user.isEmpty() || pass.isEmpty() || userRole == null){
+            label.setText("Fill in all fields.");
+            return;
+        }
+        if(!pass.equals(confirm)){
+            label.setText("Passwords do not match.");
+            return;
+        }
+
+        for(User u : UserManager.getUserList()){
+            if(u.getUsername().equals(user)){
+                label.setText("Username already exists.");
+                return;
+            }
+        }
+        User newUser = new User(user, pass, userRole);
+
+        UserManager.addUser(newUser);
+        UserManager.saveToFile();
+        label.setText("Account created successfully!");
     }
 }
