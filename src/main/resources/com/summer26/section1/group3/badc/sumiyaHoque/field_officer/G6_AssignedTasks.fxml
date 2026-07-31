@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.G6_AssignedTasksController">
+   <children>
+      <Label layoutX="216.0" layoutY="33.0" prefHeight="27.0" prefWidth="145.0" text="Assigned Tasks">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="assignedTasksTableView" layoutX="51.0" layoutY="82.0" prefHeight="200.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="taskIdColumn" prefWidth="75.0" text="Task ID" />
+          <TableColumn fx:id="taskNameColumn" prefWidth="75.0" text="Task Name" />
+            <TableColumn fx:id="dueDateColumn" prefWidth="75.0" text="Due Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="80.0" layoutY="324.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh" />
+      <Button layoutX="244.0" layoutY="324.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

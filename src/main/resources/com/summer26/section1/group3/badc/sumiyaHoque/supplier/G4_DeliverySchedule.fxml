@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.supplier.G4_DeliveryScheduleController">
+   <children>
+      <Label layoutX="225.0" layoutY="36.0" text=" Delivery Schedule">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="deliveryDatePicker" layoutX="112.0" layoutY="103.0" />
+      <Label layoutX="14.0" layoutY="107.0" text="Delivery Date:" />
+      <Label layoutX="14.0" layoutY="162.0" prefHeight="18.0" prefWidth="101.0" text="Delivery Location:" />
+      <TextField fx:id="deliveryLocationTextField" layoutX="116.0" layoutY="159.0" text=" " />
+      <Button layoutX="86.0" layoutY="241.0" mnemonicParsing="false" onAction="#scheduleDeliveryButton" text="Schedule Delivery" />
+      <Button layoutX="243.0" layoutY="241.0" mnemonicParsing="false" onAction="#backButton" text="Back  " />
+   </children>
+</AnchorPane>
