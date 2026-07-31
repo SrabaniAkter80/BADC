@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.common;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
         private String username;
         private String password;
         private String role;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="437.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G7_PO_ProcurementHistoryController">
+   <children>
+      <Label layoutX="107.0" layoutY="8.0" prefHeight="65.0" prefWidth="365.0" text="Procurement Transaction History">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="transactionid" layoutX="46.0" layoutY="73.0" prefHeight="25.0" prefWidth="174.0" promptText="TransactionID" />
+      <Button layoutX="242.0" layoutY="73.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="75.0" text="Search" />
+      <ComboBox fx:id="productname" layoutX="46.0" layoutY="114.0" prefHeight="25.0" prefWidth="174.0" promptText="Product Name" />
+      <ComboBox fx:id="suppliername" layoutX="242.0" layoutY="114.0" prefHeight="25.0" prefWidth="166.0" promptText="Supplier Name" />
+      <DatePicker fx:id="purchasedate" layoutX="46.0" layoutY="147.0" promptText="Purchase Date" />
+      <Button layoutX="242.0" layoutY="147.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="75.0" text="Filter" />
+      <TableView fx:id="tableview" layoutX="23.0" layoutY="186.0" prefHeight="200.0" prefWidth="513.0">
+        <columns>
+          <TableColumn fx:id="coltransactionid" prefWidth="94.0" text="TransactionID" />
+          <TableColumn fx:id="colproduct" prefWidth="96.0" text="Product Name" />
+            <TableColumn fx:id="colsupplier" prefWidth="92.0" text="Supplier Name" />
+            <TableColumn fx:id="colquantity" prefWidth="60.0" text="Quantity" />
+            <TableColumn fx:id="coltotalamount" prefWidth="85.0" text="Total Amount" />
+            <TableColumn fx:id="colpurchasedate" prefWidth="85.0" text="Purchase Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="250.0" layoutY="397.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" text="Back" />
+   </children>
+</AnchorPane>
