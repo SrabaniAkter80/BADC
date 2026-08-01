@@ -1,5 +1,10 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+
 public class G3_Maintenance_Request_ViewController
 {
     @javafx.fxml.FXML
