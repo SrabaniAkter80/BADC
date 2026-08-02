@@ -47,6 +47,8 @@ public class LoginController
             if (user.getUsername().equals(username)
                     && user.getPassword().equals(password)
                     && user.getRole().equals(role)) {
+                System.out.println("Login successful!");
+                System.out.println("Role = " + role);
                 switch (role) {
                     case "Admin":
                         SceneSwitcher.switchTo("adminDashboard.fxml");
@@ -55,7 +57,8 @@ public class LoginController
                         SceneSwitcher.switchTo("G0_HR Manager_Dashboard.fxml");
                         break;
                     case "Procurement Officer":
-                        SceneSwitcher.switchTo("G0_PO_Dashboard.fxml");
+                        System.out.println("Opening Procurement Dashboard...");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/ProcurementOfficer/G0_PO_Dashboard.fxml");
                         break;
                     case "Account Officer":
                         SceneSwitcher.switchTo("accountOfficerDashboard.fxml");
@@ -67,7 +70,8 @@ public class LoginController
                         SceneSwitcher.switchTo("fieldOfficerDashboard.fxml");
                         break;
                     case "Transport & Logistic Manager":
-                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/ G0_TML_DashboardController.fxml");
+                        System.out.println("Opening Transport & Logistic Manager Dashboard...");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/G0_TML_Dashboard.fxml");
                         break;
                     case "Supplier":
                         SceneSwitcher.switchTo("supplierDashboard.fxml");

@@ -54,7 +54,7 @@ public class SignupController
         }
         User newUser = new User(user, pass, userRole);
 
-        UserManager.addUser(newUser);
+        UserManager.getUserList().add(newUser);
         UserManager.saveToFile();
         label.setText("Account created successfully!");
     }
