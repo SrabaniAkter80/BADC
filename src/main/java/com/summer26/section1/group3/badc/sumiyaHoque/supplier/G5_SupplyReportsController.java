@@ -7,13 +7,19 @@ import javafx.scene.control.TextArea;
 public class G5_SupplyReportsController
 {
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private TextArea reportSummaryTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+        reportTypeComboBox.getItems().addAll(
+                "Daily Report",
+                "Weekly Report",
+                "Monthly Report"
+        );
+
+}
 
     @javafx.fxml.FXML
     public void downloadReportButton(ActionEvent actionEvent) {

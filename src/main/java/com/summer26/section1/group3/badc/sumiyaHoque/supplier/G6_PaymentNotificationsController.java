@@ -3,22 +3,33 @@ package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class G6_PaymentNotificationsController
 {
     @javafx.fxml.FXML
-    private TableView paymentNotificationTableView;
+    private TableView<PaymentNotification> paymentNotificationTableView;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn<PaymentNotification,String> statusColumn;
     @javafx.fxml.FXML
-    private TableColumn amountColumn;
+    private TableColumn<PaymentNotification,Double> amountColumn;
     @javafx.fxml.FXML
-    private TableColumn paymentDateColumn;
+    private TableColumn<PaymentNotification,String> paymentDateColumn;
     @javafx.fxml.FXML
-    private TableColumn paymentIdColumn;
+    private TableColumn<PaymentNotification,String> paymentIdColumn;
+
+
+
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        paymentIdColumn.setCellValueFactory(new PropertyValueFactory<>("paymentId"));
+        amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        paymentDateColumn.setCellValueFactory(new PropertyValueFactory<>("paymentDate"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+
     }
 
     @javafx.fxml.FXML

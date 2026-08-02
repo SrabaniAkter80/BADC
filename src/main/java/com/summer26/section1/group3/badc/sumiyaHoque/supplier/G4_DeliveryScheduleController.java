@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
+import java.time.LocalDate;
+
 public class G4_DeliveryScheduleController
 {
     @javafx.fxml.FXML
@@ -17,6 +19,9 @@ public class G4_DeliveryScheduleController
 
     @javafx.fxml.FXML
     public void scheduleDeliveryButton(ActionEvent actionEvent) {
+        LocalDate deliveryDate = deliveryDatePicker.getValue();
+        String location = deliveryLocationTextField.getText();
+
     }
 
     @javafx.fxml.FXML
