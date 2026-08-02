@@ -6,14 +6,14 @@ import java.util.List;
 
 public class UserManager {
     private static final List<User> userList = new ArrayList<>();
-    private static final String FileName= "users.bin";
+    private static final String FileName = "users.bin";
 
     static {
-            loadFromFile();
-            if(userList.isEmpty()){
-                userList.add(new User("Sumiya","121212","Procurement Officer"));
-                saveToFile();
-            }
+        loadFromFile();
+        if (userList.isEmpty()) {
+            userList.add(new User("Sumiya", "121212", "Procurement Officer"));
+            saveToFile();
+        }
 
     }
 
@@ -21,20 +21,20 @@ public class UserManager {
         return userList;
     }
 
-    public static void saveToFile(){
-        try{
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName));
-            out.writeObject(userList);
-            out.close();
-        } catch(IOException e){
-            System.out.println("Could not save user data to file");
+    private static void loadFromFile() {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FileName))) {
+            userList.clear();
+            userList.addAll((ArrayList<User>) in.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Could not load user data from file");
         }
     }
 
-    private static void loadFromFile(){
-        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName))) {
+    public static void saveToFile() {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName))) {
         } catch (IOException e) {
             System.out.println("Could not save user data to file");
-        }}
+        }
     }
+}
 
