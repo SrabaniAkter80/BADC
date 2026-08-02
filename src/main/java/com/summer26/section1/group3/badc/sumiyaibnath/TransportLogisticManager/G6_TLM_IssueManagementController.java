@@ -28,6 +28,7 @@ public class G6_TLM_IssueManagementController
 
     @javafx.fxml.FXML
     public void initialize() {
+        
     }
 
     @javafx.fxml.FXML

@@ -1,20 +1,23 @@
 package com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+
+import java.io.IOException;
 
 public class G1_PO_SupplierManagementController
 {
     @javafx.fxml.FXML
     private TextField supplierid;
     @javafx.fxml.FXML
-    private TableColumn colsupplierid;
+    private TableColumn<Supplier,String> colsupplierid;
     @javafx.fxml.FXML
-    private TableColumn colstatus;
+    private TableColumn<Supplier, String> colstatus;
     @javafx.fxml.FXML
-    private TableView tableview;
+    private TableView<Supplier> tableview;
     @javafx.fxml.FXML
-    private ComboBox statusupdate;
+    private ComboBox<String> statusupdate;
     @javafx.fxml.FXML
     private TableColumn colcompany;
     @javafx.fxml.FXML
@@ -34,6 +37,8 @@ public class G1_PO_SupplierManagementController
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusupdate.getItems().addAll("Active", "Inactive", "Blacklisted");
+        tableview.getItems().addAll(SupplierManager.getSupplierList());
     }
 
     @Deprecated
@@ -46,7 +51,8 @@ public class G1_PO_SupplierManagementController
     }
 
     @javafx.fxml.FXML
-    public void back(ActionEvent actionEvent) {
+    public void back(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/ProcurementOfficer/G0_PO_Dashboard.fxml");
     }
 
     @javafx.fxml.FXML

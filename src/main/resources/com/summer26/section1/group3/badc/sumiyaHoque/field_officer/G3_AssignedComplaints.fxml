@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.G3_AssignedComplaintsController">
+   <children>
+      <Label layoutX="206.0" layoutY="33.0" text="Assigned Complaints">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="complaintTableView" layoutX="114.0" layoutY="100.0" prefHeight="200.0" prefWidth="350.0">
+        <columns>
+          <TableColumn fx:id="complaintIdColumn" prefWidth="96.0" text="Complaint ID" />
+          <TableColumn fx:id="farmerNameColumn" prefWidth="85.60003662109375" text="Farmer Name" />
+            <TableColumn fx:id="complaintTypeColumn" prefWidth="96.79998779296875" text="Complaint Type" />
+            <TableColumn fx:id="statusColumn" prefWidth="76.0" text="Status" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="complaintDetailsTextArea" layoutX="114.0" layoutY="338.0" prefHeight="38.0" prefWidth="130.0" text="Complaint Details" />
+      <Button layoutX="127.0" layoutY="437.0" mnemonicParsing="false" onAction="#resolveComplaintButton" text="Resolve Complaint" />
+      <Button layoutX="323.0" layoutY="437.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

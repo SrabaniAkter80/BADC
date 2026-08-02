@@ -2,7 +2,7 @@ package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
 import javafx.event.ActionEvent;
 
-public class GO_SP_DashboardController
+public class SP_DashboardController
 {
     @javafx.fxml.FXML
     public void initialize() {

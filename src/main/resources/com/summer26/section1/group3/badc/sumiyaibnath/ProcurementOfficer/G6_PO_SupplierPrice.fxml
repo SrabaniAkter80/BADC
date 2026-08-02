@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G6_PO_SupplierPriceController">
+   <children>
+      <Label layoutX="92.0" layoutY="14.0" prefHeight="57.0" prefWidth="294.0" text="Supplier Price Comparison">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="productname" layoutX="29.0" layoutY="80.0" prefWidth="150.0" promptText="Product Name" />
+      <Button layoutX="206.0" layoutY="80.0" mnemonicParsing="false" onAction="#compare" text="Compare Price" />
+      <TableView fx:id="tableview" layoutX="29.0" layoutY="121.0" prefHeight="200.0" prefWidth="420.0">
+        <columns>
+          <TableColumn fx:id="colsuppliername" prefWidth="103.0" text="Supplier Name" />
+          <TableColumn fx:id="colproductname" prefWidth="96.0" text="Product Name" />
+            <TableColumn fx:id="colunitprice" prefWidth="75.0" text="Unit Price" />
+            <TableColumn fx:id="colquality" prefWidth="78.0" text="Quality" />
+            <TableColumn fx:id="colrating" prefWidth="69.0" text="Rating" />
+        </columns>
+      </TableView>
+      <Label fx:id="label" layoutX="92.0" layoutY="330.0" prefHeight="25.0" prefWidth="267.0" />
+      <Button layoutX="200.0" layoutY="361.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>
