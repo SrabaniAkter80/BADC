@@ -1,6 +1,9 @@
 package com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class G0_PO_DashboardController
 {
@@ -9,7 +12,8 @@ public class G0_PO_DashboardController
     }
 
     @javafx.fxml.FXML
-    public void logout(ActionEvent actionEvent) {
+    public void logout(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("login.fxml");
     }
 
     @javafx.fxml.FXML

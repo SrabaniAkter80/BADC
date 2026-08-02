@@ -21,9 +21,6 @@ public class UserManager {
         return userList;
     }
 
-    public static void addUser(User user){
-        userList.add(user);
-    }
     public static void saveToFile(){
         try{
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName));
@@ -35,13 +32,9 @@ public class UserManager {
     }
 
     private static void loadFromFile(){
-        try{
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream(FileName));
-            userList.clear();
-            userList.addAll((ArrayList<User>) in.readObject());
-            in.close();
-        } catch(IOException | ClassNotFoundException e){
-            System.out.println("No previous users found.");
-        }
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName))) {
+        } catch (IOException e) {
+            System.out.println("Could not save user data to file");
+        }}
     }
-}
+
