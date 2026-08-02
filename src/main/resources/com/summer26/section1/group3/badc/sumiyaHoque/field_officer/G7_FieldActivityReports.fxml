@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.G7_FieldActivityReportsController">
+   <children>
+      <Label layoutX="188.0" layoutY="26.0" text="Field Activity Reports">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="reportTypeComboBox" layoutX="103.0" layoutY="99.0" prefWidth="150.0" promptText="Report Type" />
+      <TextArea fx:id="reportDetailsTextArea" layoutX="103.0" layoutY="138.0" prefHeight="38.0" prefWidth="150.0" text="Report Details" />
+      <Button layoutX="272.0" layoutY="233.0" mnemonicParsing="false" onAction="#downloadReportButton" text="Download Report" />
+      <Button layoutX="103.0" layoutY="233.0" mnemonicParsing="false" onAction="#generateReportButton" text="Generate Report" />
+      <Button layoutX="233.0" layoutY="296.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

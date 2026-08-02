@@ -2,23 +2,22 @@ package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 
-public class GO1_SupplyProposalController
+public class G2_UplodDocumentsController
 {
     @javafx.fxml.FXML
-    private TextField ProposalDetailsTextField;
-    @javafx.fxml.FXML
-    private TextField QuantityTextField;
-    @javafx.fxml.FXML
-    private ComboBox ProductCategoryComboBox;
+    private ComboBox DocumentTypeComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void ProposalSubmitButton(ActionEvent actionEvent) {
+    public void ChooseFileButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void UploadButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
