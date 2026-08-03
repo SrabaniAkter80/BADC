@@ -4,24 +4,30 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class G4_VerifyFarmerApplicationsController
 {
     @javafx.fxml.FXML
-    private TableColumn farmerNameColumn;
+    private TableColumn<FarmerApplication,String> farmerNameColumn;
     @javafx.fxml.FXML
-    private TableView applicationTableView;
+    private TableView<FarmerApplication> applicationTableView;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn<FarmerApplication,String> statusColumn;
     @javafx.fxml.FXML
-    private TableColumn applicationTypeColumn;
+    private TableColumn<FarmerApplication,String> applicationTypeColumn;
     @javafx.fxml.FXML
     private TextArea applicationDetailsTextArea;
     @javafx.fxml.FXML
-    private TableColumn applicationIdColumn;
+    private TableColumn <FarmerApplication,String>applicationIdColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        applicationIdColumn.setCellValueFactory(new PropertyValueFactory<>("applicationId"));
+        applicationTypeColumn.setCellValueFactory(new PropertyValueFactory<>("applicationType"));
+        farmerNameColumn.setCellValueFactory(new PropertyValueFactory<>("farmerName"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
     }
 
     @javafx.fxml.FXML

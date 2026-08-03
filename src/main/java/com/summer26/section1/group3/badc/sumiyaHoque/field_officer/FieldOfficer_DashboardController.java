@@ -47,4 +47,8 @@ public class FieldOfficer_DashboardController
     @javafx.fxml.FXML
     public void notificationsButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void editProfileOnAction(ActionEvent actionEvent) {
+    }
 }

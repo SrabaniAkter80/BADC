@@ -10,6 +10,16 @@ public class G8_MyProfileController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        profileInfoTextArea.setEditable(false);
+
+        profileInfoTextArea.setText(
+                "Name : Rahim Uddin\n" +
+                        "Email : rahim@gmail.com\n" +
+                        "Phone : 01712345678\n" +
+                        "Address : Dhaka, Bangladesh\n" +
+                        "Designation : Field Officer"
+        );
     }
 
     @javafx.fxml.FXML

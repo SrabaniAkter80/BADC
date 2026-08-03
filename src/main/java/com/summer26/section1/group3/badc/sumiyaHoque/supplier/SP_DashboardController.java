@@ -43,9 +43,7 @@ public class SP_DashboardController
 
     }
 
-    @javafx.fxml.FXML
-    public void Profile(ActionEvent actionEvent) throws IOException{
-    }
+
 
     @javafx.fxml.FXML
     public void Contracts(ActionEvent actionEvent)throws IOException {
@@ -56,5 +54,15 @@ public class SP_DashboardController
     @javafx.fxml.FXML
     public void SupplyReports(ActionEvent actionEvent)throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G5_SupplyReports.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void editbuttonOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_editbuttonOnAction.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void myprofileOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_myprofileOnActio.fxml");
     }
 }

@@ -16,6 +16,10 @@ public class G8_EditProfileController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameTextField.setText("Rahim Uddin");
+        emailTextField.setText("rahim@gmail.com");
+        phoneTextField.setText("01712345678");
+        addressTextField.setText("Dhaka, Bangladesh");
     }
 
     @javafx.fxml.FXML
