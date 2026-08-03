@@ -16,10 +16,15 @@ public class G8_MyProfileController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nametextfield.setText("Sumiya Hoque");
+        phonetextfield.setText("01712345678");
+        emailtextfield.setText("supplier@gmail.com");
+        addresstextfield.setText("Dhaka, Bangladesh");
     }
 
     @javafx.fxml.FXML
     public void backbutton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

@@ -1,9 +1,12 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class G1_SupplyProposalController
 {
@@ -33,7 +36,8 @@ public class G1_SupplyProposalController
 
 
         @javafx.fxml.FXML
-        public void BackButton (ActionEvent actionEvent){
+        public void BackButton (ActionEvent actionEvent)throws IOException {
+
 
         }
     }
