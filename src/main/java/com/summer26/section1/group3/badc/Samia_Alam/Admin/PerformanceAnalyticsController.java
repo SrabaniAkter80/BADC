@@ -1,5 +1,12 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Admin;
 
+import javafx.event.ActionEvent;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+
 public class PerformanceAnalyticsController
 {
     @javafx.fxml.FXML

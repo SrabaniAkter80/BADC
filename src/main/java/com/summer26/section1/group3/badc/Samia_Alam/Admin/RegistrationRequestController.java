@@ -1,5 +1,10 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Admin;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+
 public class RegistrationRequestController
 {
     @javafx.fxml.FXML
