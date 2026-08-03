@@ -71,7 +71,7 @@ public class LoginController
                         break;
                     case "Transport & Logistic Manager":
                         System.out.println("Opening Transport & Logistic Manager Dashboard...");
-                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/G0_TML_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/G0_TLM_Dashboard.fxml");
                         break;
                     case "Supplier":
                         System.out.println("Opening Supplier Dashboard...");

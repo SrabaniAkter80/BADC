@@ -25,7 +25,7 @@ public class FileManager {
         } catch (FileNotFoundException e) {
             System.out.println(fileName + " not found. A new file will be created.");
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Could not load data from file.");
+            e.printStackTrace();
         }
         return list;
     }

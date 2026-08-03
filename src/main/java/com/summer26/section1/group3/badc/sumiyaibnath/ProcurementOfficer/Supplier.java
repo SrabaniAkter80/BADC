@@ -6,9 +6,18 @@ public class Supplier implements Serializable {
     String supplierId;
     String supplierName;
     String companyName;
-    //String productName;
+    String productName;
     String status;
     String rating;
+
+    public Supplier(String supplierId, String supplierName, String companyName, String productName, String status, String rating) {
+        this.supplierId = supplierId;
+        this.supplierName = supplierName;
+        this.companyName = companyName;
+        this.productName = productName;
+        this.status = status;
+        this.rating = rating;
+    }
 
     public String getSupplierId() {
         return supplierId;
@@ -34,6 +43,14 @@ public class Supplier implements Serializable {
         this.companyName = companyName;
     }
 
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -56,16 +73,9 @@ public class Supplier implements Serializable {
                 "supplierId='" + supplierId + '\'' +
                 ", supplierName='" + supplierName + '\'' +
                 ", companyName='" + companyName + '\'' +
+                ", productName='" + productName + '\'' +
                 ", status='" + status + '\'' +
                 ", rating='" + rating + '\'' +
                 '}';
-    }
-
-    public Supplier(String supplierId, String supplierName, String companyName, String status, String rating) {
-        this.supplierId = supplierId;
-        this.supplierName = supplierName;
-        this.companyName = companyName;
-        this.status = status;
-        this.rating = rating;
     }
 }

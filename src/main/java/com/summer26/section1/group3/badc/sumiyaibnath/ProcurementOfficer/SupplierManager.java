@@ -8,25 +8,27 @@ import java.util.List;
 public class SupplierManager {
 
     private static final ArrayList<Supplier> supplierList = new ArrayList<>();
-    private static final String FileName = "Supplier.bin";
+    private static final String FILE_NAME = "Supplier.bin";
 
     static {
-        supplierList.addAll(FileManager.loadFromFile(FileName));
-        if (supplierList.isEmpty()) {
-            supplierList.add(new Supplier("S001","Mr. Rashid","ABC ltd.","Active","4"));
-            supplierList.add(new Supplier("S002","Mr. John","Green Tradings","Inactive","3.8"));
-            supplierList.add(new Supplier("S003","Mr. Hassan","Chemical Institution","Blacklisted","1.3"));
-            supplierList.add(new Supplier("S004","Mr. Taylor","Tea&Coffee House","Active","5"));
-
-            FileManager.saveToFile(supplierList, FileName);
-        }
+        supplierList.addAll(FileManager.loadFromFile(FILE_NAME));
     }
 
     public static List<Supplier> getSupplierList() {
         return supplierList;
     }
 
+    public static void addSupplier(Supplier supplier) {
+        supplierList.add(supplier);
+        FileManager.saveToFile(supplierList, FILE_NAME);
+    }
+
+    public static void deleteSupplier(Supplier supplier) {
+        supplierList.remove(supplier);
+        FileManager.saveToFile(supplierList, FILE_NAME);
+    }
+
     public static void updateSupplier() {
-        FileManager.saveToFile(supplierList, FileName);
+        FileManager.saveToFile(supplierList, FILE_NAME);
     }
 }
