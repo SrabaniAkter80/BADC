@@ -10,6 +10,8 @@ public class G5_UploadFieldDocumentsController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
     }
 
     @javafx.fxml.FXML

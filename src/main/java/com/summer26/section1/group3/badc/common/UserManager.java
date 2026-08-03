@@ -21,20 +21,28 @@ public class UserManager {
         return userList;
     }
 
-    private static void loadFromFile() {
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FileName))) {
-            userList.clear();
-            userList.addAll((ArrayList<User>) in.readObject());
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Could not load user data from file");
-        }
-    }
-
     public static void saveToFile() {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName))) {
+        try {
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FileName));
+            out.writeObject(userList);
+            out.close();
         } catch (IOException e) {
             System.out.println("Could not save user data to file");
         }
     }
-}
 
+    private static void loadFromFile() {
+        try {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream(FileName));
+            List<User> users = (List<User>) in.readObject();
+            userList.clear();
+            userList.addAll(users);
+            in.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("User file not found. A new one will be created.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Could not load user data from file.");
+            e.printStackTrace();
+        }
+    }
+}

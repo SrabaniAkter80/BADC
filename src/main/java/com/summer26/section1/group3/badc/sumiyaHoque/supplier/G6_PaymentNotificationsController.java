@@ -1,9 +1,12 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.io.IOException;
 
 public class G6_PaymentNotificationsController
 {
@@ -37,6 +40,7 @@ public class G6_PaymentNotificationsController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/SP_Dashboard.fxml");
     }
 }

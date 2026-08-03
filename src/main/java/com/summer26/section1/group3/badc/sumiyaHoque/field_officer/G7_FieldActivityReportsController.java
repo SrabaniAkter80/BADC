@@ -1,5 +1,6 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
@@ -9,10 +10,17 @@ public class G7_FieldActivityReportsController
     @javafx.fxml.FXML
     private TextArea reportDetailsTextArea;
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox<String> reportTypeComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeComboBox.setItems(FXCollections.observableArrayList(
+                "Daily Report",
+                "Weekly Report",
+                "Monthly Report",
+                "Field Visit Report",
+                "Inspection Report"
+        ));
     }
 
     @javafx.fxml.FXML

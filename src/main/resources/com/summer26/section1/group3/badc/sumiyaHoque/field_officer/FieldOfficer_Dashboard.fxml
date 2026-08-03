@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.FieldOfficer_DashboardController">
+<AnchorPane prefHeight="511.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.field_officer.FieldOfficer_DashboardController">
    <children>
       <Label fx:id="dashboardTitleLabel" layoutX="175.0" layoutY="42.0" text=" Field Officer Dashboard">
          <font>
@@ -21,6 +20,7 @@
       <Button layoutX="339.0" layoutY="200.0" mnemonicParsing="false" onAction="#notificationsButton" text=" Notifications " />
       <Button layoutX="465.0" layoutY="200.0" mnemonicParsing="false" onAction="#myProfileButton" text=" My Profile " />
       <Button layoutX="3.0" layoutY="200.0" mnemonicParsing="false" onAction="#complaintResolutionButton" text=" Complaint Resolution " />
-      <Button layoutX="234.0" layoutY="295.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout " />
+      <Button layoutX="242.0" layoutY="354.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout " />
+      <Button layoutX="595.0" layoutY="200.0" mnemonicParsing="false" onAction="#editProfileOnAction" text="Edit Profile" />
    </children>
 </AnchorPane>

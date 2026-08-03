@@ -5,22 +5,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.supplier.SP_DashboardController">
+<AnchorPane prefHeight="550.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaHoque.supplier.SP_DashboardController">
    <children>
       <Label layoutX="218.0" layoutY="30.0" prefHeight="38.0" prefWidth="186.0" text="Supplier Dashboard">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="69.0" layoutY="101.0" mnemonicParsing="false" onAction="#SupplyProposal" text="Supply Proposal" />
-      <Button layoutX="60.0" layoutY="161.0" mnemonicParsing="false" onAction="#UploadDocuments" text="Upload Documents" />
-      <Button layoutX="383.0" layoutY="161.0" mnemonicParsing="false" onAction="#SupplyStatus" text="Supply Status" />
-      <Button layoutX="228.0" layoutY="101.0" mnemonicParsing="false" onAction="#DeliverySchedule" text="Delivery Schedule" />
-      <Button layoutX="228.0" layoutY="161.0" mnemonicParsing="false" onAction="#SupplyReports" text="Supply Reports" />
-      <Button layoutX="69.0" layoutY="231.0" mnemonicParsing="false" onAction="#PaymentNotifications" text="Payment Notifications" />
-      <Button layoutX="394.0" layoutY="101.0" mnemonicParsing="false" onAction="#Contracts" text="Contracts" />
-      <Button layoutX="258.0" layoutY="231.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+      <Button layoutX="51.0" layoutY="88.0" mnemonicParsing="false" onAction="#SupplyProposal" text="Supply Proposal" />
+      <Button layoutX="51.0" layoutY="135.0" mnemonicParsing="false" onAction="#UploadDocuments" text="Upload Documents" />
+      <Button layoutX="35.0" layoutY="342.0" mnemonicParsing="false" onAction="#SupplyStatus" text="Supply Status" />
+      <Button layoutX="46.0" layoutY="174.0" mnemonicParsing="false" onAction="#DeliverySchedule" text="Delivery Schedule" />
+      <Button layoutX="44.0" layoutY="262.0" mnemonicParsing="false" onAction="#SupplyReports" text="Supply Reports" />
+      <Button layoutX="44.0" layoutY="218.0" mnemonicParsing="false" onAction="#PaymentNotifications" text="Payment Notifications" />
+      <Button layoutX="46.0" layoutY="303.0" mnemonicParsing="false" onAction="#Contracts" text="Contracts" />
+      <Button layoutX="35.0" layoutY="379.0" mnemonicParsing="false" onAction="#myprofileOnAction" text="My Profile" />
       <Button layoutX="232.0" layoutY="303.0" mnemonicParsing="false" onAction="#LogOut" text="Log Out" />
+      <Button layoutX="35.0" layoutY="427.0" mnemonicParsing="false" onAction="#editbuttonOnAction" text="Edit Button" />
    </children>
 </AnchorPane>
