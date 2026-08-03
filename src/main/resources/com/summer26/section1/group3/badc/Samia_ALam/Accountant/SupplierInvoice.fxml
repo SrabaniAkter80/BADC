@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="442.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.SupplierInvoiceController">
+   <children>
+      <Label layoutX="182.0" layoutY="22.0" text="Supplier Invoice" />
+      <TableView fx:id="supplierInvoiceTV" layoutX="86.0" layoutY="56.0" prefHeight="200.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="invoiceIdTableCol" prefWidth="75.0" text="Invoice ID" />
+          <TableColumn fx:id="supplierTableCol" prefWidth="75.0" text="Supplier" />
+            <TableColumn fx:id="materialTableCol" prefWidth="75.0" text="Material" />
+            <TableColumn fx:id="costTableCol" prefWidth="75.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Label layoutX="39.0" layoutY="296.0" text="Invoice Details: " />
+      <TextArea fx:id="invoiceDetailsTextArea" layoutX="130.0" layoutY="279.0" prefHeight="55.0" prefWidth="265.0" />
+      <Button layoutX="140.0" layoutY="384.0" mnemonicParsing="false" onAction="#athorizeButton" text="Authorize" />
+      <Button layoutX="356.0" layoutY="384.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.AccountantDashboardController">
+   <children>
+      <Label layoutX="227.0" layoutY="31.0" text=" Accountant Dashboard" />
+      <Button layoutX="88.0" layoutY="91.0" mnemonicParsing="false" onAction="#payrollButton" text="Payroll" />
+      <Button layoutX="88.0" layoutY="152.0" mnemonicParsing="false" onAction="#supplierInvoiceButton" text="Supplier Invoice" />
+      <Button layoutX="88.0" layoutY="216.0" mnemonicParsing="false" onAction="#financialReportButton" text="Financial Report" />
+      <Button layoutX="88.0" layoutY="277.0" mnemonicParsing="false" onAction="#officeExpenseButton" text="Office Expense" />
+      <Button layoutX="409.0" layoutY="91.0" mnemonicParsing="false" onAction="#dealerDepositButton" text="Dealer Deposit" />
+      <Button layoutX="409.0" layoutY="152.0" mnemonicParsing="false" onAction="#farmerSubsidyButton" text="Farmer Subsidy" />
+      <Button layoutX="409.0" layoutY="216.0" mnemonicParsing="false" onAction="#budgetPlanningButton" text="Budget Planning" />
+      <Button layoutX="409.0" layoutY="277.0" mnemonicParsing="false" onAction="#transactionHistroyButton" text="Transaction History" />
+      <Button layoutX="254.0" layoutY="340.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="323.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.OfficeExpenseController">
+   <children>
+      <Label layoutX="180.0" layoutY="24.0" text="Office Expense" />
+      <Label layoutX="55.0" layoutY="68.0" text=" Expense Type: " />
+      <ComboBox fx:id="expenseTypeCB" layoutX="144.0" layoutY="64.0" prefWidth="150.0" />
+      <Label layoutX="65.0" layoutY="114.0" text="Voucher ID:" />
+      <Label layoutX="78.0" layoutY="149.0" text="Amount: " />
+      <TextField fx:id="voucherIdTF" layoutX="145.0" layoutY="110.0" />
+      <TextField fx:id="accountTF" layoutX="144.0" layoutY="145.0" />
+      <Label layoutX="95.0" layoutY="182.0" text="Date: " />
+      <DatePicker fx:id="dateDatePicker" layoutX="145.0" layoutY="178.0" />
+      <Button layoutX="65.0" layoutY="260.0" mnemonicParsing="false" onAction="#recordExpenseButton" text="Record Expense" />
+      <Button layoutX="211.0" layoutY="260.0" mnemonicParsing="false" onAction="#clearButton" text="Clear" />
+      <Button layoutX="320.0" layoutY="260.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>
