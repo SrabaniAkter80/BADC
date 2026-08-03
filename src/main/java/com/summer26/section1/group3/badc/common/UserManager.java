@@ -12,7 +12,6 @@ public class UserManager {
             loadFromFile();
             if(userList.isEmpty()){
                 userList.add(new User("Sumiya","121212","Procurement Officer"));
-                userList.add(new User("Shoque","12345","Supplier"));
                 saveToFile();
             }
 

@@ -17,7 +17,8 @@ public class G0_PO_DashboardController
     }
 
     @javafx.fxml.FXML
-    public void suppliermanagement(ActionEvent actionEvent) {
+    public void suppliermanagement(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/ProcurementOfficer/G1_PO_SupplierManagement.fxml");
     }
 
     @javafx.fxml.FXML
