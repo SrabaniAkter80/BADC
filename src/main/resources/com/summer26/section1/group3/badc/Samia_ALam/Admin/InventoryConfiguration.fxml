@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Admin.InventoryConfigurationController">
+   <children>
+      <Label layoutX="209.0" layoutY="24.0" text="Inventory Configuration " />
+      <Label layoutX="66.0" layoutY="64.0" text="Search Product: " />
+      <TextField fx:id="searchProductTF" layoutX="153.0" layoutY="60.0" />
+      <Button layoutX="392.0" layoutY="60.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+      <TableView fx:id="configurationTableview" layoutX="64.0" layoutY="116.0" prefHeight="200.0" prefWidth="486.0">
+        <columns>
+          <TableColumn fx:id="productIdTableCol" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="productNameTableCol" prefWidth="105.60003662109375" text="Product Name" />
+            <TableColumn fx:id="warehouseTableCol" prefWidth="85.5999755859375" text="Warehouse" />
+            <TableColumn fx:id="quantityTableCol" prefWidth="68.0" text="Quantity " />
+            <TableColumn fx:id="minimumThresholdTableCol" prefWidth="150.39999999999998" text="Minimum Threshold " />
+        </columns>
+      </TableView>
+      <Label layoutX="66.0" layoutY="343.0" text="New Threshold: " />
+      <TextField fx:id="newThresholdTF" layoutX="157.0" layoutY="339.0" />
+      <Button layoutX="418.0" layoutY="339.0" mnemonicParsing="false" onAction="#updateButton" text="Update Threshold" />
+      <Label fx:id="lowStockWarningLabel" layoutX="128.0" layoutY="409.0" text="Low Stock Warning" />
+      <Button layoutX="384.0" layoutY="405.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>
