@@ -1,6 +1,9 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class AccountDashboardController
 {
@@ -9,38 +12,43 @@ public class AccountDashboardController
     }
 
     @javafx.fxml.FXML
-    public void budgetPlanningButton(ActionEvent actionEvent) {
+    public void budgetPlanningButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/BudgetPlanning.fxml");
     }
 
     @javafx.fxml.FXML
-    public void dealerDepositeButton(ActionEvent actionEvent) {
+    public void dealerDepositeButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/DealerDeposit.fxml");
     }
 
     @javafx.fxml.FXML
-    public void tnxHistoryButton(ActionEvent actionEvent) {
+    public void tnxHistoryButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/TransactionHistory.fxml");
     }
 
     @javafx.fxml.FXML
-    public void payrollButton(ActionEvent actionEvent) {
+    public void payrollButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/Payroll.fxml");
     }
 
     @javafx.fxml.FXML
-    public void supplierInvoiceButton(ActionEvent actionEvent) {
+    public void supplierInvoiceButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/SupplierInvoice.fxml");
     }
 
     @javafx.fxml.FXML
-    public void officeExpenseButton(ActionEvent actionEvent) {
+    public void officeExpenseButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/OfficeExpense.fxml");
+    }
+
+
+    @javafx.fxml.FXML
+    public void financialReportButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/FinancialReport.fxml");
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void financialReportButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void farmerSubsidyButton(ActionEvent actionEvent) {
+    public void farmerSubsidyButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/FarmerSubsidy.fxml");
     }
 }
