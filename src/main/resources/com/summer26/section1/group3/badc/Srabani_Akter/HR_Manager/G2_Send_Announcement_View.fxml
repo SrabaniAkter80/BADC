@@ -7,14 +7,104 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G2_Send_Announcement_ViewController">
-   <children>
-      <Text layoutX="47.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement Title" />
-      <TextField fx:id="announcementTitleTextField" layoutX="186.0" layoutY="68.0" />
-      <TextArea fx:id="announcementMessageTextArea" layoutX="186.0" layoutY="125.0" prefHeight="57.0" prefWidth="200.0" />
-      <Text layoutX="34.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement Message" />
-      <Button layoutX="208.0" layoutY="222.0" mnemonicParsing="false" onAction="#HandleSendAnnouncementButton" text="Send Announcement" />
-      <Button layoutX="214.0" layoutY="309.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" text="Back to Dashboard" />
-      <Label fx:id="ConfirmationMessageLabel" layoutX="365.0" layoutY="3.0" prefHeight="18.0" prefWidth="233.0" text="Label" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G2_Send_Announcement_ViewController">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="250.0"
+               layoutY="30.0"
+               prefWidth="400.0"
+               alignment="CENTER"
+               text="📢 Send Announcement"
+               style="-fx-font-size:28px;
+                    -fx-font-weight:bold;
+                    -fx-text-fill:#1E3A8A;"/>
+
+        <!-- Confirmation -->
+        <Label fx:id="ConfirmationMessageLabel"
+               layoutX="250.0"
+               layoutY="75.0"
+               prefWidth="400.0"
+               alignment="CENTER"
+               text=""
+               style="-fx-font-size:16px;
+                    -fx-font-weight:bold;
+                    -fx-text-fill:#16A34A;"/>
+
+        <!-- Announcement Title -->
+        <Text layoutX="180.0"
+              layoutY="150.0"
+              text="Announcement Title"
+              style="-fx-font-size:15px;
+                   -fx-font-weight:bold;
+                   -fx-fill:#374151;"/>
+
+        <TextField fx:id="announcementTitleTextField"
+                   layoutX="380.0"
+                   layoutY="125.0"
+                   prefHeight="40.0"
+                   prefWidth="300.0"
+                   promptText="Enter announcement title"
+                   style="-fx-background-radius:10;
+                        -fx-border-radius:10;
+                        -fx-border-color:#CBD5E1;
+                        -fx-font-size:14px;"/>
+
+        <!-- Announcement Message -->
+        <Text layoutX="180.0"
+              layoutY="240.0"
+              text="Announcement Message"
+              style="-fx-font-size:15px;
+                   -fx-font-weight:bold;
+                   -fx-fill:#374151;"/>
+
+        <TextArea fx:id="announcementMessageTextArea"
+                  layoutX="380.0"
+                  layoutY="200.0"
+                  prefHeight="130.0"
+                  prefWidth="300.0"
+                  promptText="Type your announcement..."
+                  style="-fx-background-radius:10;
+                       -fx-border-radius:10;
+                       -fx-border-color:#CBD5E1;
+                       -fx-font-size:14px;"/>
+
+        <!-- Send Button -->
+        <Button layoutX="380.0"
+                layoutY="360.0"
+                mnemonicParsing="false"
+                onAction="#HandleSendAnnouncementButton"
+                prefHeight="45.0"
+                prefWidth="300.0"
+                text="📤 Send Announcement"
+                style="-fx-background-color:#2563EB;
+                     -fx-text-fill:white;
+                     -fx-font-size:15px;
+                     -fx-font-weight:bold;
+                     -fx-background-radius:12;
+                     -fx-cursor:hand;
+                     -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);"/>
+
+        <!-- Back Button -->
+        <Button layoutX="380.0"
+                layoutY="440.0"
+                mnemonicParsing="false"
+                onAction="#HandleBackToDashboardButton"
+                prefHeight="45.0"
+                prefWidth="300.0"
+                text="← Back to Dashboard"
+                style="-fx-background-color:#374151;
+                     -fx-text-fill:white;
+                     -fx-font-size:15px;
+                     -fx-font-weight:bold;
+                     -fx-background-radius:12;
+                     -fx-cursor:hand;
+                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+
+    </children>
 </AnchorPane>

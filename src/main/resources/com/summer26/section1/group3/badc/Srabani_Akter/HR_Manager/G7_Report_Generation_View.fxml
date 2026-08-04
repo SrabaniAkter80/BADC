@@ -6,14 +6,100 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="413.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G7_Report_Generation_ViewController">
-   <children>
-      <Text layoutX="112.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Report Type " />
-      <Label fx:id="StaffActivityReportsLabel" layoutX="275.0" layoutY="60.0" text="Staff Activity Reports" />
-      <ComboBox fx:id="SelectReportTypeComboBox" layoutX="248.0" layoutY="106.0" prefWidth="150.0" />
-      <Button layoutX="275.0" layoutY="160.0" mnemonicParsing="false" onAction="#HandleLoadReportButton" prefHeight="0.0" prefWidth="82.0" text="Load Report" />
-      <Button layoutX="265.0" layoutY="233.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" text="Back to Dashboard" />
-      <Label fx:id="ConfirmationMessageLabel" layoutX="431.0" layoutY="25.0" text="Confirmation Message" />
-      <Button layoutX="60.0" layoutY="194.0" mnemonicParsing="false" text="Download Report" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G7_Report_Generation_ViewController">
+
+    <children>
+
+        <!-- Title -->
+        <Label fx:id="StaffActivityReportsLabel"
+               layoutX="250.0"
+               layoutY="30.0"
+               prefWidth="400.0"
+               alignment="CENTER"
+               text="📊 Staff Activity Reports"
+               style="-fx-font-size:28px;
+                    -fx-font-weight:bold;
+                    -fx-text-fill:#1E3A8A;"/>
+
+        <!-- Confirmation Message -->
+        <Label fx:id="ConfirmationMessageLabel"
+               layoutX="250.0"
+               layoutY="75.0"
+               prefWidth="400.0"
+               alignment="CENTER"
+               text=""
+               style="-fx-font-size:16px;
+                    -fx-font-weight:bold;
+                    -fx-text-fill:#16A34A;"/>
+
+        <!-- Report Type -->
+        <Text layoutX="180.0"
+              layoutY="155.0"
+              text="Select Report Type"
+              style="-fx-font-size:15px;
+                   -fx-font-weight:bold;
+                   -fx-fill:#374151;"/>
+
+        <ComboBox fx:id="SelectReportTypeComboBox"
+                  layoutX="400.0"
+                  layoutY="130.0"
+                  prefHeight="40.0"
+                  prefWidth="280.0"
+                  promptText="Choose Report Type"
+                  style="-fx-background-radius:10;
+                       -fx-font-size:14px;"/>
+
+        <!-- Load Report -->
+        <Button layoutX="400.0"
+                layoutY="210.0"
+                mnemonicParsing="false"
+                onAction="#HandleLoadReportButton"
+                prefHeight="45.0"
+                prefWidth="280.0"
+                text="📂 Load Report"
+                style="-fx-background-color:#2563EB;
+                     -fx-text-fill:white;
+                     -fx-font-size:15px;
+                     -fx-font-weight:bold;
+                     -fx-background-radius:12;
+                     -fx-cursor:hand;
+                     -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);"/>
+
+        <!-- Download -->
+        <Button layoutX="400.0"
+                layoutY="285.0"
+                mnemonicParsing="false"
+                prefHeight="45.0"
+                prefWidth="280.0"
+                text="⬇ Download Report"
+                style="-fx-background-color:#10B981;
+                     -fx-text-fill:white;
+                     -fx-font-size:15px;
+                     -fx-font-weight:bold;
+                     -fx-background-radius:12;
+                     -fx-cursor:hand;
+                     -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);"/>
+
+        <!-- Back -->
+        <Button layoutX="400.0"
+                layoutY="430.0"
+                mnemonicParsing="false"
+                onAction="#HandleBackToDashboardButton"
+                prefHeight="45.0"
+                prefWidth="280.0"
+                text="← Back to Dashboard"
+                style="-fx-background-color:#374151;
+                     -fx-text-fill:white;
+                     -fx-font-size:15px;
+                     -fx-font-weight:bold;
+                     -fx-background-radius:12;
+                     -fx-cursor:hand;
+                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+
+    </children>
+
 </AnchorPane>

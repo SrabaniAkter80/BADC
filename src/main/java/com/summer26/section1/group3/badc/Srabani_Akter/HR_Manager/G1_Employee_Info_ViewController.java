@@ -1,4 +1,9 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
+import java.io.IOException;
 
 public class G1_Employee_Info_ViewController
 {
@@ -22,7 +27,10 @@ public class G1_Employee_Info_ViewController
     }
 
     @javafx.fxml.FXML
-    public void HandleBackToDashBoardButton(ActionEvent actionEvent) {
+    public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo(
+
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
