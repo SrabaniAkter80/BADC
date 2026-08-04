@@ -1,7 +1,10 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class G8_MyProfileController
 {
@@ -23,7 +26,8 @@ public class G8_MyProfileController
     }
 
     @javafx.fxml.FXML
-    public void backbutton(ActionEvent actionEvent) {
+    public void backbutton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/SP_Dashboard.fxml");
 
     }
 
