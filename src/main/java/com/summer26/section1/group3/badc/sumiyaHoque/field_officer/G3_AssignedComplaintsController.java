@@ -1,5 +1,6 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,6 +8,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.io.IOException;
 
 public class G3_AssignedComplaintsController
 {
@@ -43,6 +46,7 @@ public class G3_AssignedComplaintsController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
     }
 }

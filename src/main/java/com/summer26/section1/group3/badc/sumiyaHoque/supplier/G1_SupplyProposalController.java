@@ -37,6 +37,8 @@ public class G1_SupplyProposalController
 
         @javafx.fxml.FXML
         public void BackButton (ActionEvent actionEvent)throws IOException {
+            SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/SP_Dashboard.fxml");
+
 
 
         }
