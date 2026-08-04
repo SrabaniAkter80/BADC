@@ -65,41 +65,39 @@ public class G4_VerifyFarmerApplicationsController
             alert.setContentText("Application approved successfully.");
             alert.showAndWait();
         }
-    }
+
 
     @javafx.fxml.FXML
     public void approveButton(ActionEvent actionEvent) {
 
+        FarmerApplication application =
+                applicationTableView.getSelectionModel().getSelectedItem();
 
-            FarmerApplication application =
-                    applicationTableView.getSelectionModel().getSelectedItem();
-
-            if (application == null) {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setHeaderText(null);
-                alert.setContentText("Please select an application.");
-                alert.showAndWait();
-                return;
-            }
-
-            application.setStatus("Approved");
-
-            applicationDetailsTextArea.setText(
-                    "Application ID : " + application.getApplicationId() + "\n" +
-                            "Farmer Name : " + application.getFarmerName() + "\n" +
-                            "Application Type : " + application.getApplicationType() + "\n" +
-                            "Status : Approved"
-            );
-
-            applicationTableView.refresh();
-
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        if (application == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setHeaderText(null);
-            alert.setContentText("Application approved successfully.");
+            alert.setContentText("Please select an application.");
             alert.showAndWait();
+            return;
         }
 
+        application.setStatus("Approved");
+
+        applicationDetailsTextArea.setText(
+                "Application ID : " + application.getApplicationId() + "\n" +
+                        "Farmer Name : " + application.getFarmerName() + "\n" +
+                        "Application Type : " + application.getApplicationType() + "\n" +
+                        "Status : Approved"
+        );
+
+        applicationTableView.refresh();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText("Application approved successfully.");
+        alert.showAndWait();
     }
+
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {

@@ -15,76 +15,59 @@ public class FieldOfficer_DashboardController
     public void initialize() {
     }
 
-    @Deprecated
-    public void farmerInspectionButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("'/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G2_InspectionReports.fxml");
-
-    }
-
-    @Deprecated
-    public void cropMonitoringButton(ActionEvent actionEvent)throws IOException {
-        SceneSwitcher.switchTo("/");
-
-    }
 
     @javafx.fxml.FXML
     public void myProfileButton(ActionEvent actionEvent)throws IOException  {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G8_MyProfile.fxml");
+
+    }
+
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent)throws IOException {
         SceneSwitcher.switchTo("");
-
-    }
-
-    @Deprecated
-    public void complaintResolutionButton(ActionEvent actionEvent)throws IOException  {
-        SceneSwitcher.switchTo("");
-
-
-    }
-
-    @Deprecated
-    public void distributionVerificationButton(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void submitInspectionReportButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) {
+    public void fieldVisitsButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G1_FieldVisits.fxml");
+    }
+
+
+
+    @javafx.fxml.FXML
+    public void editProfileOnAction(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G8_EditProfile.fxml");
     }
 
     @javafx.fxml.FXML
-    public void fieldVisitsButton(ActionEvent actionEvent) {
-    }
+    public void InspectionsreportsButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G2_InspectionReports.fxml");
 
-    @Deprecated
-    public void notificationsButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void editProfileOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void InspectionsreportsButton(ActionEvent actionEvent) {
+    public void VerifyFarmerApplicationsButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G4_VerifyFarmerApplications.fxml");
     }
 
     @javafx.fxml.FXML
-    public void VerifyFarmerApplicationsButton(ActionEvent actionEvent) {
+    public void FieldActivityReportsButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G7_FieldActivityReports.fxml");
     }
 
     @javafx.fxml.FXML
-    public void FieldActivityReportsButton(ActionEvent actionEvent) {
+    public void UploadFieldDocumentsbutton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G5_UploadFieldDocuments.fxml");
     }
 
     @javafx.fxml.FXML
-    public void UploadFieldDocumentsbutton(ActionEvent actionEvent) {
+    public void AssignedTaskstButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G6_AssignedTasks.fxml");
     }
 
     @javafx.fxml.FXML
-    public void AssignedTaskstButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void AssignedComplaintsButton(ActionEvent actionEvent) {
+    public void AssignedComplaintsButton(ActionEvent actionEvent)throws IOException {
+       SceneSwitcher.switchTo("com/summer26/section1/group3/badc/sumiyaHoque/field_officer/G3_AssignedComplaints.fxml");
     }
 }

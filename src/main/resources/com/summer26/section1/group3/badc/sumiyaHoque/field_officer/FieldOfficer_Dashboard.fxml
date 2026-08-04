@@ -20,7 +20,7 @@
       <Button layoutX="309.0" layoutY="200.0" mnemonicParsing="false" onAction="#VerifyFarmerApplicationsButton" text="Verify Farmer Applications" />
       <Button layoutX="487.0" layoutY="200.0" mnemonicParsing="false" onAction="#myProfileButton" text=" My Profile " />
       <Button layoutX="3.0" layoutY="200.0" mnemonicParsing="false" onAction="#AssignedComplaintsButton" text=" AssignedComplaints" />
-      <Button layoutX="242.0" layoutY="354.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout " />
+      <Button layoutX="242.0" layoutY="354.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
       <Button layoutX="595.0" layoutY="200.0" mnemonicParsing="false" onAction="#editProfileOnAction" text="Edit Profile" />
    </children>
 </AnchorPane>
