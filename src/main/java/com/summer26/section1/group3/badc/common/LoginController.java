@@ -22,6 +22,7 @@ public class LoginController
 
     @javafx.fxml.FXML
     public void initialize() {
+        UserManager.loadFromFile();
         rolelogin.getItems().addAll("HR Manager", "Procurement Officer", "Account Officer", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
     }
 
@@ -54,7 +55,7 @@ public class LoginController
                         SceneSwitcher.switchTo("adminDashboard.fxml");
                         break;
                     case "HR Manager":
-                        SceneSwitcher.switchTo("G0_HR Manager_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
                         break;
                     case "Procurement Officer":
                         System.out.println("Opening Procurement Dashboard...");
@@ -81,7 +82,7 @@ public class LoginController
                         SceneSwitcher.switchTo("dealerDashboard.fxml");
                         break;
                     case "Farmer":
-                        SceneSwitcher.switchTo("G0_Farmer_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
                         break;
                     default:
                         label.setText("No dashboard found.");
