@@ -55,7 +55,7 @@ public class LoginController
                         SceneSwitcher.switchTo("adminDashboard.fxml");
                         break;
                     case "HR Manager":
-                        SceneSwitcher.switchTo("G0_HR Manager_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
                         break;
                     case "Procurement Officer":
                         System.out.println("Opening Procurement Dashboard...");
