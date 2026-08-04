@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="452.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.SupplierInvoiceController">
    <children>
       <Label layoutX="174.0" layoutY="29.0" text="Supplier Invoice" />
