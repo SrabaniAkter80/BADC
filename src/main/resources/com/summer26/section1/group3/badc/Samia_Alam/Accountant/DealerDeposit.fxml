@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="312.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.DealerDepositController">
+    <children>
+        <Label layoutX="136.0" layoutY="26.0" text="Dealer Deposit" />
+        <TableView fx:id="dealerDepositTableView" layoutX="35.0" layoutY="56.0" prefHeight="142.0" prefWidth="298.0">
+            <columns>
+                <TableColumn fx:id="depositIdTableCol" prefWidth="75.0" text="Deposit ID" />
+                <TableColumn fx:id="dealerIdTableCol" prefWidth="75.0" text=" Dealer ID" />
+                <TableColumn fx:id="challanTableCol" prefWidth="75.0" text="Challan" />
+                <TableColumn fx:id="amountTableCol" prefWidth="75.0" text="Amount" />
+            </columns>
+        </TableView>
+        <Button layoutX="65.0" layoutY="235.0" mnemonicParsing="false" onAction="#approvedButton" text="Approve Deposit" />
+        <Button layoutX="233.0" layoutY="235.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+    </children>
+</AnchorPane>
