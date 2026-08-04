@@ -82,7 +82,7 @@ public class LoginController
                         SceneSwitcher.switchTo("dealerDashboard.fxml");
                         break;
                     case "Farmer":
-                        SceneSwitcher.switchTo("G0_Farmer_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
                         break;
                     default:
                         label.setText("No dashboard found.");
