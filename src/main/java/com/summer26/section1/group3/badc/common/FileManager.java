@@ -15,7 +15,6 @@ public class FileManager {
         }
     }
 
-    @SuppressWarnings("unchecked")
     public static <T> ArrayList<T> loadFromFile(String fileName) {
         ArrayList<T> list = new ArrayList<>();
         try {

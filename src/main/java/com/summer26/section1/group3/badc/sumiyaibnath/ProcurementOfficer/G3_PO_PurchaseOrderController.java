@@ -1,8 +1,12 @@
 package com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class G3_PO_PurchaseOrderController
@@ -41,25 +45,82 @@ public class G3_PO_PurchaseOrderController
     private TableColumn<PurchaseOrder, Integer> colquantity;
 
     @javafx.fxml.FXML
-    public void Initialize(){
-        orderstatus.getItems().addAll(
-                "Pending",
-                "Approved",
-                "Cancelled"
-        );
+    public void initialize() {
+        orderstatus.getItems().addAll("Order placed", "Processing", "Shipped");
 
-        tableview.getItems().setAll(PurchaseOrderManager.getOrderList());
+        colorderid.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        colsupplierid.setCellValueFactory(new PropertyValueFactory<>("supplierId"));
+        colproduct.setCellValueFactory(new PropertyValueFactory<>("product"));
+        colquantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        colunitprice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        colorderdate.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
+        colorderstatus.setCellValueFactory(new PropertyValueFactory<>("orderStatus"));
+
+        tableview.setItems(FXCollections.observableArrayList(PurchaseOrderManager.getOrderList()));
+
     }
 
     @javafx.fxml.FXML
     public void cancel(ActionEvent actionEvent) {
+        PurchaseOrder selectedOrder = tableview.getSelectionModel().getSelectedItem();
+        if (selectedOrder == null) {
+            label.setText("Please select an order.");
+            return;
+        }
+        PurchaseOrderManager.cancelOrder(selectedOrder);
+        tableview.setItems(FXCollections.observableArrayList(PurchaseOrderManager.getOrderList()));
+        label.setText("Purchase order cancelled successfully.");
     }
 
     @javafx.fxml.FXML
     public void approve(ActionEvent actionEvent) {
+        if (orderid.getText().isEmpty() ||
+                supplierid.getText().isEmpty() ||
+                product.getText().isEmpty() ||
+                quantity.getText().isEmpty() ||
+                unitprice.getText().isEmpty() ||
+                orderdate.getValue() == null ||
+                orderstatus.getValue() == null) {
+            label.setText("Please fill up all fields.");
+            return;
+        }
+        try {
+            PurchaseOrder order = new PurchaseOrder(
+                    orderid.getText(),
+                    supplierid.getText(),
+                    product.getText(),
+                    quantity.getText(),
+                    unitprice.getText(),
+                    orderdate.getValue(),
+                    orderstatus.getValue().toString()
+            );
+            PurchaseOrderManager.approveOrder(order);
+
+            Inventory inventory = new Inventory(
+                    product.getText(),
+                    quantity.getText(),
+                    "In Stock",
+                    "Medium"
+            );
+            InventoryManager.addOrUpdateInventory(inventory);
+
+            tableview.setItems(FXCollections.observableArrayList(PurchaseOrderManager.getOrderList()));
+            orderid.clear();
+            supplierid.clear();
+            product.clear();
+            quantity.clear();
+            unitprice.clear();
+            orderdate.setValue(null);
+            orderstatus.setValue(null);
+            label.setText("Purchase order approved successfully.");
+        } catch (Exception e) {
+            label.setText("Could not approve purchase order.");
+        }
+
     }
 
     @javafx.fxml.FXML
-    public void back(ActionEvent actionEvent) {
+    public void back(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/ProcurementOfficer/G0_PO_Dashboard.fxml");
     }
 }

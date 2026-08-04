@@ -1,6 +1,7 @@
 package com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -55,6 +56,8 @@ public class G1_PO_SupplierManagementController
         colproduct.setCellValueFactory(new PropertyValueFactory<>("productName"));
         colstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         colrating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+
+        tableview.setItems(FXCollections.observableArrayList(SupplierManager.getSupplierList()));
 
     }
 

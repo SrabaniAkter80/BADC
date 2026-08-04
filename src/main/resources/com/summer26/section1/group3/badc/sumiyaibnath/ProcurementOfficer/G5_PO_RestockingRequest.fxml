@@ -9,28 +9,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="480.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G5_PO_RestockingRequestController">
+<AnchorPane prefHeight="515.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer.G5_PO_RestockingRequestController">
    <children>
-      <Label layoutX="71.0" layoutY="27.0" prefHeight="43.0" prefWidth="212.0" text="Restocking Request">
+      <Label layoutX="153.0" layoutY="20.0" prefHeight="43.0" prefWidth="212.0" text="Restocking Request">
          <font>
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="productid" layoutX="29.0" layoutY="84.0" promptText="ProductID" />
-      <TextField fx:id="quantity" layoutX="29.0" layoutY="119.0" promptText=" Required Quantity" />
-      <TextField fx:id="productname" layoutX="189.0" layoutY="84.0" promptText="Product Name" />
-      <ComboBox fx:id="prority" layoutX="189.0" layoutY="119.0" prefWidth="150.0" promptText="Priority" />
-      <Button layoutX="29.0" layoutY="157.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="120.0" text="Confirm Restock" />
-      <TableView fx:id="tableview" layoutX="32.0" layoutY="196.0" prefHeight="200.0" prefWidth="314.0">
+      <TextField fx:id="quantity" layoutX="194.0" layoutY="118.0" promptText=" Required Quantity" />
+      <TextField fx:id="productname" layoutX="29.0" layoutY="81.0" promptText="Product Name" />
+      <ComboBox fx:id="demand" layoutX="357.0" layoutY="118.0" prefWidth="150.0" promptText="Demand" />
+      <Button layoutX="194.0" layoutY="152.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="120.0" text="Confirm Restock" />
+      <Label fx:id="label" layoutX="118.0" layoutY="417.0" prefHeight="37.0" prefWidth="293.0" />
+      <Button layoutX="224.0" layoutY="467.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" text="Back" />
+      <ComboBox fx:id="restockstatus" layoutX="29.0" layoutY="152.0" prefWidth="150.0" promptText="Restock Status" />
+      <TextField fx:id="stockstatus" layoutX="29.0" layoutY="118.0" promptText="Stock Status" />
+      <TableView fx:id="tableview" layoutX="30.0" layoutY="199.0" prefHeight="200.0" prefWidth="460.0">
         <columns>
-          <TableColumn fx:id="colproductid" prefWidth="75.0" text="ProductID" />
-          <TableColumn fx:id="colproductname" prefWidth="91.0" text="Product Name" />
-            <TableColumn fx:id="colquantity" prefWidth="68.0" text="Quantity" />
-            <TableColumn fx:id="colpriority" text="Priority" />
+          <TableColumn fx:id="colproductname" prefWidth="95.0" text="Product Name" />
+          <TableColumn fx:id="colstockstatus" prefWidth="99.0" text="Stock Status" />
+            <TableColumn fx:id="colquantity" prefWidth="76.0" text="Quantity" />
+            <TableColumn fx:id="coldemand" prefWidth="85.0" text="Demand" />
+            <TableColumn fx:id="colrestockstatus" prefWidth="104.0" text="Restock Status" />
         </columns>
       </TableView>
-      <Label fx:id="label" layoutX="46.0" layoutY="410.0" prefHeight="37.0" prefWidth="293.0" />
-      <Button layoutX="147.0" layoutY="447.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" text="Back" />
+      <Button layoutX="334.0" layoutY="152.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="104.0" text="Delete Request" />
+      <Button layoutX="194.0" layoutY="81.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="70.0" text="Search" />
+      <Button layoutX="279.0" layoutY="81.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="70.0" text="Refresh" />
    </children>
 </AnchorPane>
