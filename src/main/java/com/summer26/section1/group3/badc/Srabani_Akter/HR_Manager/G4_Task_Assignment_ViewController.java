@@ -1,13 +1,14 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
-import com.summer26.section1.group3.badc.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class G4_Task_Assignment_ViewController {
@@ -30,12 +31,11 @@ public class G4_Task_Assignment_ViewController {
     }
 
     @javafx.fxml.FXML
-    public void HandleBackToDashBoardButton(ActionEvent actionEvent) {
+    public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
 
-        SceneSwitcher.switchScene(
-                actionEvent,
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml",
-                "HR Manager Dashboard");
+        SceneSwitcher.switchTo(
+
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
 
     }
 

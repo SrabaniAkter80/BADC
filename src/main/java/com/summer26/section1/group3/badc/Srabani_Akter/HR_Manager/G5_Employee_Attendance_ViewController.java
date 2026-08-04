@@ -1,14 +1,14 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
-import com.summer26.section1.group3.badc.utils.SceneSwitcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class G5_Employee_Attendance_ViewController {
@@ -92,12 +92,10 @@ public class G5_Employee_Attendance_ViewController {
     }
 
     @javafx.fxml.FXML
-    public void HandleBacktoDashboardButton(ActionEvent actionEvent) {
+    public void HandleBacktoDashboardButton(ActionEvent actionEvent)throws IOException {
 
-        SceneSwitcher.switchScene(
-                actionEvent,
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml",
-                "HR Manager Dashboard");
+        SceneSwitcher.switchTo(
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
 
     }
 }
