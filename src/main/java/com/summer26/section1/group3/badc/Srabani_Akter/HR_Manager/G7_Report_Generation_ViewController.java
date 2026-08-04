@@ -1,8 +1,10 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
-import com.summer26.section1.group3.badc.utils.SceneSwitcher;
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+
+import java.io.IOException;
 
 public class G7_Report_Generation_ViewController
 {
@@ -22,10 +24,9 @@ public class G7_Report_Generation_ViewController
     }
 
     @javafx.fxml.FXML
-    public void HandleBackToDashboardButton(ActionEvent actionEvent) {
-        SceneSwitcher.switchScene(
-                actionEvent,
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml",
-                "HR Manager Dashboard");
+    public void HandleBackToDashboardButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo(
+
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 }

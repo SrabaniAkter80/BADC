@@ -1,14 +1,9 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
-import com.summer26.section1.group3.badc.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -60,10 +55,9 @@ public class G3_Maintenance_Request_ViewController {
     }
 
     @javafx.fxml.FXML
-    public void HandleBacktoDashBoardButton(ActionEvent actionEvent) {
-        SceneSwitcher.switchScene(
-                actionEvent,
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml",
-                "HR Manager Dashboard");
+    public void HandleBacktoDashBoardButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo(
+
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 }
