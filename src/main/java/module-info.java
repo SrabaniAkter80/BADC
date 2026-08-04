@@ -1,6 +1,7 @@
 module com.summer26.section1.group3.badc {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.summer26.section1.group3.badc;
 
 
     exports com.summer26.section1.group3.badc.common;

@@ -1,13 +1,15 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
+import com.summer26.section1.group3.badc.common.HelloApplication;
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -41,12 +43,38 @@ public class G3_AssignedComplaintsController
 
     }
 
-    @javafx.fxml.FXML
-    public void resolveComplaintButton(ActionEvent actionEvent) {
+
+        @javafx.fxml.FXML
+        public void resolveComplaintButton(ActionEvent actionEvent) {
+
+            Complaint complaint = complaintTableView.getSelectionModel().getSelectedItem();
+
+            if (complaint == null) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setHeaderText(null);
+                alert.setContentText("Please select a complaint first.");
+                alert.showAndWait();
+                return;
+            }
+
+            complaintDetailsTextArea.setText(
+                    "Complaint ID : " + complaint.getComplaintId() + "\n" +
+                            "Farmer Name : " + complaint.getFarmerName() + "\n" +
+                            "Complaint Type : " + complaint.getComplaintType() + "\n" +
+                            "Status : Resolved"
+            );
+
+            complaint.setStatus("Resolved");
+            complaintTableView.refresh();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Complaint resolved successfully.");
+            alert.showAndWait();
+        }
     }
 
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent)throws IOException {
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
-    }
-}
+
+
+
+

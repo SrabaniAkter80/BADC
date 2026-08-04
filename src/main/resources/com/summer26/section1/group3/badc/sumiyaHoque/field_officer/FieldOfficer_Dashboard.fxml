@@ -13,13 +13,13 @@
          </font>
       </Label>
       <Button layoutX="34.0" layoutY="121.0" mnemonicParsing="false" onAction="#fieldVisitsButton" text="Field Visits " />
-      <Button layoutX="444.0" layoutY="121.0" mnemonicParsing="false" onAction="#submitInspectionReportButton" text="Submit Inspection Report" />
-      <Button layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#cropMonitoringButton" text=" Crop Monitoring " />
-      <Button layoutX="149.0" layoutY="121.0" mnemonicParsing="false" onAction="#farmerInspectionButton" text="Farmer Inspection" />
-      <Button layoutX="155.0" layoutY="200.0" mnemonicParsing="false" onAction="#distributionVerificationButton" text=" Distribution Verification" />
-      <Button layoutX="339.0" layoutY="200.0" mnemonicParsing="false" onAction="#notificationsButton" text=" Notifications " />
-      <Button layoutX="465.0" layoutY="200.0" mnemonicParsing="false" onAction="#myProfileButton" text=" My Profile " />
-      <Button layoutX="3.0" layoutY="200.0" mnemonicParsing="false" onAction="#complaintResolutionButton" text=" Complaint Resolution " />
+      <Button layoutX="503.0" layoutY="121.0" mnemonicParsing="false" onAction="#AssignedTaskstButton" text="Assigned Tasks" />
+      <Button layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#UploadFieldDocumentsbutton" text="Upload Field Documents" />
+      <Button layoutX="149.0" layoutY="121.0" mnemonicParsing="false" onAction="#InspectionsreportsButton" text="Inspection reports" />
+      <Button layoutX="149.0" layoutY="200.0" mnemonicParsing="false" onAction="#FieldActivityReportsButton" text="Field Activity Reports" />
+      <Button layoutX="309.0" layoutY="200.0" mnemonicParsing="false" onAction="#VerifyFarmerApplicationsButton" text="Verify Farmer Applications" />
+      <Button layoutX="487.0" layoutY="200.0" mnemonicParsing="false" onAction="#myProfileButton" text=" My Profile " />
+      <Button layoutX="3.0" layoutY="200.0" mnemonicParsing="false" onAction="#AssignedComplaintsButton" text=" AssignedComplaints" />
       <Button layoutX="242.0" layoutY="354.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout " />
       <Button layoutX="595.0" layoutY="200.0" mnemonicParsing="false" onAction="#editProfileOnAction" text="Edit Profile" />
    </children>

@@ -2,6 +2,7 @@ package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -35,10 +36,69 @@ public class G4_VerifyFarmerApplicationsController
 
     @javafx.fxml.FXML
     public void rejectButton(ActionEvent actionEvent) {
+
+
+            FarmerApplication application =
+                    applicationTableView.getSelectionModel().getSelectedItem();
+
+            if (application == null) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setHeaderText(null);
+                alert.setContentText("Please select an application.");
+                alert.showAndWait();
+                return;
+            }
+
+            application.setStatus("Approved");
+
+            applicationDetailsTextArea.setText(
+                    "Application ID : " + application.getApplicationId() + "\n" +
+                            "Farmer Name : " + application.getFarmerName() + "\n" +
+                            "Application Type : " + application.getApplicationType() + "\n" +
+                            "Status : Approved"
+            );
+
+            applicationTableView.refresh();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Application approved successfully.");
+            alert.showAndWait();
+        }
     }
 
     @javafx.fxml.FXML
     public void approveButton(ActionEvent actionEvent) {
+
+
+            FarmerApplication application =
+                    applicationTableView.getSelectionModel().getSelectedItem();
+
+            if (application == null) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setHeaderText(null);
+                alert.setContentText("Please select an application.");
+                alert.showAndWait();
+                return;
+            }
+
+            application.setStatus("Approved");
+
+            applicationDetailsTextArea.setText(
+                    "Application ID : " + application.getApplicationId() + "\n" +
+                            "Farmer Name : " + application.getFarmerName() + "\n" +
+                            "Application Type : " + application.getApplicationType() + "\n" +
+                            "Status : Approved"
+            );
+
+            applicationTableView.refresh();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Application approved successfully.");
+            alert.showAndWait();
+        }
+
     }
 
     @javafx.fxml.FXML

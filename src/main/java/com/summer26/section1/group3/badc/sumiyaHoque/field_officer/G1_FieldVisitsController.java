@@ -1,14 +1,15 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
+import com.summer26.section1.group3.badc.common.HelloApplication;
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -51,12 +52,54 @@ public class G1_FieldVisitsController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent)throws IOException {
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
+    public void backButton(ActionEvent actionEvent) throws IOException {
 
+        FXMLLoader fxmlLoader = new FXMLLoader(
+                HelloApplication.class.getResource(
+                        "/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Button button = (Button) actionEvent.getSource();
+        Stage stage = (Stage) button.getScene().getWindow();
+
+        stage.setScene(scene);
+        stage.show();
     }
-
     @javafx.fxml.FXML
     public void submitVisitReportButton(ActionEvent actionEvent) {
+
+        FieldVisit selectedVisit = assignedAreasTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedVisit == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select an assigned area first.");
+            alert.showAndWait();
+            return;
+        }
+
+        if (visitNotesTextArea.getText().trim().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+            alert.setContentText("Please enter visit notes.");
+            alert.showAndWait();
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText(null);
+        alert.setContentText("Visit report submitted successfully.");
+        alert.showAndWait();
+
+        visitNotesTextArea.clear();
     }
 }
+
+
+
+
+
