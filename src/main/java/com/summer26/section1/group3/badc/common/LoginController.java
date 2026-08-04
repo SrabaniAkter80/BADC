@@ -22,6 +22,7 @@ public class LoginController
 
     @javafx.fxml.FXML
     public void initialize() {
+        UserManager.loadFromFile();
         rolelogin.getItems().addAll("HR Manager", "Procurement Officer", "Account Officer", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
     }
 

@@ -3,6 +3,8 @@ package com.summer26.section1.group3.badc.sumiyaibnath.ProcurementOfficer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
+
 public class G3_PO_PurchaseOrderController
 {
     @javafx.fxml.FXML
@@ -12,13 +14,13 @@ public class G3_PO_PurchaseOrderController
     @javafx.fxml.FXML
     private TextField quantity;
     @javafx.fxml.FXML
-    private ComboBox orderstatus;
+    private ComboBox<String> orderstatus;
     @javafx.fxml.FXML
     private TextField orderid;
     @javafx.fxml.FXML
-    private TableColumn colunitprice;
+    private TableColumn<PurchaseOrder, String> colunitprice;
     @javafx.fxml.FXML
-    private TableColumn colorderstatus;
+    private TableColumn<PurchaseOrder, String> colorderstatus;
     @javafx.fxml.FXML
     private Label label;
     @javafx.fxml.FXML
@@ -26,20 +28,27 @@ public class G3_PO_PurchaseOrderController
     @javafx.fxml.FXML
     private TextField unitprice;
     @javafx.fxml.FXML
-    private TableColumn colproduct;
+    private TableColumn<PurchaseOrder, String> colproduct;
     @javafx.fxml.FXML
-    private TableColumn colorderdate;
+    private TableColumn<PurchaseOrder, LocalDate> colorderdate;
     @javafx.fxml.FXML
-    private TableColumn colsupplierid;
+    private TableColumn<PurchaseOrder, String> colsupplierid;
     @javafx.fxml.FXML
-    private TableColumn colorderid;
+    private TableColumn<PurchaseOrder, String> colorderid;
     @javafx.fxml.FXML
-    private TableView tableview;
+    private TableView<PurchaseOrder> tableview;
     @javafx.fxml.FXML
-    private TableColumn colquantity;
+    private TableColumn<PurchaseOrder, Integer> colquantity;
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void Initialize(){
+        orderstatus.getItems().addAll(
+                "Pending",
+                "Approved",
+                "Cancelled"
+        );
+
+        tableview.getItems().setAll(PurchaseOrderManager.getOrderList());
     }
 
     @javafx.fxml.FXML

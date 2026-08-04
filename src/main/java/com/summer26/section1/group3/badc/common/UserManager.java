@@ -31,7 +31,7 @@ public class UserManager {
         }
     }
 
-    private static void loadFromFile() {
+    public static void loadFromFile() {
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream(FileName));
             List<User> users = (List<User>) in.readObject();
