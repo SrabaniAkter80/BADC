@@ -9,15 +9,8 @@ public class Supplier implements Serializable {
     String productName;
     String status;
     String rating;
-
-    public Supplier(String supplierId, String supplierName, String companyName, String productName, String status, String rating) {
-        this.supplierId = supplierId;
-        this.supplierName = supplierName;
-        this.companyName = companyName;
-        this.productName = productName;
-        this.status = status;
-        this.rating = rating;
-    }
+    String quality;
+    Double unitPrice;
 
     public String getSupplierId() {
         return supplierId;
@@ -67,6 +60,22 @@ public class Supplier implements Serializable {
         this.rating = rating;
     }
 
+    public String getQuality() {
+        return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
+
+    public Double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(Double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
     @Override
     public String toString() {
         return "Supplier{" +
@@ -76,7 +85,20 @@ public class Supplier implements Serializable {
                 ", productName='" + productName + '\'' +
                 ", status='" + status + '\'' +
                 ", rating='" + rating + '\'' +
+                ", quality='" + quality + '\'' +
+                ", unitPrice=" + unitPrice +
                 '}';
+    }
+
+    public Supplier(String supplierId, String supplierName, String companyName, String productName, String status, String rating, String quality, Double unitPrice) {
+        this.supplierId = supplierId;
+        this.supplierName = supplierName;
+        this.companyName = companyName;
+        this.productName = productName;
+        this.status = status;
+        this.rating = rating;
+        this.quality = quality;
+        this.unitPrice = unitPrice;
     }
 }
 
