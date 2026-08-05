@@ -2,6 +2,7 @@ package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
@@ -25,7 +26,20 @@ public class G5_SupplyReportsController
 }
 
     @javafx.fxml.FXML
-    public void downloadReportButton(ActionEvent actionEvent) {
+    public void downloadReportButton(ActionEvent actionEvent)throws IOException {
+        if (reportSummaryTextArea.getText().trim().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a report type first.");
+            alert.showAndWait();
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText("Report downloaded successfully.");
+        alert.showAndWait();
     }
 
     @javafx.fxml.FXML
@@ -35,5 +49,6 @@ public class G5_SupplyReportsController
 
     @javafx.fxml.FXML
     public void reportTypeComboBox(ActionEvent actionEvent) {
+
     }
 }

@@ -92,7 +92,7 @@ public class G3_PO_PurchaseOrderController
                     quantity.getText(),
                     unitprice.getText(),
                     orderdate.getValue(),
-                    orderstatus.getValue().toString()
+                    orderstatus.getValue()
             );
             PurchaseOrderManager.approveOrder(order);
 

@@ -39,6 +39,7 @@ public class SP_DashboardController
 
     @javafx.fxml.FXML
     public void LogOut(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("");
 
 
     }
