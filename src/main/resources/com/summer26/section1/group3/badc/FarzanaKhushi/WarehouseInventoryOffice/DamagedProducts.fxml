@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="495.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice.DamagedProductsController">
+   <children>
+      <Label layoutX="203.0" layoutY="37.0" text="Damaged Products" />
+      <Label fx:id="productIdTextField" layoutX="77.0" layoutY="85.0" text="Product Id:" />
+      <Label fx:id="damageReasonTextField" layoutX="77.0" layoutY="122.0" text="Damage Reason:" />
+      <TextField layoutX="189.0" layoutY="81.0" />
+      <TextField layoutX="189.0" layoutY="118.0" />
+      <Button layoutX="233.0" layoutY="177.0" mnemonicParsing="false" onAction="#saveButton" text="Save" />
+      <TableView fx:id="damagedTableView" layoutX="62.0" layoutY="226.0" prefHeight="200.0" prefWidth="395.0">
+        <columns>
+          <TableColumn fx:id="productIdColumn" prefWidth="111.33328247070312" text="Product ID" />
+          <TableColumn fx:id="productNameColumn" minWidth="0.0" prefWidth="140.6666259765625" text=" Product Name " />
+            <TableColumn fx:id="damageReasonColumn" minWidth="0.0" prefWidth="140.6666259765625" text="Damage Reason" />
+        </columns>
+      </TableView>
+      <Button layoutX="238.0" layoutY="439.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>
