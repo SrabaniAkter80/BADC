@@ -75,6 +75,10 @@ public class PurchaseOrder implements Serializable {
         return orderStatus;
     }
 
+    public double getTotalAmount() {
+        return Double.parseDouble(quantity) * Double.parseDouble(unitPrice);
+    }
+
     @Override
     public String toString() {
         return "PurchaseOrder{" +
