@@ -1,10 +1,7 @@
 module com.summer26.section1.group3.badc {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.graphics;
-    requires javafx.base;
-
-
+    requires com.summer26.section1.group3.badc;
 
 
     exports com.summer26.section1.group3.badc.common;
@@ -15,9 +12,6 @@ module com.summer26.section1.group3.badc {
     exports com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager;
     opens com.summer26.section1.group3.badc.Srabani_Akter.Farmer to javafx.fxml;
     opens com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager to javafx.fxml;
-    opens com.summer26.section1.group3.badc.sumiyaHoque.supplier to javafx.fxml;
-    exports com.summer26.section1.group3.badc.sumiyaHoque.supplier;
     opens com.summer26.section1.group3.badc.sumiyaHoque.field_officer to javafx.fxml;
-    exports com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
-
+    opens com.summer26.section1.group3.badc.sumiyaHoque.supplier to javafx.fxml;
 }

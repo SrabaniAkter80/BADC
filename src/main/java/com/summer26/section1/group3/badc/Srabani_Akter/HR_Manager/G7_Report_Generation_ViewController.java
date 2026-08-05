@@ -9,7 +9,7 @@ import java.io.IOException;
 public class G7_Report_Generation_ViewController
 {
     @javafx.fxml.FXML
-    private ComboBox SelectReportTypeComboBox;
+    private ComboBox<String> SelectReportTypeComboBox;
     @javafx.fxml.FXML
     private Label StaffActivityReportsLabel;
     @javafx.fxml.FXML

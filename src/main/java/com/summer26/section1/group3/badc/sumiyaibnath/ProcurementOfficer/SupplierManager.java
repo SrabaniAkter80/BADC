@@ -31,4 +31,18 @@ public class SupplierManager {
     public static void updateSupplier() {
         FileManager.saveToFile(supplierList, FILE_NAME);
     }
+
+    public static ArrayList<Supplier> getSuppliersByProduct(String product) {
+
+        ArrayList<Supplier> result = new ArrayList<>();
+
+        for (Supplier supplier : supplierList) {
+
+            if (supplier.getProductName().equalsIgnoreCase(product)) {
+                result.add(supplier);
+            }
+        }
+
+        return result;
+    }
 }

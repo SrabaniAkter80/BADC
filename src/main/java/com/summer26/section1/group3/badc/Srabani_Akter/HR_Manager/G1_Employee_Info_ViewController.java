@@ -10,15 +10,15 @@ public class G1_Employee_Info_ViewController
     @javafx.fxml.FXML
     private TextField FilterEmployeeIDTextField;
     @javafx.fxml.FXML
-    private TableView Employee_Information_TableView;
+    private TableView<EmployeeInfo> Employee_Information_TableView;
     @javafx.fxml.FXML
-    private TableColumn NameColumn;
+    private TableColumn<EmployeeInfo,String> NameColumn;
     @javafx.fxml.FXML
-    private TableColumn ContactInformationColumn;
+    private TableColumn <EmployeeInfo,String>ContactInformationColumn;
     @javafx.fxml.FXML
-    private TableColumn DesignationColumn;
+    private TableColumn<EmployeeInfo,String> DesignationColumn;
     @javafx.fxml.FXML
-    private TableColumn EmployeeIDColumn;
+    private TableColumn<EmployeeInfo,Integer> EmployeeIDColumn;
     @javafx.fxml.FXML
     private Label EmployeeDirectoryLabel;
 
