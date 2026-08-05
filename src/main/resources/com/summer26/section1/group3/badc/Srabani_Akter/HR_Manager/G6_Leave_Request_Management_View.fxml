@@ -8,135 +8,44 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G6_Leave_Request_Management_ViewController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G6_Leave_Request_Management_ViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="LeaveRequestLabel"
-               layoutX="250.0"
-               layoutY="30.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="📄 Leave Requests"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label fx:id="LeaveRequestLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="📄 Leave Requests" />
 
         <!-- Filter -->
-        <Text layoutX="150.0"
-              layoutY="120.0"
-              text="Filter by Status"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="150.0" layoutY="120.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Filter by Status" />
 
-        <ComboBox fx:id="FilterbyLeaveStatusComboBox"
-                  layoutX="280.0"
-                  layoutY="95.0"
-                  prefHeight="40.0"
-                  prefWidth="220.0"
-                  promptText="Select Status"
-                  style="-fx-background-radius:10;
-                       -fx-font-size:14px;"/>
+        <ComboBox fx:id="FilterbyLeaveStatusComboBox" layoutX="280.0" layoutY="95.0" prefHeight="40.0" prefWidth="220.0" promptText="Select Status" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
 
-        <Button layoutX="530.0"
-                layoutY="95.0"
-                mnemonicParsing="false"
-                prefHeight="40.0"
-                prefWidth="170.0"
-                text="🔍 Search Filter"
-                style="-fx-background-color:#2563EB;
-                     -fx-text-fill:white;
-                     -fx-font-size:14px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:10;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);"/>
+        <Button layoutX="530.0" layoutY="95.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="🔍 Search Filter" />
 
         <!-- Table -->
-        <TableView fx:id="Leave_Request_Management_TableView"
-                   layoutX="90.0"
-                   layoutY="170.0"
-                   prefHeight="260.0"
-                   prefWidth="720.0"
-                   style="-fx-background-radius:12;
-                        -fx-border-radius:12;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;">
+        <TableView fx:id="Leave_Request_Management_TableView" layoutX="90.0" layoutY="170.0" prefHeight="260.0" prefWidth="720.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
 
             <columns>
 
-                <TableColumn fx:id="ApplicationIDColumn"
-                             prefWidth="170.0"
-                             text="Application ID"/>
+                <TableColumn fx:id="ApplicationIDColumn" prefWidth="170.0" text="Application ID" />
 
-                <TableColumn fx:id="EmployeeIDColumn"
-                             prefWidth="170.0"
-                             text="Employee ID"/>
+                <TableColumn fx:id="EmployeeIDColumn" prefWidth="170.0" text="Employee ID" />
 
-                <TableColumn fx:id="LeaveTypeColumn"
-                             prefWidth="180.0"
-                             text="Leave Type"/>
+                <TableColumn fx:id="LeaveTypeColumn" prefWidth="180.0" text="Leave Type" />
 
-                <TableColumn fx:id="ApplicationStatusColumn"
-                             prefWidth="200.0"
-                             text="Application Status"/>
+                <TableColumn fx:id="ApplicationStatusColumn" prefWidth="200.0" text="Application Status" />
 
             </columns>
 
         </TableView>
 
         <!-- Action Buttons -->
-        <Button layoutX="200.0"
-                layoutY="470.0"
-                mnemonicParsing="false"
-                onAction="#HandleApproveButton"
-                prefHeight="45.0"
-                prefWidth="180.0"
-                text="✔ Approve Leave"
-                style="-fx-background-color:#10B981;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);"/>
+        <Button layoutX="200.0" layoutY="470.0" mnemonicParsing="false" onAction="#HandleApproveButton" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);" text="✔ Approve Leave" />
 
-        <Button layoutX="420.0"
-                layoutY="470.0"
-                mnemonicParsing="false"
-                onAction="#HandleRejectLeaveButton"
-                prefHeight="45.0"
-                prefWidth="180.0"
-                text="✖ Reject Leave"
-                style="-fx-background-color:#EF4444;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(239,68,68,0.35),12,0,0,4);"/>
+        <Button layoutX="420.0" layoutY="470.0" mnemonicParsing="false" onAction="#HandleRejectLeaveButton" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color:#EF4444;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(239,68,68,0.35),12,0,0,4);" text="✖ Reject Leave" />
 
         <!-- Back -->
-        <Button layoutX="310.0"
-                layoutY="535.0"
-                mnemonicParsing="false"
-                onAction="#HandleBackToDashboardButton"
-                prefHeight="45.0"
-                prefWidth="280.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="310.0" layoutY="535.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" prefHeight="45.0" prefWidth="280.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="← Back to Dashboard" />
 
     </children>
 
