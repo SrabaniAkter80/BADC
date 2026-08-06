@@ -52,4 +52,9 @@ public class WarehouseDashboardController
     public void productDistributionButton(ActionEvent actionEvent)throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/WarehouseInventoryOffice/ProductDistribution.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/Login.fxml");
+    }
 }

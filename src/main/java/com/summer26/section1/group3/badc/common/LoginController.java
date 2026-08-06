@@ -65,7 +65,7 @@ public class LoginController
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/AccountantDashboard.fxml");
                         break;
                     case "Warehouse & Inventory Officer":
-                        SceneSwitcher.switchTo("warehouseDashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/WarehouseInventoryOffice/WarehouseDashboard.fxml");
                         break;
                     case "Field Officer":
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
@@ -79,7 +79,7 @@ public class LoginController
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/SP_Dashboard.fxml");
                         break;
                     case "Dealer":
-                        SceneSwitcher.switchTo("dealerDashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/dealerDashboard.fxml");
                         break;
                     case "Farmer":
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
