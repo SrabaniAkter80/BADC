@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Samia_Alam.Accountant.PayrollController">
    <children>
       <Label layoutX="190.0" layoutY="14.0" text="Payroll" />
@@ -16,7 +15,7 @@
       <Button layoutX="293.0" layoutY="69.0" mnemonicParsing="false" onAction="#executePayrollButton" text="Execute Payroll" />
       <TableView fx:id="payrollTableView" layoutX="65.0" layoutY="130.0" prefHeight="200.0" prefWidth="311.0">
         <columns>
-          <TableColumn fx:id="staffTableCol" prefWidth="75.0" text="Satff ID" />
+          <TableColumn fx:id="staffTableCol" prefWidth="75.0" text="Staff ID" />
           <TableColumn fx:id="nameTableCol" prefWidth="75.0" text="Name" />
             <TableColumn fx:id="deptTableCol" prefWidth="75.0" text="Dept" />
             <TableColumn fx:id="salaryTableCol" prefWidth="75.0" text="Salary" />

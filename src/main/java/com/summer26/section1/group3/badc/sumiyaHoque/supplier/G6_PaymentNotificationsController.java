@@ -2,6 +2,7 @@ package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -36,7 +37,13 @@ public class G6_PaymentNotificationsController
     }
 
     @javafx.fxml.FXML
-    public void refreshButton(ActionEvent actionEvent) {
+    public void refreshButton(ActionEvent actionEvent)throws IOException {
+        paymentNotificationTableView.refresh();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText("Payment notifications refreshed successfully.");
+        alert.showAndWait();
     }
 
     @javafx.fxml.FXML

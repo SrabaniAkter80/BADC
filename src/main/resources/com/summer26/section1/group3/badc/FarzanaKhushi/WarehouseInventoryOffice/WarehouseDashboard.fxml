@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice.WarehouseDashboardController">
+   <children>
+      <Label layoutX="213.0" layoutY="25.0" text="Warehouse Dashboard" />
+      <Button layoutX="66.0" layoutY="75.0" mnemonicParsing="false" onAction="#viewStockButton" text="View Stock" />
+      <Button layoutX="66.0" layoutY="119.0" mnemonicParsing="false" onAction="#updateStockButton" text="Update Stock" />
+      <Button layoutX="66.0" layoutY="168.0" mnemonicParsing="false" onAction="#verifyProductsButton" text="Verify Products" />
+      <Button layoutX="66.0" layoutY="222.0" mnemonicParsing="false" onAction="#inventoryReportButton" text="Inventory Report" />
+      <Button layoutX="406.0" layoutY="75.0" mnemonicParsing="false" onAction="#damagedProductButton" text="Damaged Products" />
+      <Button layoutX="406.0" layoutY="119.0" mnemonicParsing="false" onAction="#productDistributionButton" text="Product Distribution" />
+      <Button layoutX="406.0" layoutY="168.0" mnemonicParsing="false" onAction="#searchProdutButton" text="Search Product" />
+      <Button layoutX="406.0" layoutY="222.0" mnemonicParsing="false" onAction="#securityButton" text="Warehouse Security" />
+      <Button layoutX="237.0" layoutY="314.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+   </children>
+</AnchorPane>

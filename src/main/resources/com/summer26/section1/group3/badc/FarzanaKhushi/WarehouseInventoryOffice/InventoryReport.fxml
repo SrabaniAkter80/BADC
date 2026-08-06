@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="reportTableView" prefHeight="392.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice.InventoryReportController">
+   <children>
+      <Label layoutX="217.0" layoutY="39.0" text="Inventory Report" />
+      <TableView fx:id="inventoryTableView" layoutX="97.0" layoutY="75.0" prefHeight="200.0" prefWidth="317.0">
+        <columns>
+          <TableColumn fx:id="productIdColumn" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="productNameColumn" prefWidth="110.66668701171875" text=" Product Name " />
+            <TableColumn fx:id="quantityColumn" prefWidth="73.3333740234375" text="Quantity " />
+            <TableColumn fx:id="statusColumn" prefWidth="53.33331298828125" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="210.0" layoutY="291.0" mnemonicParsing="false" onAction="#generateReportButton" text="Generate Report" />
+      <Button layoutX="235.0" layoutY="327.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,8 +1,7 @@
 module com.summer26.section1.group3.badc {
     requires javafx.controls;
     requires javafx.fxml;
-    requires com.summer26.section1.group3.badc;
-
+    requires com.github.librepdf.openpdf;
 
     exports com.summer26.section1.group3.badc.common;
     opens com.summer26.section1.group3.badc.common to javafx.fxml;
@@ -14,4 +13,8 @@ module com.summer26.section1.group3.badc {
     opens com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager to javafx.fxml;
     opens com.summer26.section1.group3.badc.sumiyaHoque.field_officer to javafx.fxml;
     opens com.summer26.section1.group3.badc.sumiyaHoque.supplier to javafx.fxml;
+    opens com.summer26.section1.group3.badc.Samia_Alam.Admin to javafx.fxml;
+    exports com.summer26.section1.group3.badc.Samia_Alam.Admin;
+    opens com.summer26.section1.group3.badc.Samia_Alam.Accountant to javafx.fxml;
+    exports com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 }

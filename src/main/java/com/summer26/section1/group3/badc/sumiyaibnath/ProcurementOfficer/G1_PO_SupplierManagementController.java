@@ -40,6 +40,14 @@ public class G1_PO_SupplierManagementController
     private ComboBox<String> rating;
     @javafx.fxml.FXML
     private TableColumn<Supplier, String> colrating;
+    @javafx.fxml.FXML
+    private TableColumn<Supplier, String> colunitprice;
+    @javafx.fxml.FXML
+    private TextField unitprice;
+    @javafx.fxml.FXML
+    private ComboBox<String> quality;
+    @javafx.fxml.FXML
+    private TableColumn<Supplier, String> colquality;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -50,12 +58,16 @@ public class G1_PO_SupplierManagementController
 
         product.getItems().addAll("seed", "fertilizer", "soil", "bio-pesticides", "machinery");
 
+        quality.getItems().addAll( "Excellent", "Good", "Average", "Poor");
+
         colsupplierid.setCellValueFactory(new PropertyValueFactory<>("supplierId"));
         colname.setCellValueFactory(new PropertyValueFactory<>("supplierName"));
         colcompany.setCellValueFactory(new PropertyValueFactory<>("companyName"));
         colproduct.setCellValueFactory(new PropertyValueFactory<>("productName"));
         colstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         colrating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        colunitprice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        colquality.setCellValueFactory(new PropertyValueFactory<>("quality"));
 
         tableview.setItems(FXCollections.observableArrayList(SupplierManager.getSupplierList()));
 
@@ -94,6 +106,8 @@ public class G1_PO_SupplierManagementController
         selectedSupplier.setProductName(product.getValue());
         selectedSupplier.setStatus(status.getValue());
         selectedSupplier.setRating(rating.getValue());
+        selectedSupplier.setUnitPrice(Double.parseDouble(unitprice.getText()));
+        selectedSupplier.setQuality(quality.getValue());
 
         SupplierManager.updateSupplier();
         tableview.refresh();
@@ -108,7 +122,9 @@ public class G1_PO_SupplierManagementController
                 companyname.getText(),
                 product.getValue(),
                 status.getValue(),
-                rating.getValue()
+                rating.getValue(),
+                quality.getValue(),
+                Double.parseDouble(unitprice.getText())
         );
         SupplierManager.addSupplier(supplier);
         tableview.getItems().clear();
@@ -121,6 +137,8 @@ public class G1_PO_SupplierManagementController
         product.setValue(null);
         status.setValue(null);
         rating.setValue(null);
+        quality.setValue(null);
+        unitprice.clear();
     }
 
     @javafx.fxml.FXML

@@ -1,7 +1,10 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -27,14 +30,41 @@ public class G7_ContractsController
     @javafx.fxml.FXML
     public void initialize() {
         contractIdColumn.setCellValueFactory(new PropertyValueFactory<>("contractId"));
-        productNameColumn.setCellValueFactory(new PropertyValueFactory<>("productName"));
-        contractDateColumn.setCellValueFactory(new PropertyValueFactory<>("contractDate"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-
+        productNameColumn.setCellValueFactory(new PropertyValueFactory<>("contractTitle"));
+        contractDateColumn.setCellValueFactory(new PropertyValueFactory<>("agreementDetails"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("contractStatus"));
     }
+    ObservableList<Contruct> list = FXCollections.observableArrayList(
+            new Contruct("C001", "Rice Supply", "01-Aug-2026", "Approved"),
+            new Contruct("C002", "Fertilizer Supply", "05-Aug-2026", "Pending"),
+            new Contruct("C003", "Seed Supply", "10-Aug-2026", "Completed")
+    );
+
+
 
     @javafx.fxml.FXML
     public void downloadContractButton(ActionEvent actionEvent) {
+        Contruct contract = contractTableView.getSelectionModel().getSelectedItem();
+
+        if (contract == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a contract.");
+            alert.showAndWait();
+            return;
+        }
+
+        agreementInfoTextArea.setText(
+                "Contract ID : " + contract.getContractId() + "\n" +
+                        "Contract Title : " + contract.getContractTitle() + "\n" +
+                        "Agreement Details : " + contract.getAgreementDetails() + "\n" +
+                        "Status : " + contract.getContractStatus()
+        );
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText("Contract downloaded successfully.");
+        alert.showAndWait();
     }
 
     @javafx.fxml.FXML

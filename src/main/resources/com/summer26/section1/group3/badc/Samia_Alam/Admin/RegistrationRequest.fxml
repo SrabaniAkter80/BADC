@@ -20,8 +20,8 @@
       </TableView>
       <Label layoutX="413.0" layoutY="100.0" text="Applicant Details" />
       <TextArea fx:id="applicantDetailsTA" layoutX="413.0" layoutY="126.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="approvedButton" layoutX="413.0" layoutY="352.0" mnemonicParsing="false" text="Approved" />
-      <Button fx:id="rejectBUtton" layoutX="561.0" layoutY="352.0" mnemonicParsing="false" text="Reject" />
-      <Button fx:id="backButton" layoutX="572.0" layoutY="440.0" mnemonicParsing="false" text="Back" />
+       <Button layoutX="413.0" layoutY="352.0" mnemonicParsing="false" onAction="#approvedButton" text="Approved" />
+       <Button layoutX="561.0" layoutY="352.0" mnemonicParsing="false" onAction="#rejectButton" text="Reject" />
+       <Button layoutX="572.0" layoutY="440.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
