@@ -38,16 +38,10 @@ public class G2_Send_Announcement_ViewController {
             ConfirmationMessageLabel.setText("Please enter the announcement message.");
             return;
         }
-
-        Announcement announcement = new Announcement(
-                title,
-                message,
-                "HR Manager"
-        );
-        BinaryFileUtil.appendObject("data/announcements.bin", announcement);
+        Announcement announcement = new Announcement(title, message);
+        BinaryFileUtil.appendObject("announcements.bin",announcement);
 
         ConfirmationMessageLabel.setText("Announcement sent successfully.");
-
         announcementTitleTextField.clear();
         announcementMessageTextArea.clear();
     }

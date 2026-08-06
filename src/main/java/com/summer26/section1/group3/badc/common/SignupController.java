@@ -22,7 +22,7 @@ public class SignupController
 
     @javafx.fxml.FXML
     public void initialize() {
-        role.getItems().addAll("HR Manager", "Procurement Officer", "Account Officer", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
+        role.getItems().addAll("HR Manager", "Procurement Officer", "Accountant", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
     }
 
     @javafx.fxml.FXML

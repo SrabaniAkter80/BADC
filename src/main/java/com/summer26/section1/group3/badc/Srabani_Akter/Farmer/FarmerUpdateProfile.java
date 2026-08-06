@@ -1,19 +1,19 @@
-package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
+package com.summer26.section1.group3.badc.Srabani_Akter.Farmer;
 
 import java.io.Serializable;
 
-public class UpdateProfile implements Serializable {
+public class FarmerUpdateProfile implements Serializable {
     private String name;
     private String phoneNumber;
-    private String email;
+    private String address;
 
-    public UpdateProfile() {
+    public FarmerUpdateProfile() {
     }
 
-    public UpdateProfile(String name, String phoneNumber, String email) {
+    public FarmerUpdateProfile(String name, String phoneNumber, String address) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.email = email;
+        this.address = address;
     }
 
     public String getName() {
@@ -32,20 +32,20 @@ public class UpdateProfile implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAddress() {
+        return address;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
-        return "UpdateProfile{" +
+        return "FarmerUpdateProfile{" +
                 "name='" + name + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

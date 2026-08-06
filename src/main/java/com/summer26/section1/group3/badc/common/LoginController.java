@@ -23,7 +23,7 @@ public class LoginController
     @javafx.fxml.FXML
     public void initialize() {
         UserManager.loadFromFile();
-        rolelogin.getItems().addAll("HR Manager", "Procurement Officer", "Account Officer", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
+        rolelogin.getItems().addAll("HR Manager", "Procurement Officer", "Accountant", "Warehouse & Inventory Officer", "Field Officer","Admin","Transport & Logistic Manager","Supplier","Dealer","Farmer");
     }
 
     @javafx.fxml.FXML
@@ -61,8 +61,8 @@ public class LoginController
                         System.out.println("Opening Procurement Dashboard...");
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/ProcurementOfficer/G0_PO_Dashboard.fxml");
                         break;
-                    case "Account Officer":
-                        SceneSwitcher.switchTo("accountOfficerDashboard.fxml");
+                    case "Accountant":
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/AccountantDashboard.fxml");
                         break;
                     case "Warehouse & Inventory Officer":
                         SceneSwitcher.switchTo("warehouseDashboard.fxml");
@@ -72,7 +72,7 @@ public class LoginController
                         break;
                     case "Transport & Logistic Manager":
                         System.out.println("Opening Transport & Logistic Manager Dashboard...");
-                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/G0_TML_Dashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaibnath/TransportLogisticManager/G0_TLM_Dashboard.fxml");
                         break;
                     case "Supplier":
                         System.out.println("Opening Supplier Dashboard...");

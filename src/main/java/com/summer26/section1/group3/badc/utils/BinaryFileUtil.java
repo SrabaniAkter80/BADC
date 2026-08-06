@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class BinaryFileUtil {
 
     // Save a single object (overwrites the file)
-    public static <T extends Serializable> void saveObject(String fileName, T object) {
+    public static <T extends Serializable> void saveObject(String fileName,T object) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
             out.writeObject(object);
         } catch (IOException e) {
@@ -54,7 +54,6 @@ public class BinaryFileUtil {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         return list;
     }
 

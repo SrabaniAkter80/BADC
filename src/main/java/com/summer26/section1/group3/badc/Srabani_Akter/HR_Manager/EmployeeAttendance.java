@@ -11,11 +11,7 @@ public class EmployeeAttendance implements Serializable {
     private String workingStatus;
     private LocalDate date;
 
-    public EmployeeAttendance(String employeeID,
-                              String employeeName,
-                              String attendanceRecord,
-                              String workingStatus,
-                              LocalDate date) {
+    public EmployeeAttendance(String employeeID,String employeeName,String attendanceRecord,String workingStatus, LocalDate date) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.attendanceRecord = attendanceRecord;
@@ -61,5 +57,16 @@ public class EmployeeAttendance implements Serializable {
 
     public LocalDate getDate() {
         return date;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeAttendance{" +
+                "employeeID='" + employeeID + '\'' +
+                ", employeeName='" + employeeName + '\'' +
+                ", attendanceRecord='" + attendanceRecord + '\'' +
+                ", workingStatus='" + workingStatus + '\'' +
+                ", date=" + date +
+                '}';
     }
 }

@@ -7,14 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G7_Submit_ComplaintController">
 
-<AnchorPane prefHeight="494.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G7_Submit_ComplaintController">
-   <children>
-      <ComboBox fx:id="complaintCategoryComboBox" layoutX="211.0" layoutY="94.0" prefWidth="150.0" promptText="Complaint Category" />
-      <Text layoutX="97.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint Details" />
-      <TextArea fx:id="complaintDetailsTextArea" layoutX="211.0" layoutY="165.0" prefHeight="79.0" prefWidth="200.0" />
-      <Button layoutX="273.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleSubmitButton" text="Submit" />
-      <Label fx:id="confirmationMessageLabel" layoutX="371.0" layoutY="262.0" text="Confirmation Message" />
-      <Button layoutX="240.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBacktoDashboardButton" text="Back to Dashboard " />
-   </children>
+    <children>
+
+        <!-- Title -->
+        <Label alignment="CENTER" layoutX="389.0" layoutY="35.0" prefHeight="40.0" prefWidth="260.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Submit Complaint" />
+
+        <!-- Complaint Category -->
+        <Text fontSmoothingType="LCD" layoutX="210.0" layoutY="145.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Complaint Category" />
+
+        <ComboBox fx:id="complaintCategoryComboBox" layoutX="390.0" layoutY="120.0" prefHeight="40.0" prefWidth="260.0" promptText="Complaint Category" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
+
+        <!-- Complaint Details -->
+        <Text layoutX="210.0" layoutY="225.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Complaint Details" />
+
+        <TextArea fx:id="complaintDetailsTextArea" layoutX="390.0" layoutY="190.0" prefHeight="120.0" prefWidth="260.0" promptText="Describe your complaint..." style="-fx-background-radius:10;                        -fx-border-radius:10;                        -fx-border-color:#CBD5E1;                        -fx-font-size:14px;" />
+
+        <!-- Submit Button -->
+        <Button layoutX="390.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleSubmitButton" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color:#EF4444;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(239,68,68,0.35),12,0,0,4);" text="Submit Complaint" />
+
+        <!-- Confirmation Message -->
+        <Label fx:id="confirmationMessageLabel" alignment="CENTER" layoutX="309.0" layoutY="418.0" prefWidth="400.0" style="-fx-font-size:16px;                     -fx-font-weight:bold;                     -fx-text-fill:#16A34A;" text="Confirmation Message" />
+
+        <!-- Back Button -->
+        <Button layoutX="390.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleBacktoDashboardButton" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
+
+    </children>
 </AnchorPane>

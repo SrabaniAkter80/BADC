@@ -1,49 +1,46 @@
-package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
-
+package com.summer26.section1.group3.badc.common;
 import java.io.Serializable;
 
-public class EmployeeInfo implements Serializable {
-    private String employeeId;
+public class Employee implements Serializable {
+
+    private String employeeID;
     private String name;
     private String designation;
     private String contactInformation;
 
-    public EmployeeInfo() {
-    }
-
-    public EmployeeInfo(String employeeId, String name, String designation, String contactInformation) {
-        this.employeeId = employeeId;
+    public Employee(String employeeID, String name,String designation, String contactInformation) {
+        this.employeeID = employeeID;
         this.name = name;
         this.designation = designation;
         this.contactInformation = contactInformation;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId;
+    public String getEmployeeID() {
+        return employeeID;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDesignation() {
         return designation;
     }
 
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
-
     public String getContactInformation() {
         return contactInformation;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
     public void setContactInformation(String contactInformation) {
@@ -52,8 +49,8 @@ public class EmployeeInfo implements Serializable {
 
     @Override
     public String toString() {
-        return "EmployeeInfo{" +
-                "employeeId='" + employeeId + '\'' +
+        return "Employee{" +
+                "employeeID='" + employeeID + '\'' +
                 ", name='" + name + '\'' +
                 ", designation='" + designation + '\'' +
                 ", contactInformation='" + contactInformation + '\'' +

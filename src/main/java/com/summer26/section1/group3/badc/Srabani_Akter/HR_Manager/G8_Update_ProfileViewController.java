@@ -21,11 +21,9 @@ public class G8_Update_ProfileViewController {
     private Label UpdateProfileLabel;
     @javafx.fxml.FXML
     private TextField EmailTextField;
-    private final String FILE_NAME = "HRManager.bin";
+    private final String FILE_NAME = "data/HRManager.bin";
 
-    // Replace this with the logged-in HR Manager's ID.
     private String loggedInEmployeeId = "HR001";
-
     private HRManager currentManager;
 
     @javafx.fxml.FXML
@@ -39,9 +37,7 @@ public class G8_Update_ProfileViewController {
         for (HRManager manager : managerList) {
 
             if (manager.getEmployeeId().equals(loggedInEmployeeId)) {
-
                 currentManager = manager;
-
                 NameTextField.setText(manager.getName());
                 PhoneNumberTextField.setText(manager.getPhoneNumber());
                 EmailTextField.setText(manager.getEmail());

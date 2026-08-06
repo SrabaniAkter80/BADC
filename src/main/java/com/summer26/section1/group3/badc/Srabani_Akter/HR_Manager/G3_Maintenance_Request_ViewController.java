@@ -21,14 +21,7 @@ public class G3_Maintenance_Request_ViewController {
 
     @javafx.fxml.FXML
     public void initialize() {
-
-        equipmentTypeComboBox.getItems().addAll(
-                "Computer",
-                "Printer",
-                "Furniture",
-                "Office Facility"
-        );
-
+        equipmentTypeComboBox.getItems().addAll("Computer","Printer","Furniture","Office Facility");
         StatusConfirmationLabel.setText("");
     }
 
@@ -42,10 +35,7 @@ public class G3_Maintenance_Request_ViewController {
             StatusConfirmationLabel.setText("Please fill in all required information.");
             return;
         }
-
-        MaintenanceRequest request =
-                new MaintenanceRequest(equipment, description);
-
+        MaintenanceRequest request = new MaintenanceRequest(equipment, description);
         BinaryFileUtil.appendObject(FILE_NAME, request);
 
         StatusConfirmationLabel.setText("Request submitted successfully.");
@@ -57,7 +47,6 @@ public class G3_Maintenance_Request_ViewController {
     @javafx.fxml.FXML
     public void HandleBacktoDashBoardButton(ActionEvent actionEvent)throws IOException {
         SceneSwitcher.switchTo(
-
                 "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 }
