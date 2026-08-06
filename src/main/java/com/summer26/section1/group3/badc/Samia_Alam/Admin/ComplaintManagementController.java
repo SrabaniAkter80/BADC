@@ -31,7 +31,7 @@ public class ComplaintManagementController
         fieldOfficerCB.getItems().addAll(
                 "Officer 1", "Officer 2", "Officer 3", "Officer 4"
         );
-
+    }
     @javafx.fxml.FXML
     public void AssingOfficerButton(ActionEvent actionEvent) {
         if (fieldOfficerCB.getValue() == null) {
