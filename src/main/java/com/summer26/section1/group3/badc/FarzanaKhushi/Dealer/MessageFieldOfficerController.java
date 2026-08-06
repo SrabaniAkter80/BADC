@@ -7,6 +7,11 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 public class MessageFieldOfficerController
 {
     @javafx.fxml.FXML

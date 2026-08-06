@@ -9,6 +9,9 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+
 public class SendProductDemandController
 {
     @javafx.fxml.FXML
