@@ -20,6 +20,7 @@ public class G4_Application_StatusController
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

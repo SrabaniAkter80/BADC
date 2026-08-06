@@ -6,124 +6,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G8_Update_ProfileViewController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G8_Update_ProfileViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="UpdateProfileLabel"
-               layoutX="250.0"
-               layoutY="30.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="👤 Update Profile"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label fx:id="UpdateProfileLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Update Profile" />
 
         <!-- Name -->
-        <Text layoutX="180.0"
-              layoutY="145.0"
-              text="Name"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="145.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Name" />
 
-        <TextField fx:id="NameTextField"
-                   layoutX="380.0"
-                   layoutY="120.0"
-                   prefHeight="40.0"
-                   prefWidth="300.0"
-                   promptText="Enter your name"
-                   style="-fx-background-radius:10;
-                        -fx-border-radius:10;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;"/>
+        <TextField fx:id="NameTextField" layoutX="380.0" layoutY="120.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter your name" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
         <!-- Phone -->
-        <Text layoutX="180.0"
-              layoutY="215.0"
-              text="Phone Number"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="215.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Phone Number" />
 
-        <TextField fx:id="PhoneNumberTextField"
-                   layoutX="380.0"
-                   layoutY="190.0"
-                   prefHeight="40.0"
-                   prefWidth="300.0"
-                   promptText="Enter phone number"
-                   style="-fx-background-radius:10;
-                        -fx-border-radius:10;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;"/>
+        <TextField fx:id="PhoneNumberTextField" layoutX="380.0" layoutY="190.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter phone number" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
         <!-- Email -->
-        <Text layoutX="180.0"
-              layoutY="285.0"
-              text="Email"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="285.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Email" />
 
-        <TextField fx:id="EmailTextField"
-                   layoutX="380.0"
-                   layoutY="260.0"
-                   prefHeight="40.0"
-                   prefWidth="300.0"
-                   promptText="Enter email address"
-                   style="-fx-background-radius:10;
-                        -fx-border-radius:10;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;"/>
+        <TextField fx:id="EmailTextField" layoutX="380.0" layoutY="260.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter email address" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
         <!-- Update Button -->
-        <Button layoutX="380.0"
-                layoutY="350.0"
-                mnemonicParsing="false"
-                onAction="#HandleUpdateProfileButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="✔ Update Profile"
-                style="-fx-background-color:#2563EB;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="350.0" mnemonicParsing="false" onAction="#HandleUpdateProfileButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Update Profile" />
 
         <!-- Confirmation -->
-        <Label fx:id="confirmationMessageLabel"
-               layoutX="250.0"
-               layoutY="420.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text=""
-               style="-fx-font-size:16px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#16A34A;"/>
+        <Label fx:id="confirmationMessageLabel" alignment="CENTER" layoutX="250.0" layoutY="420.0" prefWidth="400.0" style="-fx-font-size:16px;                     -fx-font-weight:bold;                     -fx-text-fill:#16A34A;" text="" />
 
         <!-- Back -->
-        <Button layoutX="380.0"
-                layoutY="490.0"
-                mnemonicParsing="false"
-                onAction="#HandleBacktoDashboardButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="490.0" mnemonicParsing="false" onAction="#HandleBacktoDashboardButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
 
     </children>
 

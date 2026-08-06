@@ -12,9 +12,9 @@
       <ComboBox fx:id="productCategoryComboBox" layoutX="263.0" layoutY="95.0" prefWidth="150.0" promptText="Select a product" />
       <Text layoutX="191.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
       <TextField fx:id="quantityTextField" layoutX="263.0" layoutY="150.0" />
-      <Button layoutX="292.0" layoutY="210.0" mnemonicParsing="false" onAction="#HandlePlaceOrderButton" text="Place Order" />
-      <Button layoutX="280.0" layoutY="298.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" text="Back to Dashboard" />
+      <Button layoutX="239.0" layoutY="210.0" mnemonicParsing="false" onAction="#HandlePlaceOrderButton" prefHeight="42.0" prefWidth="222.0" text="Place Order" />
+      <Button layoutX="254.0" layoutY="319.0" mnemonicParsing="false" onAction="#HandleBackToDashboardButton" prefHeight="26.0" prefWidth="192.0" text="Back to Dashboard" />
       <Label fx:id="placeOrderPageLabel" layoutX="292.0" layoutY="39.0" text="Place Order Page" />
-      <Label fx:id="confirmationMessageLabel" layoutX="278.0" layoutY="258.0" text="Confirmation Message" />
+      <Label fx:id="confirmationMessageLabel" layoutX="401.0" layoutY="428.0" text="Confirmation Message" />
    </children>
 </AnchorPane>

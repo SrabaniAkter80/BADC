@@ -8,121 +8,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G4_Task_Assignment_ViewController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G4_Task_Assignment_ViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="taskAssignmentLabel"
-               layoutX="250.0"
-               layoutY="30.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="📝 Task Assignment"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label fx:id="taskAssignmentLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Task Assignment" />
 
         <!-- Employee ID -->
-        <Text layoutX="180.0"
-              layoutY="140.0"
-              text="Employee ID"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="140.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
 
-        <TextField fx:id="employeeIDTextField"
-                   layoutX="380.0"
-                   layoutY="115.0"
-                   prefHeight="40.0"
-                   prefWidth="300.0"
-                   promptText="Enter Employee ID"
-                   style="-fx-background-radius:10;
-                        -fx-border-radius:10;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;"/>
+        <TextField fx:id="employeeIDTextField" layoutX="380.0" layoutY="115.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter Employee ID" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
         <!-- Task Description -->
-        <Text layoutX="180.0"
-              layoutY="220.0"
-              text="Task Description"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="220.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Task Description" />
 
-        <TextArea fx:id="taskDescriptionTextArea"
-                  layoutX="380.0"
-                  layoutY="180.0"
-                  prefHeight="100.0"
-                  prefWidth="300.0"
-                  promptText="Describe the task..."
-                  style="-fx-background-radius:10;
-                       -fx-border-radius:10;
-                       -fx-border-color:#CBD5E1;
-                       -fx-font-size:14px;"/>
+        <TextArea fx:id="taskDescriptionTextArea" layoutX="380.0" layoutY="180.0" prefHeight="100.0" prefWidth="300.0" promptText="Describe the task..." style="-fx-background-radius:10;                        -fx-border-radius:10;                        -fx-border-color:#CBD5E1;                        -fx-font-size:14px;" />
 
         <!-- Due Date -->
-        <Text layoutX="180.0"
-              layoutY="325.0"
-              text="Due Date"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="325.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Due Date" />
 
-        <DatePicker fx:id="dueDateDatePicker"
-                    layoutX="380.0"
-                    layoutY="300.0"
-                    prefHeight="40.0"
-                    prefWidth="300.0"
-                    style="-fx-font-size:14px;
-                         -fx-background-radius:10;"/>
+        <DatePicker fx:id="dueDateDatePicker" layoutX="380.0" layoutY="300.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size:14px;                          -fx-background-radius:10;" />
 
         <!-- Message -->
-        <Label fx:id="MessageLabel"
-               layoutX="250.0"
-               layoutY="360.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text=""
-               style="-fx-font-size:16px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#16A34A;"/>
+        <Label fx:id="MessageLabel" alignment="CENTER" layoutX="250.0" layoutY="360.0" prefWidth="400.0" style="-fx-font-size:16px;                     -fx-font-weight:bold;                     -fx-text-fill:#16A34A;" text="" />
 
         <!-- Assign Task -->
-        <Button layoutX="380.0"
-                layoutY="400.0"
-                mnemonicParsing="false"
-                onAction="#HandleAssignTaskButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="📝 Assign Task"
-                style="-fx-background-color:#8B5CF6;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(139,92,246,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="400.0" mnemonicParsing="false" onAction="#HandleAssignTaskButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#8B5CF6;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(139,92,246,0.35),12,0,0,4);" text="Assign Task" />
 
         <!-- Back -->
-        <Button layoutX="380.0"
-                layoutY="480.0"
-                mnemonicParsing="false"
-                onAction="#HandleBackToDashBoardButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="480.0" mnemonicParsing="false" onAction="#HandleBackToDashBoardButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
 
     </children>
 </AnchorPane>

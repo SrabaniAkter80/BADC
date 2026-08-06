@@ -20,6 +20,7 @@ public class G3_Farmer_Update_ProfileController
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

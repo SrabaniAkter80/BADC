@@ -7,103 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G3_Maintenance_Request_ViewController">
+<AnchorPane prefHeight="555.0" prefWidth="775.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G3_Maintenance_Request_ViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="maintenanceRequestLabel"
-               layoutX="250.0"
-               layoutY="30.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="🛠 Maintenance Request"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label fx:id="maintenanceRequestLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Maintenance Request" />
 
         <!-- Status -->
-        <Label fx:id="StatusConfirmationLabel"
-               layoutX="250.0"
-               layoutY="75.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text=""
-               style="-fx-font-size:16px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#16A34A;"/>
+        <Label fx:id="StatusConfirmationLabel" alignment="CENTER" layoutX="250.0" layoutY="75.0" prefWidth="400.0" style="-fx-font-size:16px;                     -fx-font-weight:bold;                     -fx-text-fill:#16A34A;" text="" />
 
         <!-- Equipment Type -->
-        <Text layoutX="180.0"
-              layoutY="145.0"
-              text="Equipment Type"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="145.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Equipment Type" />
 
-        <ComboBox fx:id="equipmentTypeComboBox"
-                  layoutX="380.0"
-                  layoutY="120.0"
-                  prefHeight="40.0"
-                  prefWidth="300.0"
-                  promptText="Equipment Type"
-                  style="-fx-background-radius:10;
-                       -fx-font-size:14px;"/>
+        <ComboBox fx:id="equipmentTypeComboBox" layoutX="380.0" layoutY="120.0" prefHeight="40.0" prefWidth="300.0" promptText="Equipment Type" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
 
         <!-- Description -->
-        <Text layoutX="180.0"
-              layoutY="230.0"
-              text="Issue Description"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="180.0" layoutY="230.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Issue Description" />
 
-        <TextArea fx:id="maintenanceIssueDescriptionTextArea"
-                  layoutX="380.0"
-                  layoutY="190.0"
-                  prefHeight="130.0"
-                  prefWidth="300.0"
-                  promptText="Describe the maintenance issue..."
-                  style="-fx-background-radius:10;
-                       -fx-border-radius:10;
-                       -fx-border-color:#CBD5E1;
-                       -fx-font-size:14px;"/>
+        <TextArea fx:id="maintenanceIssueDescriptionTextArea" layoutX="380.0" layoutY="190.0" prefHeight="130.0" prefWidth="300.0" promptText="Describe the maintenance issue..." style="-fx-background-radius:10;                        -fx-border-radius:10;                        -fx-border-color:#CBD5E1;                        -fx-font-size:14px;" />
 
         <!-- Submit -->
-        <Button layoutX="380.0"
-                layoutY="350.0"
-                mnemonicParsing="false"
-                onAction="#HandleSubmitRequestButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="🛠 Submit Request"
-                style="-fx-background-color:#F59E0B;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(245,158,11,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="350.0" mnemonicParsing="false" onAction="#HandleSubmitRequestButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#F59E0B;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(245,158,11,0.35),12,0,0,4);" text="Submit Request" />
 
         <!-- Back -->
-        <Button layoutX="380.0"
-                layoutY="440.0"
-                mnemonicParsing="false"
-                onAction="#HandleBacktoDashBoardButton"
-                prefHeight="45.0"
-                prefWidth="300.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="380.0" layoutY="440.0" mnemonicParsing="false" onAction="#HandleBacktoDashBoardButton" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
 
     </children>
 </AnchorPane>
