@@ -8,19 +8,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="451.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G6_Farmer_NotificationsController">
-   <children>
-      <Label fx:id="notificationsLabel" layoutX="214.0" layoutY="23.0" text="Notifications" />
-      <Button layoutX="190.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleBackToDashboardButton" text="Back to Dashboard" />
-      <TableView fx:id="Farmer_Notificatios_Tableview" layoutX="114.0" layoutY="99.0" prefHeight="200.0" prefWidth="294.0">
-        <columns>
-          <TableColumn fx:id="notificationTitleColumn" prefWidth="108.800048828125" text="Notification Title" />
-          <TableColumn fx:id="messageColumn" prefWidth="97.5999755859375" text="Message" />
-            <TableColumn fx:id="dateColumn" prefWidth="97.5999755859375" text="Date" />
-        </columns>
-      </TableView>
-      <DatePicker layoutX="384.0" layoutY="48.0" />
-      <Text layoutX="333.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
-      <Button layoutX="456.0" layoutY="87.0" mnemonicParsing="false" text="Filter Button" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G6_Farmer_NotificationsController">
+
+    <children>
+
+        <!-- Title -->
+        <Label fx:id="notificationsLabel" alignment="CENTER" layoutX="300.0" layoutY="30.0" prefWidth="300.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Notifications" />
+
+        <!-- Date Filter -->
+        <Text layoutX="220.0" layoutY="120.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Date" />
+
+        <DatePicker layoutX="300.0" layoutY="95.0" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size:14px;                          -fx-background-radius:10;" />
+
+        <!-- Filter Button -->
+        <Button layoutX="550.0" layoutY="95.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Filter" />
+
+        <!-- Notification Table -->
+        <TableView fx:id="Farmer_Notificatios_Tableview" layoutX="100.0" layoutY="180.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
+
+            <columns>
+
+                <TableColumn fx:id="notificationTitleColumn" prefWidth="240.0" text="Notification Title" />
+
+                <TableColumn fx:id="messageColumn" prefWidth="280.0" text="Message" />
+
+                <TableColumn fx:id="dateColumn" prefWidth="180.0" text="Date" />
+
+            </columns>
+
+        </TableView>
+
+        <!-- Back Button -->
+        <Button layoutX="340.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleBackToDashboardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
+
+    </children>
 </AnchorPane>
