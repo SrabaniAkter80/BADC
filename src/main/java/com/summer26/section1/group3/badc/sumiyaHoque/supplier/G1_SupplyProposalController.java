@@ -6,7 +6,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class G1_SupplyProposalController
 {
@@ -28,11 +30,45 @@ public class G1_SupplyProposalController
     }
 
     @javafx.fxml.FXML
-    public void ProposalSubmitButton(ActionEvent actionEvent) {
-        String category = ProductCategoryComboBox.getValue();
-        String quantity = QuantityTextField.getText();
-        String details = ProposalDetailsTextField.getText();
+    public void submitButton(ActionEvent actionEvent) {
+
+        try {
+
+            String category = ProductCategoryComboBox.getValue();
+            int quantity = Integer.parseInt(QuantityTextField.getText());
+            String details = ProposalDetailsTextField.getText();
+
+            SupplyProposal proposal = new SupplyProposal(
+                    "P001",
+                    category,
+                    quantity,
+                    details,
+                    "Pending"
+            );
+
+            FileOutputStream fos = new FileOutputStream("SupplyProposal.bin");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(proposal);
+
+            oos.close();
+            fos.close();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Proposal submitted successfully.");
+            alert.showAndWait();
+
+            ProductCategoryComboBox.setValue(null);
+            QuantityTextField.clear();
+            ProposalDetailsTextField.clear();
+
         }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
         @javafx.fxml.FXML
