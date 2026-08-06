@@ -10,9 +10,9 @@
 <AnchorPane prefHeight="291.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.Dealer.MessageFieldOfficerController">
    <children>
       <Label layoutX="32.0" layoutY="83.0" text="Subject:" />
-      <Label fx:id="titleLabel" layoutX="81.0" layoutY="34.0" text="Message Field Officer" />
-      <TextField fx:id="subjectTextField" layoutX="91.0" layoutY="87.0" />
-      <TextArea fx:id="messageTextArea" layoutX="91.0" layoutY="126.0" prefHeight="25.0" prefWidth="161.0" />
+      <Label layoutX="81.0" layoutY="34.0" text="Message Field Officer" />
+      <TextField fx:id="subjectTextField" layoutX="81.0" layoutY="79.0" />
+      <TextArea fx:id="messageTextArea" layoutX="85.0" layoutY="126.0" prefHeight="25.0" prefWidth="161.0" />
       <Label layoutX="32.0" layoutY="137.0" text="Message:" />
       <Button layoutX="60.0" layoutY="197.0" mnemonicParsing="false" onAction="#sendButton" text="Send" />
       <Button layoutX="125.0" layoutY="248.0" mnemonicParsing="false" onAction="#backButton" text="Back" />

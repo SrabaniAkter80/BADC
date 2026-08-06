@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="397.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.Dealer.DeliveryStatusController">
    <children>
-      <Label fx:id="titleLabel" layoutX="151.0" layoutY="29.0" text="Delivery Status" />
+      <Label layoutX="151.0" layoutY="29.0" text="Delivery Status" />
       <Label layoutX="46.0" layoutY="72.0" text="Order ID:" />
       <TextField fx:id="orderIdTextField" layoutX="112.0" layoutY="68.0" />
       <TableView fx:id="deliveryStatusTable" layoutX="95.0" layoutY="111.0" prefHeight="200.0" prefWidth="229.0">

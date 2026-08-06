@@ -1,19 +1,25 @@
 package com.summer26.section1.group3.badc.FarzanaKhushi.Dealer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
+import javax.swing.text.View;
+import java.io.IOException;
+
 public class ViewProductsController
 {
     @javafx.fxml.FXML
-    private TableColumn stockCol;
+    private TableColumn <ViewProductsController, String>stockCol;
     @javafx.fxml.FXML
-    private Label titleLabel;
+    private TableView<ViewProductsController> productsTable;
     @javafx.fxml.FXML
-    private TableView productsTable;
+    private TableColumn<ViewProductsController, String>productIdCol;
     @javafx.fxml.FXML
-    private TableColumn productIdCol;
+    private TableColumn <ViewProductsController, String>productNameCol;
     @javafx.fxml.FXML
-    private TableColumn productNameCol;
-    @javafx.fxml.FXML
-    private TableColumn priceCol;
+    private TableColumn <ViewProductsController, String> priceCol;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -24,6 +30,7 @@ public class ViewProductsController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/dealerDashboardController.java");
     }
 }
