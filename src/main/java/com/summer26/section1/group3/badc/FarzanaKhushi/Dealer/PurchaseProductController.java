@@ -1,5 +1,11 @@
 package com.summer26.section1.group3.badc.FarzanaKhushi.Dealer;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+
+import java.io.IOException;
+
 public class PurchaseProductController
 {
     @javafx.fxml.FXML
@@ -20,7 +26,8 @@ public class PurchaseProductController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/dealerDashboardController.java");
     }
 
     @javafx.fxml.FXML

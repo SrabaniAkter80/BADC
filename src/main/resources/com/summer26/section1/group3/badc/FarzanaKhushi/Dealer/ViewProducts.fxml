@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="361.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.Dealer.ViewProductsController">
    <children>
       <Label layoutX="211.0" layoutY="37.0" />
-      <TableView fx:id="productsTable" layoutX="52.0" layoutY="77.0" prefHeight="200.0" prefWidth="393.0">
+      <TableView fx:id="productsTable" layoutX="76.0" layoutY="81.0" prefHeight="200.0" prefWidth="393.0">
         <columns>
           <TableColumn fx:id="productIdCol" prefWidth="75.0" text="Product ID" />
           <TableColumn fx:id="productNameCol" prefWidth="155.99998474121094" text="Product Name" />
@@ -21,6 +21,6 @@
       </TableView>
       <Button layoutX="170.0" layoutY="304.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh" />
       <Button layoutX="310.0" layoutY="304.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-      <Label fx:id="titleLabel" layoutX="219.0" layoutY="37.0" text="View Products" />
+      <Label layoutX="219.0" layoutY="37.0" text="View Products" />
    </children>
 </AnchorPane>

@@ -1,24 +1,28 @@
 package com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice;
 
+import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class SearchProductController
 {
     @javafx.fxml.FXML
-    private TableView productTableView;
+    private TableView<SearchProductController> productTableView;
     @javafx.fxml.FXML
-    private TableColumn quantityColumn;
+    private TableColumn <SearchProductController, String>quantityColumn;
     @javafx.fxml.FXML
-    private TableColumn productNameColumn;
+    private TableColumn <SearchProductController, String> productNameColumn;
     @javafx.fxml.FXML
-    private Label searchTextField;
+    private TableColumn <SearchProductController, String>categoryColumn;
     @javafx.fxml.FXML
-    private TableColumn categoryColumn;
+    private TableColumn <SearchProductController, String>productIdColumn;
     @javafx.fxml.FXML
-    private TableColumn productIdColumn;
+    private TextField searchTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -29,6 +33,7 @@ public class SearchProductController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/FarzanaKhushi/WarehouseInventoryOffice/WarehouseDashboardController.java");
     }
 }

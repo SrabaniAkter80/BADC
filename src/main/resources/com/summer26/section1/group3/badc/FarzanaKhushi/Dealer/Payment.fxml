@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="258.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.FarzanaKhushi.Dealer.PaymentController">
    <children>
-      <Label fx:id="titleLabel" layoutX="239.0" layoutY="27.0" prefHeight="17.0" prefWidth="55.0" text="Payment" />
+      <Label layoutX="249.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Payment" />
       <Label layoutX="34.0" layoutY="80.0" text="Invoice ID:" />
       <Label layoutX="277.0" layoutY="80.0" text="Amount:" />
       <TextField fx:id="invoiceIdTextField" layoutX="103.0" layoutY="76.0" />
