@@ -73,7 +73,7 @@ public class G4_Application_StatusController {
 
     @javafx.fxml.FXML
     public void HandleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
 
     }
 }
