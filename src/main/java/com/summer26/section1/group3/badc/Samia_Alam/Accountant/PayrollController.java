@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
@@ -15,7 +17,7 @@ public class PayrollController
     @javafx.fxml.FXML
     private TableColumn <Payroll, String> nameTableCol;
     @javafx.fxml.FXML
-    private TableColumn <Payroll, String> salaryTableCol;
+    private TableColumn <Payroll, Double> salaryTableCol;
     @javafx.fxml.FXML
     private TableView <Payroll> payrollTableView;
     @javafx.fxml.FXML
@@ -47,6 +49,13 @@ public class PayrollController
         deptTableCol.setCellValueFactory(new PropertyValueFactory<>("department"));
         salaryTableCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
+        // TODO: এখানে ডাটাবেস থেকে actual ডেটা লোড করবে
+        ObservableList<Payroll> staffList = FXCollections.observableArrayList(
+                new Payroll("S001", "Nusrat Jahan", "Finance", 45000.0),
+                new Payroll("S002", "Tanvir Ahmed", "HR", 38000.0),
+                new Payroll("S003", "Mahmudul Hasan", "Accounts", 42000.0)
+        );
+        payrollTableView.setItems(staffList);
     }
 
     @javafx.fxml.FXML

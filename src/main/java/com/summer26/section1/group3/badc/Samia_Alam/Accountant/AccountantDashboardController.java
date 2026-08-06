@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
-public class AccountDashboardController
+public class AccountantDashboardController
 {
     @javafx.fxml.FXML
     public void initialize() {
@@ -50,5 +50,9 @@ public class AccountDashboardController
     @javafx.fxml.FXML
     public void farmerSubsidyButton(ActionEvent actionEvent) throws IOException{
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/FarmerSubsidy.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) {
     }
 }

@@ -20,7 +20,7 @@
         <Label layoutX="173.0" layoutY="86.0" text="Transaction ID: " />
         <TextField fx:id="tnxIdTF" layoutX="265.0" layoutY="82.0" />
         <Button layoutX="173.0" layoutY="133.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
-        <TableView fx:id="tnxHistoryTableView" layoutX="55.0" layoutY="179.0" onSort="#tnxHistoryTableView" prefHeight="200.0" prefWidth="380.0">
+        <TableView fx:id="tnxHistoryTableView" layoutX="55.0" layoutY="179.0" onSort="#onTnxTableSort" prefHeight="200.0" prefWidth="380.0">
             <columns>
                 <TableColumn fx:id="tnxIdTableCol" prefWidth="75.0" text="Tnx ID" />
                 <TableColumn fx:id="dateTableCol" prefWidth="75.0" text="Date" />

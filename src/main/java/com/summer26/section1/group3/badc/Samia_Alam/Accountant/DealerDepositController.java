@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
@@ -12,7 +14,7 @@ import java.io.IOException;
 public class DealerDepositController
 {
     @javafx.fxml.FXML
-    private TableColumn <DealerDeposit, String> amountTableCol;
+    private TableColumn <DealerDeposit, Double> amountTableCol;
     @javafx.fxml.FXML
     private TableColumn <DealerDeposit, String> challanTableCol;
     @javafx.fxml.FXML
@@ -29,11 +31,19 @@ public class DealerDepositController
         challanTableCol.setCellValueFactory(new PropertyValueFactory<>("challan"));
         amountTableCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
 
+        ObservableList<DealerDeposit> deposits = FXCollections.observableArrayList(
+                new DealerDeposit("D001", "DL-101", "CH-2001", 15000.0),
+                new DealerDeposit("D002", "DL-102", "CH-2002", 8500.0),
+                new DealerDeposit("D003", "DL-103", "CH-2003", 22000.0)
+        );
+        dealerDepositTableView.setItems(deposits);
     }
 
     @javafx.fxml.FXML
     public void approvedButton(ActionEvent actionEvent) {
-        if (dealerDepositTableView.getSelectionModel().getSelectedItem() == null) {
+        DealerDeposit selected = dealerDepositTableView.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Approval Error");

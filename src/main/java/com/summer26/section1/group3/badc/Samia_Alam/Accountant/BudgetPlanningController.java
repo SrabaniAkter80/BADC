@@ -38,7 +38,6 @@ public class BudgetPlanningController
         if (deptCB.getValue() == null ||
                 currentBudgetTF.getText().trim().isEmpty() ||
                 proposedBudgetTF.getText().trim().isEmpty()) {
-
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
@@ -46,13 +45,28 @@ public class BudgetPlanningController
             alert.showAndWait();
             return;
         }
-
+        try {
+            double currentBudget = Double.parseDouble(currentBudgetTF.getText().trim());
+            double proposedBudget = Double.parseDouble(proposedBudgetTF.getText().trim());
+            BudgetPlanning budgetPlanning = new BudgetPlanning(
+                    deptCB.getValue(),
+                    currentBudget,
+                    proposedBudget
+            );
+            // TODO: এখানে budgetPlanning অবজেক্টটা database/service এ save করবে
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Budget amounts must be valid numbers.");
+            alert.showAndWait();
+            return;
+        }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
         alert.setContentText("Budget updated successfully.");
         alert.showAndWait();
-
         deptCB.getSelectionModel().clearSelection();
         currentBudgetTF.clear();
         proposedBudgetTF.clear();

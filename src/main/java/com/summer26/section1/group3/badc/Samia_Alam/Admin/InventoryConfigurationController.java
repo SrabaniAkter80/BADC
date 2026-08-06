@@ -3,6 +3,7 @@ package com.summer26.section1.group3.badc.Samia_Alam.Admin;
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
@@ -21,16 +22,21 @@ public class InventoryConfigurationController
     @javafx.fxml.FXML
     private TableColumn <InventoryConfiguration, String> productNameTableCol;
     @javafx.fxml.FXML
-    private TableColumn <InventoryConfiguration, String>  quantityTableCol;
+    private TableColumn<InventoryConfiguration, Number> quantityTableCol;
+    @javafx.fxml.FXML
+    private TableColumn<InventoryConfiguration, Number> minimumThresholdTableCol;
     @javafx.fxml.FXML
     private TextField newThresholdTF;
-    @javafx.fxml.FXML
-    private TableColumn <InventoryConfiguration, String> minimumThresholdTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {
         lowStockWarningLabel.setText("No Low Stock Warning");
 
+        productIdTableCol.setCellValueFactory(new PropertyValueFactory<>("productId"));
+        productNameTableCol.setCellValueFactory(new PropertyValueFactory<>("productName"));
+        warehouseTableCol.setCellValueFactory(new PropertyValueFactory<>("warehouse"));
+        quantityTableCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        minimumThresholdTableCol.setCellValueFactory(new PropertyValueFactory<>("minimumThreshold"));
     }
 
     @javafx.fxml.FXML

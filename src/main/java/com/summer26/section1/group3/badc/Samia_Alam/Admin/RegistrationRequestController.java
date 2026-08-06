@@ -13,15 +13,9 @@ public class RegistrationRequestController
     @javafx.fxml.FXML
     private TableColumn <RegistrationRequest, String> nameTV;
     @javafx.fxml.FXML
-    private Button approvedButton;
-    @javafx.fxml.FXML
     private TableColumn<RegistrationRequest, String> userTypeTV;
     @javafx.fxml.FXML
-    private Button backButton;
-    @javafx.fxml.FXML
-    private TableColumn <RegistrationRequest, String> requestIdTV;
-    @javafx.fxml.FXML
-    private Button rejectBUtton;
+    private TableColumn <RegistrationRequest, Number> requestIdTV;
     @javafx.fxml.FXML
     private TableView <RegistrationRequest> requestTV;
     @javafx.fxml.FXML
@@ -34,8 +28,8 @@ public class RegistrationRequestController
         applicantDetailsTA.setEditable(false);
 
         requestIdTV.setCellValueFactory(new PropertyValueFactory<>("requestId"));
-        nameTV.setCellValueFactory(new PropertyValueFactory<>("applicantName"));
-        userTypeTV.setCellValueFactory(new PropertyValueFactory<>("role"));
+        nameTV.setCellValueFactory(new PropertyValueFactory<>("name"));
+        userTypeTV.setCellValueFactory(new PropertyValueFactory<>("userType"));
         statusTV.setCellValueFactory(new PropertyValueFactory<>("status"));
 
     }

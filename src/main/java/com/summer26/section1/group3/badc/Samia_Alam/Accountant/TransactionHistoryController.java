@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.*;
@@ -11,7 +13,7 @@ import java.io.IOException;
 public class TransactionHistoryController {
 
     @javafx.fxml.FXML
-    private TableColumn<Transaction, String> amountTableCol;
+    private TableColumn<Transaction, Double> amountTableCol;
     @javafx.fxml.FXML
     private TableColumn<Transaction, String> tnxIdTableCol;
     @javafx.fxml.FXML
@@ -42,10 +44,18 @@ public class TransactionHistoryController {
         typeTableCol.setCellValueFactory(new PropertyValueFactory<>("type"));
         amountTableCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
         statusTableCol.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        // TODO: এখানে ডাটাবেস থেকে actual ডেটা লোড করবে
+        ObservableList<Transaction> transactions = FXCollections.observableArrayList(
+                new Transaction("TNX001", "2026-08-01", "Payroll", 45000.0, "Completed"),
+                new Transaction("TNX002", "2026-08-02", "Subsidy", 12000.0, "Pending"),
+                new Transaction("TNX003", "2026-08-03", "Expense", 3200.0, "Failed")
+        );
+        tnxHistoryTableView.setItems(transactions);
     }
 
     @javafx.fxml.FXML
-    public void tnxHistoryTableView(Event event) {
+    public void onTnxTableSort(Event event) {
 
         if (tnxHistoryTableView.getSelectionModel().getSelectedItem() != null) {
 

@@ -54,7 +54,7 @@ public class DatabaseBackupController
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/Samia_Alam/Admin/AdminDashboard.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Admin/AdminDashboard.fxml");
     }
 
     @javafx.fxml.FXML

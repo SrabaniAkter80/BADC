@@ -58,13 +58,20 @@ public class FinancialReportController
             return;
         }
 
-        reportTextArea.setText(
+        String reportContent =
                 "Financial Report\n\n" +
                         "Quarter: " + quarterComboBox.getValue() +
                         "\nTotal Revenue: 500,000 BDT" +
                         "\nTotal Expense: 320,000 BDT" +
-                        "\nNet Profit: 180,000 BDT"
+                        "\nNet Profit: 180,000 BDT";
+
+        FinancialReport financialReport = new FinancialReport(
+                quarterComboBox.getValue(),
+                reportContent
         );
+
+
+        reportTextArea.setText(financialReport.getReport());
     }
 
     @javafx.fxml.FXML

@@ -54,6 +54,25 @@ public class OfficeExpenseController
             return;
         }
 
+        double amount;
+        try {
+            amount = Double.parseDouble(amountTextField.getText().trim());
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Amount must be a valid number.");
+            alert.showAndWait();
+            return;
+        }
+
+        OfficeExpense expense = new OfficeExpense(
+                expenseTypeComboBox.getValue(),
+                voucharTextField.getText().trim(),
+                amount,
+                dateDatePicker.getValue().toString()
+        );
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
