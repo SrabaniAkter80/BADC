@@ -53,7 +53,7 @@ public class AccountantDashboardController
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("");
+    public void logoutButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
     }
 }
