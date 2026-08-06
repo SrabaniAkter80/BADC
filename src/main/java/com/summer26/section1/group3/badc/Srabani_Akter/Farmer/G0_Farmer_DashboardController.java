@@ -50,13 +50,21 @@ public class G0_Farmer_DashboardController
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G1_View_Product_List.fxml");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNotificationsStatusButton(ActionEvent actionEvent) throws IOException{
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G6_Farmer_Notifications.fxml");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleCancelOrderButton(ActionEvent actionEvent) throws IOException{
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G5_Cancel_Order.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void handleMyOrdersButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleNotificationsButton(ActionEvent actionEvent) {
     }
 }

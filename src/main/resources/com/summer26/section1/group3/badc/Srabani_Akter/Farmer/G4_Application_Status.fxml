@@ -7,18 +7,36 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="487.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G4_Application_StatusController">
-   <children>
-      <TableView fx:id="Application_Status_TableView" layoutX="108.0" layoutY="180.0" prefHeight="200.0" prefWidth="336.0">
-        <columns>
-          <TableColumn fx:id="applicationTypeColumn" prefWidth="115.20001220703125" text="Application Type" />
-          <TableColumn fx:id="submissionDateColumn" prefWidth="116.0" text="Submission Date" />
-            <TableColumn fx:id="currentStatusColumn" prefWidth="101.60003662109375" text="Current Status" />
-        </columns>
-      </TableView>
-      <Button layoutX="204.0" layoutY="404.0" mnemonicParsing="false" onAction="#HandleBacktoDashboardButton" text="Back to Dashboard" />
-      <Label fx:id="ApplicationStatusPageLabel" layoutX="213.0" layoutY="24.0" text="Application Status Page" />
-      <ComboBox layoutX="83.0" layoutY="66.0" prefWidth="150.0" promptText="Current Status" />
-      <Button layoutX="122.0" layoutY="122.0" mnemonicParsing="false" text="Search Button" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G4_Application_StatusController">
+
+    <children>
+
+        <!-- Title -->
+        <Label fx:id="ApplicationStatusPageLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Application Status" />
+
+        <!-- Filter -->
+        <ComboBox layoutX="250.0" layoutY="95.0" prefHeight="40.0" prefWidth="240.0" promptText="Current Status" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
+
+        <!-- Search -->
+        <Button layoutX="520.0" layoutY="95.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Search" />
+
+        <!-- Table -->
+        <TableView fx:id="Application_Status_TableView" layoutX="100.0" layoutY="180.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
+
+            <columns>
+
+                <TableColumn fx:id="applicationTypeColumn" prefWidth="235.0" text="Application Type" />
+
+                <TableColumn fx:id="submissionDateColumn" prefWidth="230.0" text="Submission Date" />
+
+                <TableColumn fx:id="currentStatusColumn" prefWidth="235.0" text="Current Status" />
+
+            </columns>
+
+        </TableView>
+
+        <!-- Back Button -->
+        <Button layoutX="340.0" layoutY="520.0" mnemonicParsing="false" onAction="#HandleBacktoDashboardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
+
+    </children>
 </AnchorPane>
