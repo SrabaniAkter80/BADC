@@ -1,6 +1,10 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Admin;
 
-public class UserManagement {
+import java.io.Serializable;
+
+public class UserManagement implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String fullName;
     private String username;
     private String password;

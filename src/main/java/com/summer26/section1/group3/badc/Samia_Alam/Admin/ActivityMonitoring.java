@@ -1,6 +1,9 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Admin;
+import java.io.Serializable;
 
-public class ActivityMonitoring {
+public class ActivityMonitoring implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String userId;
     private String action;
     private String timestamp;

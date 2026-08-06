@@ -6,16 +6,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class BudgetPlanningController
-{
+public class BudgetPlanningController {
+
     @javafx.fxml.FXML
-    private ComboBox <String> deptCB;
+    private ComboBox<String> deptCB;
     @javafx.fxml.FXML
     private TextField currentBudgetTF;
     @javafx.fxml.FXML
     private TextField proposedBudgetTF;
+
+    File file = new File("budget.bin");
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,15 +49,13 @@ public class BudgetPlanningController
             alert.showAndWait();
             return;
         }
+
+        double currentBudget;
+        double proposedBudget;
+
         try {
-            double currentBudget = Double.parseDouble(currentBudgetTF.getText().trim());
-            double proposedBudget = Double.parseDouble(proposedBudgetTF.getText().trim());
-            BudgetPlanning budgetPlanning = new BudgetPlanning(
-                    deptCB.getValue(),
-                    currentBudget,
-                    proposedBudget
-            );
-            // TODO: এখানে budgetPlanning অবজেক্টটা database/service এ save করবে
+            currentBudget = Double.parseDouble(currentBudgetTF.getText().trim());
+            proposedBudget = Double.parseDouble(proposedBudgetTF.getText().trim());
         } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -62,13 +64,66 @@ public class BudgetPlanningController
             alert.showAndWait();
             return;
         }
+
+        BudgetPlanning budgetPlanning = new BudgetPlanning(
+                deptCB.getValue(),
+                currentBudget,
+                proposedBudget
+        );
+
+        saveBudget(budgetPlanning);
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
         alert.setContentText("Budget updated successfully.");
         alert.showAndWait();
+
         deptCB.getSelectionModel().clearSelection();
         currentBudgetTF.clear();
         proposedBudgetTF.clear();
+    }
+
+    private void saveBudget(BudgetPlanning newBudget) {
+
+        List<BudgetPlanning> budgetList = loadAllBudgets();
+        budgetList.add(newBudget);
+
+        try (ObjectOutputStream oos =
+                     new ObjectOutputStream(new FileOutputStream(file))) {
+
+            for (BudgetPlanning bp : budgetList) {
+                oos.writeObject(bp);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<BudgetPlanning> loadAllBudgets() {
+
+        List<BudgetPlanning> budgetList = new ArrayList<>();
+
+        if (!file.exists()) {
+            return budgetList;
+        }
+
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(new FileInputStream(file))) {
+
+            while (true) {
+                BudgetPlanning bp = (BudgetPlanning) ois.readObject();
+                budgetList.add(bp);
+            }
+
+        } catch (EOFException e) {
+            // End of File, expected
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return budgetList;
     }
 }
