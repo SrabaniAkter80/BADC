@@ -7,12 +7,8 @@ import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
 
 import java.io.IOException;import java.io.File;
-import java.io.File;
-import java.io.File;
-import java.io.File;
-import java.io.IOException;
 
-public class G2_UplodDocumentsController
+public class G2_UploadDocumentsController
 {
     @javafx.fxml.FXML
     private ComboBox<String> DocumentTypeComboBox;
