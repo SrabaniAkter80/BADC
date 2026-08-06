@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class G1_SupplyProposalController
+public class G1SupplyProposalController
 {
     @javafx.fxml.FXML
     private TextField ProposalDetailsTextField;
@@ -29,7 +29,7 @@ public class G1_SupplyProposalController
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void submitButton(ActionEvent actionEvent) {
 
         try {
@@ -78,4 +78,8 @@ public class G1_SupplyProposalController
 
 
         }
+
+    @javafx.fxml.FXML
+    public void ProposalSubmitButton(ActionEvent actionEvent) {
     }
+}
