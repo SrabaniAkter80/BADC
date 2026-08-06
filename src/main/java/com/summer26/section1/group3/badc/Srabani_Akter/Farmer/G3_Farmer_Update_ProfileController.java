@@ -27,9 +27,7 @@ public class G3_Farmer_Update_ProfileController {
     private TextField PhoneNumberTextField;
 
 
-    private static final String FILE_NAME =
-            "data/farmers.bin";
-
+    private static final String FILE_NAME = "data/farmers.bin";
     private Farmer farmer;
 
 

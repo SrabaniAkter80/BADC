@@ -7,10 +7,7 @@ public class Notification implements Serializable {
     private String message;
     private String date;
 
-    public Notification(String notificationTitle,
-                        String message,
-                        String date) {
-
+    public Notification(String notificationTitle,String message,String date) {
         this.notificationTitle = notificationTitle;
         this.message = message;
         this.date = date;
@@ -19,23 +16,18 @@ public class Notification implements Serializable {
     public String getNotificationTitle() {
         return notificationTitle;
     }
-
     public String getMessage() {
         return message;
     }
-
     public String getDate() {
         return date;
     }
-
     public void setNotificationTitle(String notificationTitle) {
         this.notificationTitle = notificationTitle;
     }
-
     public void setMessage(String message) {
         this.message = message;
     }
-
     public void setDate(String date) {
         this.date = date;
     }

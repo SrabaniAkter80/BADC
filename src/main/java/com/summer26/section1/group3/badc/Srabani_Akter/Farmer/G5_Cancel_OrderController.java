@@ -48,23 +48,14 @@ public class G5_Cancel_OrderController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        orderIDColumn.setCellValueFactory(
-                new PropertyValueFactory<>("orderID")
-        );
+        orderIDColumn.setCellValueFactory(new PropertyValueFactory<>("orderID"));
 
-        ProductNameColumn.setCellValueFactory(
-                new PropertyValueFactory<>("productCategory")
-        );
+        ProductNameColumn.setCellValueFactory(new PropertyValueFactory<>("productCategory"));
 
-        quantityColumn.setCellValueFactory(
-                new PropertyValueFactory<>("quantity")
-        );
-
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
         loadOrders();
-
         CancelOrder_TableView.setItems(orders);
-
         confirmationMessageLabel.setText("");
     }
 
@@ -151,7 +142,6 @@ public class G5_Cancel_OrderController {
             file.delete();
         }
 
-
         for (Order order : orders) {
 
             BinaryFileUtil.appendObject(
@@ -159,13 +149,7 @@ public class G5_Cancel_OrderController {
                     order
             );
         }
-
-
-        confirmationMessageLabel.setText(
-                "Request cancelled successfully."
-        );
-
-
+        confirmationMessageLabel.setText("Request cancelled successfully");
         filterOrderIDTextField.clear();
     }
 

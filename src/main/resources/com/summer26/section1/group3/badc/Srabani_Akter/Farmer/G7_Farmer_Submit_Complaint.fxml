@@ -7,102 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G7_Submit_ComplaintController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.Farmer.G7_Submit_ComplaintController">
 
     <children>
 
         <!-- Title -->
-        <Label layoutX="275.0"
-               layoutY="35.0"
-               prefWidth="350.0"
-               alignment="CENTER"
-               text="📝 Submit Complaint"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label alignment="CENTER" layoutX="389.0" layoutY="35.0" prefHeight="40.0" prefWidth="260.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Submit Complaint" />
 
         <!-- Complaint Category -->
-        <Text layoutX="210.0"
-              layoutY="145.0"
-              text="Complaint Category"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text fontSmoothingType="LCD" layoutX="210.0" layoutY="145.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Complaint Category" />
 
-        <ComboBox fx:id="complaintCategoryComboBox"
-                  layoutX="390.0"
-                  layoutY="120.0"
-                  prefHeight="40.0"
-                  prefWidth="260.0"
-                  promptText="Complaint Category"
-                  style="-fx-background-radius:10;
-                       -fx-font-size:14px;"/>
+        <ComboBox fx:id="complaintCategoryComboBox" layoutX="390.0" layoutY="120.0" prefHeight="40.0" prefWidth="260.0" promptText="Complaint Category" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
 
         <!-- Complaint Details -->
-        <Text layoutX="210.0"
-              layoutY="225.0"
-              text="Complaint Details"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="210.0" layoutY="225.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Complaint Details" />
 
-        <TextArea fx:id="complaintDetailsTextArea"
-                  layoutX="390.0"
-                  layoutY="190.0"
-                  prefHeight="120.0"
-                  prefWidth="260.0"
-                  promptText="Describe your complaint..."
-                  style="-fx-background-radius:10;
-                       -fx-border-radius:10;
-                       -fx-border-color:#CBD5E1;
-                       -fx-font-size:14px;"/>
+        <TextArea fx:id="complaintDetailsTextArea" layoutX="390.0" layoutY="190.0" prefHeight="120.0" prefWidth="260.0" promptText="Describe your complaint..." style="-fx-background-radius:10;                        -fx-border-radius:10;                        -fx-border-color:#CBD5E1;                        -fx-font-size:14px;" />
 
         <!-- Submit Button -->
-        <Button layoutX="390.0"
-                layoutY="340.0"
-                mnemonicParsing="false"
-                onAction="#handleSubmitButton"
-                prefHeight="45.0"
-                prefWidth="260.0"
-                text="📤 Submit Complaint"
-                style="-fx-background-color:#EF4444;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(239,68,68,0.35),12,0,0,4);"/>
+        <Button layoutX="390.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleSubmitButton" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color:#EF4444;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(239,68,68,0.35),12,0,0,4);" text="Submit Complaint" />
 
         <!-- Confirmation Message -->
-        <Label fx:id="confirmationMessageLabel"
-               layoutX="250.0"
-               layoutY="410.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="Confirmation Message"
-               style="-fx-font-size:16px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#16A34A;"/>
+        <Label fx:id="confirmationMessageLabel" alignment="CENTER" layoutX="309.0" layoutY="418.0" prefWidth="400.0" style="-fx-font-size:16px;                     -fx-font-weight:bold;                     -fx-text-fill:#16A34A;" text="Confirmation Message" />
 
         <!-- Back Button -->
-        <Button layoutX="390.0"
-                layoutY="480.0"
-                mnemonicParsing="false"
-                onAction="#handleBacktoDashboardButton"
-                prefHeight="45.0"
-                prefWidth="260.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="390.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleBacktoDashboardButton" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
 
     </children>
 </AnchorPane>

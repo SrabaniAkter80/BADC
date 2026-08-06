@@ -32,36 +32,21 @@ public class G6_Farmer_NotificationsController {
 
     private static final String FILE_NAME =
             "data/notifications.bin";
-
-
     private final ObservableList<Notification> notifications =
             FXCollections.observableArrayList();
-
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        notificationTitleColumn.setCellValueFactory(
-                new PropertyValueFactory<>("notificationTitle")
-        );
+        notificationTitleColumn.setCellValueFactory(new PropertyValueFactory<>("notificationTitle"));
 
-        messageColumn.setCellValueFactory(
-                new PropertyValueFactory<>("message")
-        );
+        messageColumn.setCellValueFactory(new PropertyValueFactory<>("message"));
 
-        dateColumn.setCellValueFactory(
-                new PropertyValueFactory<>("date")
-        );
-
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         loadNotifications();
-
-        Farmer_Notificatios_Tableview.setItems(
-                notifications
-        );
+        Farmer_Notificatios_Tableview.setItems(notifications);
     }
-
-
     private void loadNotifications() {
 
         ArrayList<Notification> notificationList =
@@ -69,8 +54,6 @@ public class G6_Farmer_NotificationsController {
 
         notifications.setAll(notificationList);
     }
-
-
     @javafx.fxml.FXML
     public void handleBackToDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");

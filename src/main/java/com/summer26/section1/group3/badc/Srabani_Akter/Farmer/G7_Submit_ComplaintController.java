@@ -10,47 +10,26 @@ import javafx.scene.control.*;
 import java.io.IOException;
 
 public class G7_Submit_ComplaintController {
-
     @javafx.fxml.FXML
     private TextArea complaintDetailsTextArea;
-
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
 
     @javafx.fxml.FXML
     private ComboBox<String> complaintCategoryComboBox;
-
-
     private static final String FILE_NAME =
             "data/complaints.bin";
 
-
     @javafx.fxml.FXML
-    public void initialize() {
-
-        complaintCategoryComboBox.setItems(
-                FXCollections.observableArrayList(
-                        "Products",
-                        "Services",
-                        "Application Process"
-                )
-        );
-
+    public void initialize() {complaintCategoryComboBox.setItems(FXCollections.observableArrayList("Products", "Services", "Application Process"));
         confirmationMessageLabel.setText("");
     }
-
-
     @javafx.fxml.FXML
     public void handleSubmitButton(ActionEvent actionEvent) {
 
-        String category =
-                complaintCategoryComboBox.getValue();
+        String category = complaintCategoryComboBox.getValue();
 
-        String details =
-                complaintDetailsTextArea.getText().trim();
-
-
-        // Validate category
+        String details = complaintDetailsTextArea.getText().trim();
         if (category == null || category.isEmpty()) {
 
             confirmationMessageLabel.setText(
@@ -59,9 +38,6 @@ public class G7_Submit_ComplaintController {
 
             return;
         }
-
-
-
         if (details.isEmpty()) {
 
             confirmationMessageLabel.setText(
@@ -70,36 +46,16 @@ public class G7_Submit_ComplaintController {
 
             return;
         }
+        Complaint complaint = new Complaint(category, details);
 
+        BinaryFileUtil.appendObject(FILE_NAME, complaint);
 
-        // Create complaint object
-        Complaint complaint =
-                new Complaint(
-                        category,
-                        details
-                );
+        confirmationMessageLabel.setText("Complaint submitted successfully.");
 
-
-        // Store complaint in complaints.bin
-        BinaryFileUtil.appendObject(
-                FILE_NAME,
-                complaint
-        );
-
-
-        // Display confirmation
-        confirmationMessageLabel.setText(
-                "Complaint submitted successfully."
-        );
-
-
-        // Clear input fields
-        complaintCategoryComboBox.getSelectionModel()
-                .clearSelection();
+        complaintCategoryComboBox.getSelectionModel().clearSelection();
 
         complaintDetailsTextArea.clear();
     }
-
 
     @javafx.fxml.FXML
     public void handleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {

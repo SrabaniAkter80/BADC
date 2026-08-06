@@ -48,4 +48,14 @@ public class LeaveRequest implements Serializable {
     public void setApplicationStatus(String applicationStatus) {
         this.applicationStatus = applicationStatus;
     }
+
+    @Override
+    public String toString() {
+        return "LeaveRequest{" +
+                "applicationID='" + applicationID + '\'' +
+                ", employeeID='" + employeeID + '\'' +
+                ", leaveType='" + leaveType + '\'' +
+                ", applicationStatus='" + applicationStatus + '\'' +
+                '}';
+    }
 }

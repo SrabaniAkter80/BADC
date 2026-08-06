@@ -33,10 +33,7 @@ public class G4_Task_Assignment_ViewController {
     @javafx.fxml.FXML
     public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
 
-        SceneSwitcher.switchTo(
-
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
-
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
@@ -61,11 +58,7 @@ public class G4_Task_Assignment_ViewController {
             return;
         }
 
-        TaskAssignment task = new TaskAssignment(
-                employeeID,
-                taskDescription,
-                dueDate
-        );
+        TaskAssignment task = new TaskAssignment(employeeID, taskDescription, dueDate);
 
         BinaryFileUtil.appendObject(FILE_NAME, task);
 
