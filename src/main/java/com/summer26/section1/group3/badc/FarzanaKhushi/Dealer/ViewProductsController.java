@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import javax.swing.text.View;
+//import javax.swing.text.View;
 import java.io.IOException;
 
 public class ViewProductsController

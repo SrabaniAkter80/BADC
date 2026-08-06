@@ -52,4 +52,9 @@ public class AdminDashboardController
     public void performanceAnalyticsButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Admin/PerformanceAnalytics.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Admin/AdminDashboard.fxml");
+    }
 }

@@ -52,7 +52,7 @@ public class LoginController
                 System.out.println("Role = " + role);
                 switch (role) {
                     case "Admin":
-                        SceneSwitcher.switchTo("adminDashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Admin/AdminDashboard.fxml");
                         break;
                     case "HR Manager":
                         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
