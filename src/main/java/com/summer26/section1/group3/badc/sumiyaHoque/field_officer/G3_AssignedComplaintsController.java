@@ -72,7 +72,12 @@ public class G3_AssignedComplaintsController
             alert.setContentText("Complaint resolved successfully.");
             alert.showAndWait();
         }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
     }
+}
 
 
 

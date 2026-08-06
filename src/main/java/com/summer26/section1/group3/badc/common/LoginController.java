@@ -68,7 +68,7 @@ public class LoginController
                         SceneSwitcher.switchTo("warehouseDashboard.fxml");
                         break;
                     case "Field Officer":
-                        SceneSwitcher.switchTo("fieldOfficerDashboard.fxml");
+                        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
                         break;
                     case "Transport & Logistic Manager":
                         System.out.println("Opening Transport & Logistic Manager Dashboard...");
