@@ -9,135 +9,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G5_Employee_Attendance_ViewController">
+<AnchorPane prefHeight="600.0" prefWidth="871.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G5_Employee_Attendance_ViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="employeeAttendanceLabel"
-               layoutX="250.0"
-               layoutY="30.0"
-               prefWidth="400.0"
-               alignment="CENTER"
-               text="📅 Employee Attendance"
-               style="-fx-font-size:28px;
-                    -fx-font-weight:bold;
-                    -fx-text-fill:#1E3A8A;"/>
+        <Label fx:id="employeeAttendanceLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text="Employee Attendance" />
 
         <!-- Employee ID -->
-        <Text layoutX="100.0"
-              layoutY="120.0"
-              text="Employee ID"
-              style="-fx-font-size:15px;
-                   -fx-font-weight:bold;
-                   -fx-fill:#374151;"/>
+        <Text layoutX="100.0" layoutY="120.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
 
-        <TextField fx:id="employeeIDTextField"
-                   layoutX="210.0"
-                   layoutY="95.0"
-                   prefHeight="40.0"
-                   prefWidth="200.0"
-                   promptText="Employee ID"
-                   style="-fx-background-radius:10;
-                        -fx-border-radius:10;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;"/>
+        <TextField fx:id="employeeIDTextField" layoutX="210.0" layoutY="95.0" prefHeight="40.0" prefWidth="200.0" promptText="Employee ID" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
         <!-- Working Status -->
-        <ComboBox layoutX="500.0"
-                  layoutY="95.0"
-                  prefHeight="40.0"
-                  prefWidth="200.0"
-                  promptText="Working Status"
-                  style="-fx-background-radius:10;
-                       -fx-font-size:14px;"/>
+        <ComboBox layoutX="500.0" layoutY="95.0" prefHeight="40.0" prefWidth="200.0" promptText="Working Status" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
 
         <!-- Buttons -->
-        <Button layoutX="210.0"
-                layoutY="155.0"
-                mnemonicParsing="false"
-                onAction="#HandleSearchFilterButton"
-                prefHeight="40.0"
-                prefWidth="200.0"
-                text="🔍 Search Employee"
-                style="-fx-background-color:#2563EB;
-                     -fx-text-fill:white;
-                     -fx-font-size:14px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:10;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);"/>
+        <Button layoutX="210.0" layoutY="155.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Search Employee" />
 
-        <Button layoutX="500.0"
-                layoutY="155.0"
-                mnemonicParsing="false"
-                text="🔎 Filter Status"
-                prefHeight="40.0"
-                prefWidth="200.0"
-                style="-fx-background-color:#10B981;
-                     -fx-text-fill:white;
-                     -fx-font-size:14px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:10;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);"/>
+        <Button layoutX="500.0" layoutY="155.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#10B981;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);" text="Filter Status" />
 
         <!-- Attendance Table -->
-        <TableView fx:id="Employee_Attendance_TableView"
-                   layoutX="50.0"
-                   layoutY="230.0"
-                   prefHeight="280.0"
-                   prefWidth="800.0"
-                   style="-fx-background-radius:12;
-                        -fx-border-radius:12;
-                        -fx-border-color:#CBD5E1;
-                        -fx-font-size:14px;">
+        <TableView fx:id="Employee_Attendance_TableView" layoutX="50.0" layoutY="230.0" prefHeight="280.0" prefWidth="800.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
 
             <columns>
 
-                <TableColumn fx:id="employeeIDColumn"
-                             prefWidth="150.0"
-                             text="Employee ID"/>
+                <TableColumn fx:id="employeeIDColumn" prefWidth="150.0" text="Employee ID" />
 
-                <TableColumn fx:id="employeeNameColumn"
-                             prefWidth="180.0"
-                             text="Employee Name"/>
+                <TableColumn fx:id="employeeNameColumn" prefWidth="180.0" text="Employee Name" />
 
-                <TableColumn fx:id="attendanceRecordColumn"
-                             prefWidth="180.0"
-                             text="Attendance Record"/>
+                <TableColumn fx:id="attendanceRecordColumn" prefWidth="180.0" text="Attendance Record" />
 
-                <TableColumn fx:id="workingStatusColumn"
-                             prefWidth="160.0"
-                             text="Working Status"/>
+                <TableColumn fx:id="workingStatusColumn" prefWidth="160.0" text="Working Status" />
 
-                <TableColumn fx:id="DateColumn"
-                             prefWidth="130.0"
-                             text="Date"/>
+                <TableColumn fx:id="DateColumn" prefWidth="130.0" text="Date" />
 
             </columns>
 
         </TableView>
 
         <!-- Back -->
-        <Button layoutX="340.0"
-                layoutY="530.0"
-                mnemonicParsing="false"
-                onAction="#HandleBacktoDashboardButton"
-                prefHeight="45.0"
-                prefWidth="220.0"
-                text="← Back to Dashboard"
-                style="-fx-background-color:#374151;
-                     -fx-text-fill:white;
-                     -fx-font-size:15px;
-                     -fx-font-weight:bold;
-                     -fx-background-radius:12;
-                     -fx-cursor:hand;
-                     -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);"/>
+        <Button layoutX="340.0" layoutY="530.0" mnemonicParsing="false" onAction="#HandleBacktoDashboardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
 
     </children>
 </AnchorPane>
