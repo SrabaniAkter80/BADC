@@ -6,13 +6,11 @@ import java.time.LocalDate;
 public class Announcement implements Serializable {
     private String title;
     private String message;
-    private String sender;
     private LocalDate dateTime;
 
-    public Announcement(String title, String message, String sender) {
+    public Announcement(String title, String message) {
         this.title = title;
         this.message = message;
-        this.sender = sender;
         this.dateTime = LocalDate.now();
     }
 
@@ -32,14 +30,6 @@ public class Announcement implements Serializable {
         this.message = message;
     }
 
-    public String getSender() {
-        return sender;
-    }
-
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
-
     public LocalDate getDateTime() {
         return dateTime;
     }
@@ -53,7 +43,6 @@ public class Announcement implements Serializable {
         return "Announcement{" +
                 "title='" + title + '\'' +
                 ", message='" + message + '\'' +
-                ", sender='" + sender + '\'' +
                 ", dateTime=" + dateTime +
                 '}';
     }

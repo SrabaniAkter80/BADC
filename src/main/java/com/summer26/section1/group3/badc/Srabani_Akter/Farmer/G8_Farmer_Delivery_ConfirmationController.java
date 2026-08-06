@@ -36,56 +36,37 @@ public class G8_Farmer_Delivery_ConfirmationController {
     @javafx.fxml.FXML
     private TableColumn<Order, Integer> orderIDColumn;
 
-
-    private static final String FILE_NAME =
-            "data/orders.bin";
-
+    private static final String FILE_NAME = "data/orders.bin";
 
     private final ObservableList<Order> orders =
             FXCollections.observableArrayList();
 
-
     @javafx.fxml.FXML
     public void initialize() {
 
-        orderIDColumn.setCellValueFactory(
-                new PropertyValueFactory<>("orderID")
-        );
+        orderIDColumn.setCellValueFactory(new PropertyValueFactory<>("orderID"));
 
-        productNameColumn.setCellValueFactory(
-                new PropertyValueFactory<>("productCategory")
-        );
+        productNameColumn.setCellValueFactory(new PropertyValueFactory<>("productCategory"));
 
-        deleveryStatusColumn.setCellValueFactory(
-                new PropertyValueFactory<>("status")
-        );
-
-
+        deleveryStatusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
         loadOrders();
 
-        DeleveryConfirmation_TableView.setItems(
-                orders
-        );
+        DeleveryConfirmation_TableView.setItems(orders);
 
         confirmationMessageLabel.setText("");
     }
 
-
     private void loadOrders() {
 
-        ArrayList<Order> orderList =
-                BinaryFileUtil.readObjects(FILE_NAME);
+        ArrayList<Order> orderList = BinaryFileUtil.readObjects(FILE_NAME);
 
         orders.setAll(orderList);
     }
-
-
     @javafx.fxml.FXML
     public void handleLoadDataButton(ActionEvent actionEvent) {
 
         String orderIDText =
                 FilterOrderIDtextField.getText().trim();
-
 
         if (orderIDText.isEmpty()) {
 
@@ -95,12 +76,9 @@ public class G8_Farmer_Delivery_ConfirmationController {
 
             return;
         }
-
-
         int orderID;
 
         try {
-
             orderID = Integer.parseInt(orderIDText);
 
         } catch (NumberFormatException e) {
@@ -112,11 +90,7 @@ public class G8_Farmer_Delivery_ConfirmationController {
             return;
         }
 
-
         Order selectedOrder = null;
-
-
-        // Find the order
         for (Order order : orders) {
 
             if (order.getOrderID() == orderID) {
@@ -127,8 +101,6 @@ public class G8_Farmer_Delivery_ConfirmationController {
             }
         }
 
-
-        // Order not found
         if (selectedOrder == null) {
 
             confirmationMessageLabel.setText(
@@ -136,38 +108,22 @@ public class G8_Farmer_Delivery_ConfirmationController {
             );
 
             return;
-        }
+        }if (selectedOrder.getStatus().equalsIgnoreCase("Delivered")) {
 
-
-        // Check if delivery is already confirmed
-        if (selectedOrder.getStatus()
-                .equalsIgnoreCase("Delivered")) {
-
-            confirmationMessageLabel.setText(
-                    "Delivery has already been confirmed."
-            );
+            confirmationMessageLabel.setText("Delivery has already been confirmed.");
 
             return;
         }
 
-
-        // Confirm delivery
         selectedOrder.setStatus("Delivered");
-
-
-        // Refresh TableView
         DeleveryConfirmation_TableView.refresh();
 
-
-        // Delete old orders.bin
         File file = new File(FILE_NAME);
 
         if (file.exists()) {
             file.delete();
         }
 
-
-        // Save updated orders
         for (Order order : orders) {
 
             BinaryFileUtil.appendObject(
@@ -176,20 +132,11 @@ public class G8_Farmer_Delivery_ConfirmationController {
             );
         }
 
-
-        // Display confirmation
-        confirmationMessageLabel.setText(
-                "Delivery confirmed successfully."
-        );
-
-
+        confirmationMessageLabel.setText("Delivery confirmed successfully");
         FilterOrderIDtextField.clear();
     }
-
-
     @javafx.fxml.FXML
     public void handleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
     }
 }

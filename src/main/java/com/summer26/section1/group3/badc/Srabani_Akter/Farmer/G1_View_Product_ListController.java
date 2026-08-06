@@ -39,12 +39,9 @@ public class G1_View_Product_ListController {
     @javafx.fxml.FXML
     private TableColumn<Product, String> ProductNameColumn;
 
+    private final ObservableList<Product> allProducts = FXCollections.observableArrayList();
 
-    private final ObservableList<Product> allProducts =
-            FXCollections.observableArrayList();
-
-    private final ObservableList<Product> displayedProducts =
-            FXCollections.observableArrayList();
+    private final ObservableList<Product> displayedProducts = FXCollections.observableArrayList();
 
     private static final String FILE_NAME = "data/examples.bin";
 
@@ -52,41 +49,22 @@ public class G1_View_Product_ListController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        ProductNameColumn.setCellValueFactory(
-                new PropertyValueFactory<>("productName")
-        );
+        ProductNameColumn.setCellValueFactory(new PropertyValueFactory<>("productName"));
 
-        ProductQuantityColumn.setCellValueFactory(
-                new PropertyValueFactory<>("productQuantity")
-        );
+        ProductQuantityColumn.setCellValueFactory(new PropertyValueFactory<>("productQuantity"));
 
-        availabilityStatusColumn.setCellValueFactory(
-                new PropertyValueFactory<>("availabilityStatus")
-        );
+        availabilityStatusColumn.setCellValueFactory(new PropertyValueFactory<>("availabilityStatus"));
 
-
-        ProductCategoryComboBox.setItems(
-                FXCollections.observableArrayList(
-                        "Seeds",
-                        "Fertilizers",
-                        "Agricultural Products"
-                )
-        );
-
+        ProductCategoryComboBox.setItems(FXCollections.observableArrayList("Seeds", "Fertilizers", "Agricultural Products"));
 
         loadProducts();
-
         displayedProducts.setAll(allProducts);
 
         Product_List_TableView.setItems(displayedProducts);
     }
 
-
     private void loadProducts() {
-
-        ArrayList<Product> products =
-                BinaryFileUtil.readObjects(FILE_NAME);
-
+        ArrayList<Product> products = BinaryFileUtil.readObjects(FILE_NAME);
         allProducts.setAll(products);
     }
 
@@ -95,9 +73,7 @@ public class G1_View_Product_ListController {
     public void HandleSearchFilterButton(ActionEvent actionEvent) {
 
         String searchText =
-                FilterProductNameTextField.getText()
-                        .trim()
-                        .toLowerCase();
+                FilterProductNameTextField.getText().trim().toLowerCase();
 
         String selectedCategory =
                 ProductCategoryComboBox.getValue();
@@ -132,23 +108,15 @@ public class G1_View_Product_ListController {
         displayedProducts.setAll(filteredProducts);
     }
 
-
     @javafx.fxml.FXML
     public void HandleResetFilter(ActionEvent actionEvent) {
-
         FilterProductNameTextField.clear();
 
-        ProductCategoryComboBox.getSelectionModel()
-                .clearSelection();
-
+        ProductCategoryComboBox.getSelectionModel().clearSelection();
         displayedProducts.setAll(allProducts);
     }
-
-
     @javafx.fxml.FXML
     public void HandleBackToDashboardButton(ActionEvent actionEvent) throws IOException {
-
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
     }
 }

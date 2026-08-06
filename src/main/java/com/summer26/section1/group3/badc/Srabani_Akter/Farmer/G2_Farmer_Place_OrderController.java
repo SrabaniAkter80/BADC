@@ -24,22 +24,15 @@ public class G2_Farmer_Place_OrderController {
     @javafx.fxml.FXML
     private TextField quantityTextField;
 
+    private static final String PRODUCT_FILE = "data/products.bin";
 
-    private static final String PRODUCT_FILE =
-            "data/products.bin";
-
-    private static final String ORDER_FILE =
-            "data/orders.bin";
-
+    private static final String ORDER_FILE = "data/orders.bin";
 
     @javafx.fxml.FXML
-    public void initialize() {
-
-        loadProducts();
+    public void initialize() {loadProducts();
 
         confirmationMessageLabel.setText("");
     }
-
 
     private void loadProducts() {
 
@@ -60,8 +53,6 @@ public class G2_Farmer_Place_OrderController {
                 FXCollections.observableArrayList(productNames)
         );
     }
-
-
     @javafx.fxml.FXML
     public void HandlePlaceOrderButton(ActionEvent actionEvent) {
 
@@ -81,7 +72,6 @@ public class G2_Farmer_Place_OrderController {
 
             return;
         }
-
 
         if (quantityText.isEmpty()) {
 

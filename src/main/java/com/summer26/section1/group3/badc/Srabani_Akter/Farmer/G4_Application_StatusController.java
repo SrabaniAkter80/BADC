@@ -30,9 +30,7 @@ public class G4_Application_StatusController {
     private TableColumn<Application, String> submissionDateColumn;
 
 
-    private static final String FILE_NAME =
-            "data/applications.bin";
-
+    private static final String FILE_NAME = "data/applications.bin";
 
     private final ObservableList<Application> applications =
             FXCollections.observableArrayList();
@@ -41,24 +39,16 @@ public class G4_Application_StatusController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        applicationTypeColumn.setCellValueFactory(
-                new PropertyValueFactory<>("applicationType")
-        );
+        applicationTypeColumn.setCellValueFactory(new PropertyValueFactory<>("applicationType"));
 
-        submissionDateColumn.setCellValueFactory(
-                new PropertyValueFactory<>("submissionDate")
-        );
+        submissionDateColumn.setCellValueFactory(new PropertyValueFactory<>("submissionDate"));
 
-        currentStatusColumn.setCellValueFactory(
-                new PropertyValueFactory<>("currentStatus")
-        );
+        currentStatusColumn.setCellValueFactory(new PropertyValueFactory<>("currentStatus"));
 
         loadApplications();
 
-
         Application_Status_TableView.setItems(
-                applications
-        );
+                applications);
     }
 
 
@@ -69,7 +59,6 @@ public class G4_Application_StatusController {
 
         applications.setAll(applicationList);
     }
-
 
     @javafx.fxml.FXML
     public void HandleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {

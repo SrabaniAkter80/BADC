@@ -23,7 +23,7 @@ public class SP_DashboardController
 
     @javafx.fxml.FXML
     public void SupplyProposal(ActionEvent actionEvent)throws IOException  {
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G5_SupplyProposal.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G1SupplyProposal.fxml");
 
     }
 
@@ -39,7 +39,7 @@ public class SP_DashboardController
 
     @javafx.fxml.FXML
     public void LogOut(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
 
 
     }
@@ -59,11 +59,11 @@ public class SP_DashboardController
 
     @javafx.fxml.FXML
     public void editbuttonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_editbuttonOnAction.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_EditProfile.fxml");
     }
 
     @javafx.fxml.FXML
     public void myprofileOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_myprofileOnActio.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/supplier/G8_MyProfile.fxml");
     }
 }

@@ -17,7 +17,6 @@ public class Application implements Serializable {
         this.submissionDate = submissionDate;
         this.currentStatus = currentStatus;
     }
-
     public String getApplicationType() {
         return applicationType;
     }
