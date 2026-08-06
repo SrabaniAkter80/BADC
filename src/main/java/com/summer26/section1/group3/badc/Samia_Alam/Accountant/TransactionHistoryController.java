@@ -29,6 +29,7 @@ public class TransactionHistoryController {
     @javafx.fxml.FXML
     private TableColumn<Transaction, String> typeTableCol;
 
+
     @javafx.fxml.FXML
     public void initialize() {
 
@@ -45,7 +46,6 @@ public class TransactionHistoryController {
         amountTableCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
         statusTableCol.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // TODO: এখানে ডাটাবেস থেকে actual ডেটা লোড করবে
         ObservableList<Transaction> transactions = FXCollections.observableArrayList(
                 new Transaction("TNX001", "2026-08-01", "Payroll", 45000.0, "Completed"),
                 new Transaction("TNX002", "2026-08-02", "Subsidy", 12000.0, "Pending"),

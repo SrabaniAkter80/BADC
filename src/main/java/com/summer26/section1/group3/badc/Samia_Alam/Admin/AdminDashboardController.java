@@ -54,7 +54,7 @@ public class AdminDashboardController
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Admin/AdminDashboard.fxml");
+    public void logoutButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
     }
 }
