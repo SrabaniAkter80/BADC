@@ -6,14 +6,18 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class FinancialReportController
-{
+public class FinancialReportController {
+
     @javafx.fxml.FXML
     private TextArea reportTextArea;
     @javafx.fxml.FXML
-    private ComboBox <String> quarterComboBox;
+    private ComboBox<String> quarterComboBox;
+
+    File file = new File("financial_report.bin");
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,25 +29,6 @@ public class FinancialReportController
         );
 
         reportTextArea.setEditable(false);
-    }
-
-    @javafx.fxml.FXML
-    public void downloadButton(ActionEvent actionEvent) {
-        if (reportTextArea.getText().trim().isEmpty()) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Generate the report first.");
-            alert.showAndWait();
-            return;
-        }
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setHeaderText(null);
-        alert.setContentText("Report downloaded successfully.");
-        alert.showAndWait();
     }
 
     @javafx.fxml.FXML
@@ -70,12 +55,93 @@ public class FinancialReportController
                 reportContent
         );
 
+        saveReport(financialReport);
 
         reportTextArea.setText(financialReport.getReport());
     }
 
     @javafx.fxml.FXML
+    public void downloadButton(ActionEvent actionEvent) {
+        if (reportTextArea.getText().trim().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Generate the report first.");
+            alert.showAndWait();
+            return;
+        }
+
+        String fileName = "FinancialReport_" + quarterComboBox.getValue() + ".txt";
+
+        try (BufferedWriter writer =
+                     new BufferedWriter(new FileWriter(fileName))) {
+
+            writer.write(reportTextArea.getText());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Error");
+            errorAlert.setHeaderText(null);
+            errorAlert.setContentText("Failed to download the report.");
+            errorAlert.showAndWait();
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText(null);
+        alert.setContentText("Report downloaded successfully as " + fileName);
+        alert.showAndWait();
+    }
+
+    @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Samia_Alam/Accountant/AccountantDashboard.fxml");
+    }
+
+    private void saveReport(FinancialReport newReport) {
+
+        List<FinancialReport> reportList = loadAllReports();
+        reportList.add(newReport);
+
+        try (ObjectOutputStream oos =
+                     new ObjectOutputStream(new FileOutputStream(file))) {
+
+            for (FinancialReport fr : reportList) {
+                oos.writeObject(fr);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<FinancialReport> loadAllReports() {
+
+        List<FinancialReport> reportList = new ArrayList<>();
+
+        if (!file.exists()) {
+            return reportList;
+        }
+
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(new FileInputStream(file))) {
+
+            while (true) {
+                FinancialReport fr = (FinancialReport) ois.readObject();
+                reportList.add(fr);
+            }
+
+        } catch (EOFException e) {
+            // End of File, expected
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return reportList;
     }
 }

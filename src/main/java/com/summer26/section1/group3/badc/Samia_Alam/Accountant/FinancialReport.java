@@ -1,6 +1,11 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
-public class FinancialReport {
+import java.io.Serializable;
+
+public class FinancialReport implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String quarter;
     private String report;
 
