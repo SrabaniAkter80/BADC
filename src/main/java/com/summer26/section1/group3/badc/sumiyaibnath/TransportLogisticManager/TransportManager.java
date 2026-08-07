@@ -49,6 +49,12 @@ public class TransportManager {
                 "Assigned".equalsIgnoreCase(transport.getStatus());
     }
 
+    public static boolean isDispatched(String transportId) {
+        Transport transport = findTransport(transportId);
+        return transport != null &&
+                "Dispatched".equalsIgnoreCase(transport.getStatus());
+    }
+
     public static void updateTransport() {
         save();
     }

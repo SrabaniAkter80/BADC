@@ -9,26 +9,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="357.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager.G4_TLM_WarehouseTransportController">
+<AnchorPane prefHeight="530.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager.G4_TLM_WarehouseTransportController">
    <children>
-      <Label layoutX="88.0" layoutY="26.0" prefHeight="47.0" prefWidth="428.0" text="Warehouse Transport Management">
+      <Label layoutX="76.0" layoutY="20.0" prefHeight="47.0" prefWidth="428.0" text="Warehouse Transport Management">
          <font>
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="transportid" layoutX="51.0" layoutY="95.0" prefHeight="25.0" prefWidth="179.0" promptText="TransportID" />
-      <TextField fx:id="warehouse" layoutX="51.0" layoutY="129.0" prefHeight="25.0" prefWidth="179.0" promptText="Warehouse " />
-      <TextField fx:id="farm" layoutX="51.0" layoutY="163.0" prefHeight="25.0" prefWidth="179.0" promptText="Farm" />
-      <TableView fx:id="tableview" layoutX="244.0" layoutY="95.0" prefHeight="200.0" prefWidth="253.0">
+      <TextField fx:id="transportid" layoutX="40.0" layoutY="83.0" prefHeight="25.0" prefWidth="179.0" promptText="TransportID" />
+      <TextField fx:id="warehouse" layoutX="40.0" layoutY="120.0" prefHeight="25.0" prefWidth="179.0" promptText="Warehouse " />
+      <TextField fx:id="farm" layoutX="229.0" layoutY="120.0" prefHeight="25.0" prefWidth="179.0" promptText="Farm" />
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="238.0" prefHeight="200.0" prefWidth="444.0">
         <columns>
-          <TableColumn fx:id="coltransportid" prefWidth="87.0" text="TransportID" />
-          <TableColumn fx:id="colwarehouse" prefWidth="85.0" text="Warehouse" />
-            <TableColumn fx:id="colfarm" prefWidth="79.0" text="Farm" />
+          <TableColumn fx:id="coltransportid" prefWidth="78.0" text="TransportID" />
+          <TableColumn fx:id="colwarehouse" prefWidth="94.0" text="Warehouse" />
+            <TableColumn fx:id="colfarm" prefWidth="87.0" text="Farm" />
+            <TableColumn fx:id="coldispatcheddate" prefWidth="102.0" text="Dispatched Date" />
+            <TableColumn fx:id="colstatus" prefWidth="82.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="51.0" layoutY="229.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="114.0" text="Confirm Transport" />
-      <Label fx:id="confirmlabel" layoutX="20.0" layoutY="266.0" prefHeight="59.0" prefWidth="205.0" />
-      <Button layoutX="225.0" layoutY="310.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="88.0" text="Back" />
-      <DatePicker fx:id="transportdate" layoutX="51.0" layoutY="195.0" prefHeight="25.0" prefWidth="179.0" promptText="Transport Date" />
+      <Button layoutX="40.0" layoutY="196.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="114.0" text="Confirm Dispatch" />
+      <Label fx:id="label" layoutX="37.0" layoutY="451.0" prefHeight="40.0" prefWidth="444.0" />
+      <Button layoutX="212.0" layoutY="497.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="88.0" text="Back" />
+      <DatePicker fx:id="dispatcheddate" layoutX="40.0" layoutY="157.0" prefHeight="25.0" prefWidth="179.0" promptText="Dispatched Date" />
+      <Button layoutX="230.0" layoutY="83.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <TextField fx:id="status" editable="false" layoutX="230.0" layoutY="157.0" prefHeight="25.0" prefWidth="179.0" promptText="Status" />
    </children>
 </AnchorPane>
