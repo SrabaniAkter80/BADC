@@ -1,12 +1,16 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TransactionHistoryController {
 
@@ -28,6 +32,9 @@ public class TransactionHistoryController {
     private TableColumn<Transaction, String> typeTableCol;
 
     File file = new File("transaction.bin");
+
+    // সব transaction মেমোরিতে রাখা হচ্ছে, filter করার সময় এখান থেকেই বাছাই হবে
+    private final List<Transaction> allTransactions = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -80,7 +87,7 @@ public class TransactionHistoryController {
 
     private void loadData() {
 
-        tnxHistoryTableView.getItems().clear();
+        allTransactions.clear();
 
         try {
 
@@ -92,7 +99,7 @@ public class TransactionHistoryController {
                 Transaction transaction =
                         (Transaction) ois.readObject();
 
-                tnxHistoryTableView.getItems().add(transaction);
+                allTransactions.add(transaction);
 
             }
 
@@ -103,6 +110,9 @@ public class TransactionHistoryController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // প্রথমে সব দেখাও
+        tnxHistoryTableView.setItems(FXCollections.observableArrayList(allTransactions));
     }
 
     @javafx.fxml.FXML
@@ -127,8 +137,10 @@ public class TransactionHistoryController {
     @javafx.fxml.FXML
     public void filterButton(ActionEvent actionEvent) {
 
-        if (filterComboBox.getValue() == null &&
-                tnxIdTF.getText().trim().isEmpty()) {
+        String selectedStatus = filterComboBox.getValue();
+        String tnxId = tnxIdTF.getText().trim();
+
+        if (selectedStatus == null && tnxId.isEmpty()) {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Filter");
@@ -138,10 +150,32 @@ public class TransactionHistoryController {
             return;
         }
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setHeaderText(null);
-        alert.setContentText("Filter applied successfully.");
-        alert.showAndWait();
+        List<Transaction> filtered = new ArrayList<>();
+
+        for (Transaction t : allTransactions) {
+
+            boolean statusMatches =
+                    selectedStatus == null
+                            || selectedStatus.equals("All")
+                            || t.getStatus().equalsIgnoreCase(selectedStatus);
+
+            boolean idMatches =
+                    tnxId.isEmpty()
+                            || t.getTransactionId().equalsIgnoreCase(tnxId);
+
+            if (statusMatches && idMatches) {
+                filtered.add(t);
+            }
+        }
+
+        tnxHistoryTableView.setItems(FXCollections.observableArrayList(filtered));
+
+        if (filtered.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Filter");
+            alert.setHeaderText(null);
+            alert.setContentText("No matching transactions found.");
+            alert.showAndWait();
+        }
     }
 }
