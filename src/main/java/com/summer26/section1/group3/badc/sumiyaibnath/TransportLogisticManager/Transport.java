@@ -11,6 +11,60 @@ public class Transport implements Serializable {
     private String vehicleId;
     private LocalDate dispatchDate;
     private String status;
+    private LocalDate assignmentDate;
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "transportId='" + transportId + '\'' +
+                ", destination='" + destination + '\'' +
+                ", scheduledDate=" + scheduledDate +
+                ", driverName='" + driverName + '\'' +
+                ", vehicleId='" + vehicleId + '\'' +
+                ", dispatchDate=" + dispatchDate +
+                ", status='" + status + '\'' +
+                ", assignmentDate=" + assignmentDate +
+                ", warehouse='" + warehouse + '\'' +
+                ", farm='" + farm + '\'' +
+                '}';
+    }
+
+    private String warehouse;
+
+    public String getWarehouse() {
+        return warehouse;
+    }
+
+    public void setWarehouse(String warehouse) {
+        this.warehouse = warehouse;
+    }
+
+    public String getFarm() {
+        return farm;
+    }
+
+    public void setFarm(String farm) {
+        this.farm = farm;
+    }
+
+    private String farm;
+
+    public Transport(String warehouse, String farm) {
+        this.warehouse = warehouse;
+        this.farm = farm;
+    }
+
+    public LocalDate getAssignmentDate() {
+        return assignmentDate;
+    }
+
+    public void setAssignmentDate(LocalDate assignmentDate) {
+        this.assignmentDate = assignmentDate;
+    }
+
+    public Transport(LocalDate assignmentDate) {
+        this.assignmentDate = assignmentDate;
+    }
 
     public Transport() {
     }
@@ -71,18 +125,6 @@ public class Transport implements Serializable {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Transport{" +
-                "transportId='" + transportId + '\'' +
-                ", destination='" + destination + '\'' +
-                ", scheduledDate=" + scheduledDate +
-                ", driverName='" + driverName + '\'' +
-                ", vehicleId='" + vehicleId + '\'' +
-                ", dispatchDate=" + dispatchDate +
-                ", status='" + status + '\'' +
-                '}';
-    }
 
     public Transport(String transportId, String destination, LocalDate scheduledDate, String driverName, String vehicleId, LocalDate dispatchDate, String status) {
         this.transportId = transportId;
