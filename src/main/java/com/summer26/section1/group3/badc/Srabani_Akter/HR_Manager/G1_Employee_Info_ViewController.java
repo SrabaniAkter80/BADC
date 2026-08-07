@@ -19,9 +19,6 @@ import java.util.ArrayList;
 public class G1_Employee_Info_ViewController {
 
     @FXML
-    private TextField FilterEmployeeIDTextField;
-
-    @FXML
     private ComboBox<String> DesignationComboBox;
 
     @FXML
@@ -44,6 +41,8 @@ public class G1_Employee_Info_ViewController {
 
     private final ObservableList<Employee> employeeList =
             FXCollections.observableArrayList();
+    @FXML
+    private TextField FilterEmployeeIDTextField;
 
     @FXML
     public void initialize() {
@@ -56,7 +55,7 @@ public class G1_Employee_Info_ViewController {
 
         ContactInformationColumn.setCellValueFactory(new PropertyValueFactory<>("contactInformation"));
 
-        DesignationComboBox.getItems().addAll("Account Officer", "Field Officer", "Procurement Officer", "Transport & Logistic Manager");
+        DesignationComboBox.getItems().addAll("Account Officer", "Field Officer", "Procurement Officer", "Transport and Logistic Manager");
         loadEmployees();
 
         Employee_Information_TableView.setItems(employeeList);
@@ -88,7 +87,6 @@ public class G1_Employee_Info_ViewController {
 
     @FXML
     public void HandleSearchFilterButton(ActionEvent actionEvent) {
-
         String employeeID = FilterEmployeeIDTextField.getText().trim();
         String designation = DesignationComboBox.getValue();
 
@@ -105,14 +103,13 @@ public class G1_Employee_Info_ViewController {
                     designation == null
                             || employee.getDesignation().equalsIgnoreCase(designation);
 
-            if (idMatch && designationMatch) {
+            if (idMatch || designationMatch) {
                 filteredList.add(employee);
             }
         }
 
         Employee_Information_TableView.setItems(filteredList);
     }
-
     @FXML
     public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
