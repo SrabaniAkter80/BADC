@@ -1,6 +1,5 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
-import com.summer26.section1.group3.badc.common.Employee;
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
 import javafx.collections.FXCollections;

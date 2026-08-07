@@ -37,7 +37,6 @@ public class G7_Submit_ComplaintController {
             return;
         }
         if (details.isEmpty()) {
-
             confirmationMessageLabel.setText("Please enter complaint details");
 
             return;

@@ -41,7 +41,7 @@ public class G1_View_Product_ListController {
 
     private final ObservableList<Product> displayedProducts = FXCollections.observableArrayList();
 
-    private static final String FILE_NAME = "data/examples.bin";
+    private static final String FILE_NAME = "data/products.bin";
 
 
     @javafx.fxml.FXML
