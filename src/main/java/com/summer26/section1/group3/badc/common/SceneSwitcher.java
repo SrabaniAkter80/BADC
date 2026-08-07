@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SceneSwitcher {
 
@@ -13,8 +14,13 @@ public class SceneSwitcher {
 
     public static void switchTo(String fxmlFile) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(
-                SceneSwitcher.class.getResource(fxmlFile));
+        URL url = SceneSwitcher.class.getResource(fxmlFile);
+
+        if (url == null) {
+            throw new  IOException("FXML file not found at path: " + fxmlFile);
+        }
+
+        FXMLLoader loader = new FXMLLoader(url);
 
         Parent root = loader.load();
 

@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.supplier;
 
-public class SupplyProposal {
+import java.io.Serializable;
+
+public class SupplyProposal implements Serializable {
     private String proposalId;
     private String productCategory;
     private int quantity;

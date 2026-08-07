@@ -17,4 +17,8 @@ module com.summer26.section1.group3.badc {
     exports com.summer26.section1.group3.badc.Samia_Alam.Admin;
     opens com.summer26.section1.group3.badc.Samia_Alam.Accountant to javafx.fxml;
     exports com.summer26.section1.group3.badc.Samia_Alam.Accountant;
+    opens com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice to javafx.fxml;
+    exports com.summer26.section1.group3.badc.FarzanaKhushi.WarehouseInventoryOffice;
+    opens com.summer26.section1.group3.badc.FarzanaKhushi.Dealer to javafx.fxml;
+    exports com.summer26.section1.group3.badc.FarzanaKhushi.Dealer;
 }

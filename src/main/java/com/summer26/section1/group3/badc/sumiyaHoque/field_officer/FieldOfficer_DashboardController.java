@@ -25,7 +25,7 @@ public class FieldOfficer_DashboardController
 
     @javafx.fxml.FXML
     public void logoutButton(ActionEvent actionEvent)throws IOException {
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/sumiyaHoque/field_officer/FieldOfficer_Dashboard.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
     }
 
     @javafx.fxml.FXML

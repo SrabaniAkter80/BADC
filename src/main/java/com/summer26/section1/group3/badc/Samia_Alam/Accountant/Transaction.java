@@ -1,6 +1,10 @@
 package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
-public class Transaction {
+import java.io.Serializable;
+
+public class Transaction implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String transactionId;
     private String date;
     private String type;

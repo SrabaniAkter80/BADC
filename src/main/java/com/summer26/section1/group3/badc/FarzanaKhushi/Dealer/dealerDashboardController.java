@@ -49,4 +49,14 @@ public class dealerDashboardController
     public void purchaseHistoryButton(ActionEvent actionEvent) throws IOException{
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/PurchaseProduct.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void demandButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/SendProductDemand.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/Login.fxml");
+    }
 }

@@ -31,6 +31,6 @@ public class ViewProductsController
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/dealerDashboardController.java");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/FarzanaKhushi/Dealer/dealerDashboard.fxml");
     }
 }

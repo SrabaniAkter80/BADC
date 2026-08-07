@@ -1,6 +1,8 @@
 package com.summer26.section1.group3.badc.sumiyaHoque.field_officer;
 
-public class FieldVisit {
+import java.io.Serializable;
+
+public class FieldVisit implements Serializable {
     private String areaId;
     private String areaName;
     private String farmerName;
