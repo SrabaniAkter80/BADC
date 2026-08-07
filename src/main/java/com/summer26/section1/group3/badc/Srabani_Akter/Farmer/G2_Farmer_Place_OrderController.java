@@ -29,7 +29,9 @@ public class G2_Farmer_Place_OrderController {
     private static final String ORDER_FILE = "data/orders.bin";
 
     @javafx.fxml.FXML
-    public void initialize() {loadProducts();
+    public void initialize() {
+        loadProducts();
+        productCategoryComboBox.getItems().addAll("Seeds","Fertilizers","Agricultural Products");
 
         confirmationMessageLabel.setText("");
     }
@@ -86,7 +88,6 @@ public class G2_Farmer_Place_OrderController {
         int quantity;
 
         try {
-
             quantity = Integer.parseInt(quantityText);
 
         } catch (NumberFormatException e) {
@@ -94,11 +95,8 @@ public class G2_Farmer_Place_OrderController {
             confirmationMessageLabel.setText(
                     "Please enter a valid quantity."
             );
-
             return;
         }
-
-
         if (quantity <= 0) {
 
             confirmationMessageLabel.setText(

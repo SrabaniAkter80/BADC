@@ -14,7 +14,6 @@ public class G7_Submit_ComplaintController {
     private TextArea complaintDetailsTextArea;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
-
     @javafx.fxml.FXML
     private ComboBox<String> complaintCategoryComboBox;
     private static final String FILE_NAME =
@@ -38,19 +37,15 @@ public class G7_Submit_ComplaintController {
             return;
         }
         if (details.isEmpty()) {
-
             confirmationMessageLabel.setText("Please enter complaint details");
 
             return;
         }
         Complaint complaint = new Complaint(category, details);
-
         BinaryFileUtil.appendObject(FILE_NAME, complaint);
 
         confirmationMessageLabel.setText("Complaint submitted successfully.");
-
         complaintCategoryComboBox.getSelectionModel().clearSelection();
-
         complaintDetailsTextArea.clear();
     }
     @javafx.fxml.FXML

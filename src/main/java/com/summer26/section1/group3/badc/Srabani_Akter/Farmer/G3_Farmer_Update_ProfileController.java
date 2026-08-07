@@ -132,8 +132,6 @@ public class G3_Farmer_Update_ProfileController {
                 "Profile information updated successfully."
         );
     }
-
-
     @javafx.fxml.FXML
     public void HandleBacktoDashBoardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
