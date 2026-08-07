@@ -39,7 +39,6 @@ public class G3_Farmer_Update_ProfileController {
         confirmationMessageLabel.setText("");
     }
 
-
     private void loadFarmer() {
 
         ArrayList<Farmer> farmers =
@@ -47,47 +46,32 @@ public class G3_Farmer_Update_ProfileController {
 
         if (farmers.isEmpty()) {
             confirmationMessageLabel.setText(
-                    "Farmer information not found."
-            );
+                    "Farmer information not found.");
             return;
         }
 
         farmer = farmers.get(0);
 
-        NameTextField.setText(
-                farmer.getName()
-        );
-
+        NameTextField.setText(farmer.getName());
         PhoneNumberTextField.setText(
                 farmer.getPhoneNumber()
         );
 
-        addressTextArea.setText(
-                farmer.getAddress()
-        );
+        addressTextArea.setText(farmer.getAddress());
     }
-
 
     @javafx.fxml.FXML
     public void HandleUpdateInformationButton(ActionEvent actionEvent) {
-
         if (farmer == null) {
-            confirmationMessageLabel.setText(
-                    "Farmer information not found."
-            );
+            confirmationMessageLabel.setText("Farmer information not found.");
             return;
         }
 
+        String name = NameTextField.getText().trim();
 
-        String name =
-                NameTextField.getText().trim();
+        String phoneNumber = PhoneNumberTextField.getText().trim();
 
-        String phoneNumber =
-                PhoneNumberTextField.getText().trim();
-
-        String address =
-                addressTextArea.getText().trim();
-
+        String address = addressTextArea.getText().trim();
 
         if (name.isEmpty()) {
 
@@ -137,7 +121,6 @@ public class G3_Farmer_Update_ProfileController {
                 break;
             }
         }
-
 
         BinaryFileUtil.saveList(
                 FILE_NAME,

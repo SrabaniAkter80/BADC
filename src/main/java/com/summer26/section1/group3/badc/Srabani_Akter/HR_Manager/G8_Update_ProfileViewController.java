@@ -62,7 +62,6 @@ public class G8_Update_ProfileViewController {
             confirmationMessageLabel.setText("Profile not found.");
             return;
         }
-
         currentManager.setName(NameTextField.getText().trim());
         currentManager.setPhoneNumber(PhoneNumberTextField.getText().trim());
         currentManager.setEmail(EmailTextField.getText().trim());
@@ -79,18 +78,13 @@ public class G8_Update_ProfileViewController {
                 break;
             }
         }
-
         BinaryFileUtil.saveList(FILE_NAME, managerList);
-
         confirmationMessageLabel.setText("Profile updated successfully.");
     }
-
     @javafx.fxml.FXML
     public void HandleBacktoDashboardButton(ActionEvent actionEvent)throws IOException {
 
         SceneSwitcher.switchTo(
 
-                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
-
-    }
+                "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");}
 }
