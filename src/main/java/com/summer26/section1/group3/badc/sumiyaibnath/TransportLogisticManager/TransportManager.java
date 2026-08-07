@@ -67,4 +67,14 @@ public class TransportManager {
         transportList = FileManager.loadFromFile(FILE_NAME);
     }
 
+    public static boolean canTrackShipment(String transportId) {
+        Transport transport = findTransport(transportId);
+        if (transport == null) {
+            return false;
+        }
+        return transport.getStatus().equalsIgnoreCase("Dispatched")
+                || transport.getStatus().equalsIgnoreCase("In Transit")
+                || transport.getStatus().equalsIgnoreCase("Delivered");
+    }
+
 }

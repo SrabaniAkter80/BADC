@@ -9,28 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="358.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager.G3_TLM_TrackShipmentController">
+<AnchorPane prefHeight="461.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.sumiyaibnath.TransportLogisticManager.G3_TLM_TrackShipmentController">
    <children>
-      <Label layoutX="199.0" layoutY="14.0" prefHeight="54.0" prefWidth="361.0" text="Track Shipment">
+      <Label layoutX="143.0" layoutY="14.0" prefHeight="54.0" prefWidth="196.0" text="Track Shipment">
          <font>
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="shipmentid" layoutX="40.0" layoutY="83.0" promptText="ShipmentID" />
-      <Button layoutX="40.0" layoutY="118.0" mnemonicParsing="false" onAction="#trackshipment" text="Track Shipment" />
-      <TableView fx:id="tableview" layoutX="213.0" layoutY="83.0" prefHeight="200.0" prefWidth="333.0">
+      <TextField fx:id="transportid" layoutX="40.0" layoutY="83.0" promptText="Transport ID" />
+      <Button layoutX="199.0" layoutY="83.0" mnemonicParsing="false" onAction="#trackshipment" text="Track Shipment" />
+      <TableView fx:id="tableview" layoutX="37.0" layoutY="160.0" prefHeight="200.0" prefWidth="417.0">
         <columns>
-          <TableColumn fx:id="colshipmentid" prefWidth="77.0" text="ShipmentID" />
-          <TableColumn fx:id="coldate" prefWidth="88.0" text="Shipment Date" />
-            <TableColumn fx:id="coldestination" prefWidth="87.0" text="Destination" />
-            <TableColumn fx:id="colstatus" text="Status" />
+          <TableColumn fx:id="coltransportid" prefWidth="77.0" text="Transport ID" />
+          <TableColumn fx:id="colwarehouse" prefWidth="88.0" text="Warehouse" />
+            <TableColumn fx:id="colfarm" prefWidth="76.0" text="Farm" />
+            <TableColumn fx:id="coldispatcheddate" prefWidth="102.0" text="Dispatched Date" />
+            <TableColumn fx:id="colstatus" prefWidth="73.0" text="Status" />
         </columns>
       </TableView>
-      <ComboBox fx:id="statusupdate" layoutX="40.0" layoutY="199.0" prefWidth="150.0" promptText="Status" />
-      <Button layoutX="40.0" layoutY="234.0" mnemonicParsing="false" onAction="#update" text="Update " />
-      <Label fx:id="updatelabel" layoutX="35.0" layoutY="270.0" prefHeight="54.0" prefWidth="159.0" />
-      <Button layoutX="248.0" layoutY="311.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="83.0" text="Back" />
-      <TextField fx:id="shipmentidupdate" layoutX="40.0" layoutY="167.0" promptText="ShipmentID" />
+      <ComboBox fx:id="status" layoutX="40.0" layoutY="116.0" prefWidth="150.0" promptText="Status" />
+      <Button layoutX="203.0" layoutY="116.0" mnemonicParsing="false" onAction="#update" text="Update " />
+      <Label fx:id="label" layoutX="40.0" layoutY="370.0" prefHeight="45.0" prefWidth="411.0" />
+      <Button layoutX="204.0" layoutY="421.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="83.0" text="Back" />
    </children>
 </AnchorPane>
