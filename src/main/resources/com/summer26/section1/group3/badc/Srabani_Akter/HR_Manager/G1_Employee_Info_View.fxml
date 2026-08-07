@@ -17,9 +17,7 @@
         <Label fx:id="EmployeeDirectoryLabel" alignment="CENTER" layoutX="194.0" layoutY="28.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text=" Employee Directory" />
 
         <!-- Employee ID -->
-        <Text layoutX="175.0" layoutY="127.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
-
-        <TextField fx:id="FilterEmployeeIDTextField" layoutX="300.0" layoutY="95.0" prefHeight="40.0" prefWidth="220.0" promptText="Enter Employee ID" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
+        <Text layoutX="164.0" layoutY="131.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
 
         <!-- Search Button -->
         <Button layoutX="540.0" layoutY="95.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text=" Search" />
@@ -46,7 +44,8 @@
 
         <!-- Back -->
         <Button layoutX="320.0" layoutY="557.0" mnemonicParsing="false" onAction="#HandleBackToDashBoardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
-      <ComboBox fx:id="DesignationComboBox" layoutX="310.0" layoutY="151.0" prefHeight="26.0" prefWidth="166.0" promptText="Select a Designation" />
+      <ComboBox fx:id="DesignationComboBox" layoutX="304.0" layoutY="150.0" prefHeight="26.0" prefWidth="166.0" promptText="Select a Designation" />
+      <TextField fx:id="FilterEmployeeIDTextField" layoutX="272.0" layoutY="113.0" />
 
     </children>
 </AnchorPane>
