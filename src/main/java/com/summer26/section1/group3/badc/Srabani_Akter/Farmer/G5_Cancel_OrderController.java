@@ -36,14 +36,11 @@ public class G5_Cancel_OrderController {
     @javafx.fxml.FXML
     private TableColumn<Order, String> ProductNameColumn;
 
-
     private static final String FILE_NAME =
             "data/orders.bin";
 
 
-    private final ObservableList<Order> orders =
-            FXCollections.observableArrayList();
-
+    private final ObservableList<Order> orders = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -72,16 +69,11 @@ public class G5_Cancel_OrderController {
     @javafx.fxml.FXML
     public void HandleCancelOrderButton(ActionEvent actionEvent) {
 
-        String orderIDText =
-                filterOrderIDTextField.getText().trim();
-
+        String orderIDText = filterOrderIDTextField.getText();
 
         if (orderIDText.isEmpty()) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter an Order ID."
-            );
-
+            confirmationMessageLabel.setText("Please enter an Order ID.");
             return;
         }
 
@@ -152,8 +144,6 @@ public class G5_Cancel_OrderController {
         confirmationMessageLabel.setText("Request cancelled successfully");
         filterOrderIDTextField.clear();
     }
-
-
     @javafx.fxml.FXML
     public void HandleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");

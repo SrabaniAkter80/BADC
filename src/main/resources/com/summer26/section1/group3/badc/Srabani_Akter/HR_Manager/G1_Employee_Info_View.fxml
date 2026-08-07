@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,15 +9,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="577.0" prefWidth="821.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G1_Employee_Info_ViewController">
+<AnchorPane prefHeight="628.0" prefWidth="821.0" style="-fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager.G1_Employee_Info_ViewController">
 
     <children>
 
         <!-- Title -->
-        <Label fx:id="EmployeeDirectoryLabel" alignment="CENTER" layoutX="250.0" layoutY="30.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text=" Employee Directory" />
+        <Label fx:id="EmployeeDirectoryLabel" alignment="CENTER" layoutX="194.0" layoutY="28.0" prefWidth="400.0" style="-fx-font-size:28px;                     -fx-font-weight:bold;                     -fx-text-fill:#1E3A8A;" text=" Employee Directory" />
 
         <!-- Employee ID -->
-        <Text layoutX="180.0" layoutY="120.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
+        <Text layoutX="175.0" layoutY="127.0" style="-fx-font-size:15px;                    -fx-font-weight:bold;                    -fx-fill:#374151;" text="Employee ID" />
 
         <TextField fx:id="FilterEmployeeIDTextField" layoutX="300.0" layoutY="95.0" prefHeight="40.0" prefWidth="220.0" promptText="Enter Employee ID" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
@@ -24,10 +25,10 @@
         <Button layoutX="540.0" layoutY="95.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text=" Search" />
 
         <!-- View All -->
-        <Button layoutX="300.0" layoutY="155.0" mnemonicParsing="false" onAction="#HandleViewAllEmployeesButton" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color:#10B981;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);" text="View All Employees" />
+        <Button layoutX="374.0" layoutY="211.0" mnemonicParsing="false" onAction="#HandleViewAllEmployeesButton" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color:#10B981;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);" text="View All Employees" />
 
         <!-- Employee Table -->
-        <TableView fx:id="Employee_Information_TableView" layoutX="54.0" layoutY="214.0" prefHeight="280.0" prefWidth="710.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
+        <TableView fx:id="Employee_Information_TableView" layoutX="38.0" layoutY="269.0" prefHeight="280.0" prefWidth="710.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">
 
             <columns>
 
@@ -44,7 +45,8 @@
         </TableView>
 
         <!-- Back -->
-        <Button layoutX="331.0" layoutY="505.0" mnemonicParsing="false" onAction="#HandleBackToDashBoardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
+        <Button layoutX="320.0" layoutY="557.0" mnemonicParsing="false" onAction="#HandleBackToDashBoardButton" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Dashboard" />
+      <ComboBox fx:id="DesignationComboBox" layoutX="310.0" layoutY="151.0" prefHeight="26.0" prefWidth="166.0" promptText="Select a Designation" />
 
     </children>
 </AnchorPane>

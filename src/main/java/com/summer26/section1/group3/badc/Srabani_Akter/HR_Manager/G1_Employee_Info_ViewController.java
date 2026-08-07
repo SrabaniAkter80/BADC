@@ -43,22 +43,19 @@ public class G1_Employee_Info_ViewController {
     @FXML
     private Label EmployeeDirectoryLabel;
 
-    private final ObservableList<Employee> employeeList = FXCollections.observableArrayList();
+    private final ObservableList<Employee> employeeList =
+            FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
 
-        EmployeeIDColumn.setCellValueFactory(
-                new PropertyValueFactory<>("employeeID"));
+        EmployeeIDColumn.setCellValueFactory(new PropertyValueFactory<>("employeeID"));
 
-        NameColumn.setCellValueFactory(
-                new PropertyValueFactory<>("name"));
+        NameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 
-        DesignationColumn.setCellValueFactory(
-                new PropertyValueFactory<>("designation"));
+        DesignationColumn.setCellValueFactory(new PropertyValueFactory<>("designation"));
 
-        ContactInformationColumn.setCellValueFactory(
-                new PropertyValueFactory<>("contactInformation"));
+        ContactInformationColumn.setCellValueFactory(new PropertyValueFactory<>("contactInformation"));
 
         DesignationComboBox.getItems().addAll("Account Officer", "Field Officer", "Procurement Officer", "Transport & Logistic Manager");
         loadEmployees();
@@ -113,10 +110,12 @@ public class G1_Employee_Info_ViewController {
                 filteredList.add(employee);
             }
         }
+
         Employee_Information_TableView.setItems(filteredList);
     }
+
     @FXML
     public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G1_Employee_Info_View.fxml");
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
     }
 }

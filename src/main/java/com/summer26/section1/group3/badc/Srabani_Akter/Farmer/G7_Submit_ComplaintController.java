@@ -21,7 +21,8 @@ public class G7_Submit_ComplaintController {
             "data/complaints.bin";
 
     @javafx.fxml.FXML
-    public void initialize() {complaintCategoryComboBox.setItems(FXCollections.observableArrayList("Products", "Services", "Application Process"));
+    public void initialize() {
+        complaintCategoryComboBox.setItems(FXCollections.observableArrayList("Products", "Services", "Application Process"));
         confirmationMessageLabel.setText("");
     }
     @javafx.fxml.FXML
@@ -29,20 +30,16 @@ public class G7_Submit_ComplaintController {
 
         String category = complaintCategoryComboBox.getValue();
 
-        String details = complaintDetailsTextArea.getText().trim();
+        String details = complaintDetailsTextArea.getText();
         if (category == null || category.isEmpty()) {
 
-            confirmationMessageLabel.setText(
-                    "Please select a complaint category."
-            );
+            confirmationMessageLabel.setText("Please select a complaint category");
 
             return;
         }
         if (details.isEmpty()) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter complaint details."
-            );
+            confirmationMessageLabel.setText("Please enter complaint details");
 
             return;
         }
@@ -56,10 +53,8 @@ public class G7_Submit_ComplaintController {
 
         complaintDetailsTextArea.clear();
     }
-
     @javafx.fxml.FXML
     public void handleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
     }
 }

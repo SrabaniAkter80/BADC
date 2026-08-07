@@ -32,10 +32,8 @@ public class G1_View_Product_ListController {
 
     @javafx.fxml.FXML
     private TableView<Product> Product_List_TableView;
-
     @javafx.fxml.FXML
     private TableColumn<Product, Integer> ProductQuantityColumn;
-
     @javafx.fxml.FXML
     private TableColumn<Product, String> ProductNameColumn;
 
@@ -98,20 +96,16 @@ public class G1_View_Product_ListController {
                             .toLowerCase()
                             .contains(searchText);
 
-
             if (categoryMatches && searchMatches) {
                 filteredProducts.add(product);
             }
         }
-
-
         displayedProducts.setAll(filteredProducts);
     }
 
     @javafx.fxml.FXML
     public void HandleResetFilter(ActionEvent actionEvent) {
         FilterProductNameTextField.clear();
-
         ProductCategoryComboBox.getSelectionModel().clearSelection();
         displayedProducts.setAll(allProducts);
     }
