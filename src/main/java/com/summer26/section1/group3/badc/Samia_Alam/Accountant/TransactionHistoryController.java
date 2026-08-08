@@ -2,7 +2,6 @@ package com.summer26.section1.group3.badc.Samia_Alam.Accountant;
 
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.*;
@@ -33,7 +32,6 @@ public class TransactionHistoryController {
 
     File file = new File("transaction.bin");
 
-    // সব transaction মেমোরিতে রাখা হচ্ছে, filter করার সময় এখান থেকেই বাছাই হবে
     private final List<Transaction> allTransactions = new ArrayList<>();
 
     @javafx.fxml.FXML
@@ -52,42 +50,18 @@ public class TransactionHistoryController {
         amountTableCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
         statusTableCol.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        if (!file.exists()) {
-            writeSampleData();
-        }
-
+        // sample data আর বসাচ্ছি না — file এ যা আছে (হয়তো খালি) সেটাই লোড হবে
         loadData();
-    }
-
-    private void writeSampleData() {
-
-        try {
-
-            ObjectOutputStream oos =
-                    new ObjectOutputStream(new FileOutputStream(file));
-
-            oos.writeObject(new Transaction(
-                    "TNX001", "2026-08-01", "Payroll", 45000.0, "Completed"
-            ));
-
-            oos.writeObject(new Transaction(
-                    "TNX002", "2026-08-02", "Subsidy", 12000.0, "Pending"
-            ));
-
-            oos.writeObject(new Transaction(
-                    "TNX003", "2026-08-03", "Expense", 3200.0, "Failed"
-            ));
-
-            oos.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void loadData() {
 
         allTransactions.clear();
+
+        if (!file.exists()) {
+            tnxHistoryTableView.setItems(FXCollections.observableArrayList());
+            return;
+        }
 
         try {
 
@@ -95,23 +69,16 @@ public class TransactionHistoryController {
                     new ObjectInputStream(new FileInputStream(file));
 
             while (true) {
-
-                Transaction transaction =
-                        (Transaction) ois.readObject();
-
+                Transaction transaction = (Transaction) ois.readObject();
                 allTransactions.add(transaction);
-
             }
 
         } catch (EOFException e) {
-
-            // End of File
-
+            // ফাইলের শেষ, স্বাভাবিক
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // প্রথমে সব দেখাও
         tnxHistoryTableView.setItems(FXCollections.observableArrayList(allTransactions));
     }
 
