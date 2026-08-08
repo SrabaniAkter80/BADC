@@ -92,7 +92,6 @@ public class ActivityMonitoringController {
 
         activityTV.getItems().clear();
 
-        // কোনো filter দেওয়া না থাকলে সব রেকর্ড দেখাও
         boolean noFilter = (dateFilter == null && userIdFilter == null && actionFilter == null);
 
         try (ObjectInputStream ois =
