@@ -103,7 +103,7 @@ public class G1_Employee_Info_ViewController {
                     designation == null
                             || employee.getDesignation().equalsIgnoreCase(designation);
 
-            if (idMatch || designationMatch) {
+            if (idMatch && designationMatch) {
                 filteredList.add(employee);
             }
         }
