@@ -59,17 +59,14 @@ public class G8_Farmer_Delivery_ConfirmationController {
     private void loadOrders() {
 
         ArrayList<Order> orderList = BinaryFileUtil.readObjects(FILE_NAME);
-
         orders.setAll(orderList);
     }
     @javafx.fxml.FXML
     public void handleLoadDataButton(ActionEvent actionEvent) {
 
-        String orderIDText =
-                FilterOrderIDtextField.getText().trim();
+        String orderIDText = FilterOrderIDtextField.getText().trim();
 
         if (orderIDText.isEmpty()) {
-
             confirmationMessageLabel.setText(
                     "Please enter an Order ID."
             );
@@ -77,36 +74,23 @@ public class G8_Farmer_Delivery_ConfirmationController {
             return;
         }
         int orderID;
-
         try {
             orderID = Integer.parseInt(orderIDText);
 
         } catch (NumberFormatException e) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter a valid Order ID."
-            );
-
+            confirmationMessageLabel.setText("Please enter a valid Order ID");
             return;
         }
-
         Order selectedOrder = null;
         for (Order order : orders) {
-
             if (order.getOrderID() == orderID) {
-
                 selectedOrder = order;
-
                 break;
             }
         }
-
         if (selectedOrder == null) {
-
-            confirmationMessageLabel.setText(
-                    "Order not found."
-            );
-
+            confirmationMessageLabel.setText("Order not found.");
             return;
         }if (selectedOrder.getStatus().equalsIgnoreCase("Delivered")) {
 
@@ -131,7 +115,6 @@ public class G8_Farmer_Delivery_ConfirmationController {
                     order
             );
         }
-
         confirmationMessageLabel.setText("Delivery confirmed successfully");
         FilterOrderIDtextField.clear();
     }

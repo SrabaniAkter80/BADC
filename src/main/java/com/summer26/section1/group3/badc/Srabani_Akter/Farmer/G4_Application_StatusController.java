@@ -47,22 +47,15 @@ public class G4_Application_StatusController {
 
         loadApplications();
 
-        Application_Status_TableView.setItems(
-                applications);
+        Application_Status_TableView.setItems(applications);
     }
-
-
     private void loadApplications() {
 
-        ArrayList<Application> applicationList =
-                BinaryFileUtil.readObjects(FILE_NAME);
-
+        ArrayList<Application> applicationList = BinaryFileUtil.readObjects(FILE_NAME);
         applications.setAll(applicationList);
     }
-
     @javafx.fxml.FXML
     public void HandleBacktoDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
     }
 }

@@ -41,7 +41,6 @@ public class G8_Update_ProfileViewController {
                 NameTextField.setText(manager.getName());
                 PhoneNumberTextField.setText(manager.getPhoneNumber());
                 EmailTextField.setText(manager.getEmail());
-
                 break;
             }
         }

@@ -120,4 +120,9 @@ public class G0_Farmer_DashboardController
     public void handleProductListButton(ActionEvent actionEvent) throws IOException{
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G1_View_Product_List.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void HandleBackToLoginPage(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
+    }
 }

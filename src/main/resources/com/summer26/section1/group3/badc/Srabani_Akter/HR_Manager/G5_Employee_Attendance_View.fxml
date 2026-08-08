@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -21,13 +20,8 @@
 
         <TextField fx:id="employeeIDTextField" layoutX="210.0" layoutY="95.0" prefHeight="40.0" prefWidth="200.0" promptText="Employee ID" style="-fx-background-radius:10;                         -fx-border-radius:10;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;" />
 
-        <!-- Working Status -->
-        <ComboBox layoutX="500.0" layoutY="95.0" prefHeight="40.0" prefWidth="200.0" promptText="Working Status" style="-fx-background-radius:10;                        -fx-font-size:14px;" />
-
         <!-- Buttons -->
-        <Button layoutX="210.0" layoutY="155.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Search Employee" />
-
-        <Button layoutX="500.0" layoutY="155.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#10B981;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(16,185,129,0.35),12,0,0,4);" text="Filter Status" />
+        <Button layoutX="310.0" layoutY="161.0" mnemonicParsing="false" onAction="#HandleSearchFilterButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#2563EB;                      -fx-text-fill:white;                      -fx-font-size:14px;                      -fx-font-weight:bold;                      -fx-background-radius:10;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(37,99,235,0.35),12,0,0,4);" text="Search Employee" />
 
         <!-- Attendance Table -->
         <TableView fx:id="Employee_Attendance_TableView" layoutX="50.0" layoutY="230.0" prefHeight="280.0" prefWidth="800.0" style="-fx-background-radius:12;                         -fx-border-radius:12;                         -fx-border-color:#CBD5E1;                         -fx-font-size:14px;">

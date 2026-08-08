@@ -29,115 +29,63 @@ public class G2_Farmer_Place_OrderController {
     private static final String ORDER_FILE = "data/orders.bin";
 
     @javafx.fxml.FXML
-    public void initialize() {loadProducts();
+    public void initialize() {
+        loadProducts();
+        productCategoryComboBox.getItems().addAll("Seeds","Fertilizers","Agricultural Products");
 
         confirmationMessageLabel.setText("");
     }
 
     private void loadProducts() {
 
-        ArrayList<Product> products =
-                BinaryFileUtil.readObjects(PRODUCT_FILE);
+        ArrayList<Product> products = BinaryFileUtil.readObjects(PRODUCT_FILE);
 
-        ArrayList<String> productNames =
-                new ArrayList<>();
+        ArrayList<String> productNames = new ArrayList<>();
 
         for (Product product : products) {
-
             productNames.add(
                     product.getProductName()
             );
         }
 
-        productCategoryComboBox.setItems(
-                FXCollections.observableArrayList(productNames)
-        );
+        productCategoryComboBox.setItems(FXCollections.observableArrayList(productNames));
     }
     @javafx.fxml.FXML
     public void HandlePlaceOrderButton(ActionEvent actionEvent) {
 
-        String selectedProduct =
-                productCategoryComboBox.getValue();
-
-        String quantityText =
-                quantityTextField.getText().trim();
-
-
-        if (selectedProduct == null ||
-                selectedProduct.isEmpty()) {
-
-            confirmationMessageLabel.setText(
-                    "Please select a product."
-            );
-
+        String selectedProduct = productCategoryComboBox.getValue();
+        String quantityText = quantityTextField.getText().trim();
+        if (selectedProduct == null || selectedProduct.isEmpty()) {
+            confirmationMessageLabel.setText("Please select a product.");
             return;
         }
-
         if (quantityText.isEmpty()) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter required quantity."
-            );
-
+            confirmationMessageLabel.setText("Please enter required quantity.");
             return;
         }
-
-
         int quantity;
-
         try {
-
             quantity = Integer.parseInt(quantityText);
 
         } catch (NumberFormatException e) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter a valid quantity."
-            );
-
+            confirmationMessageLabel.setText("Please enter a valid quantity.");
             return;
         }
-
-
         if (quantity <= 0) {
-
             confirmationMessageLabel.setText(
                     "Quantity must be greater than 0."
             );
-
             return;
         }
-
-
-        Order order =
-                new Order(
-                        selectedProduct,
-                        quantity
-                );
-
-
-        BinaryFileUtil.appendObject(
-                ORDER_FILE,
-                order
-        );
-
-
-        confirmationMessageLabel.setText(
-                "Order placed successfully."
-        );
-
-
+        Order order = new Order(selectedProduct, quantity);
+        BinaryFileUtil.appendObject(ORDER_FILE, order);
+        confirmationMessageLabel.setText("Order placed successfully");
         quantityTextField.clear();
-
-        productCategoryComboBox.getSelectionModel()
-                .clearSelection();
-    }
-
-
+        productCategoryComboBox.getSelectionModel().clearSelection();}
     @javafx.fxml.FXML
     public void HandleBackToDashboardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
-
     }
 }

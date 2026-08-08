@@ -65,4 +65,9 @@ public class G0_HRManager_DashboardController {
 
                 "/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G3_Maintenance_Request_View.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void HandleBackToLoginPage(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/common/login.fxml");
+    }
 }

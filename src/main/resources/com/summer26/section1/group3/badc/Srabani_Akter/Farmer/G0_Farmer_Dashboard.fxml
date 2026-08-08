@@ -22,6 +22,7 @@
         <Button layoutX="330.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleNotificationsButton" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color:#14B8A6;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(20,184,166,0.35),12,0,0,4);" text="Notifications" />
 
         <Button layoutX="330.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleDeleveryConfirmationButton" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Delivery Confirmation" />
+      <Button layoutX="22.0" layoutY="15.0" mnemonicParsing="false" onAction="#HandleBackToLoginPage" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color:#374151;                      -fx-text-fill:white;                      -fx-font-size:15px;                      -fx-font-weight:bold;                      -fx-background-radius:12;                      -fx-cursor:hand;                      -fx-effect:dropshadow(gaussian, rgba(55,65,81,0.35),12,0,0,4);" text="Back to Login Page" />
 
     </children>
 </AnchorPane>

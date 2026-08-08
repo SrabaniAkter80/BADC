@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class G2_TLM_TransportAssignmentController
 {
@@ -29,6 +30,10 @@ public class G2_TLM_TransportAssignmentController
     private TableColumn<Transport, String> coltransportid;
     @javafx.fxml.FXML
     private TextField status;
+    @javafx.fxml.FXML
+    private DatePicker assigneddate;
+    @javafx.fxml.FXML
+    private TableColumn<Transport, LocalDate> colassigneddate;
 
     private Transport selectedTransport;
 
@@ -41,6 +46,7 @@ public class G2_TLM_TransportAssignmentController
         coldriver.setCellValueFactory(new PropertyValueFactory<>("driverName"));
         colvehicle.setCellValueFactory(new PropertyValueFactory<>("vehicleId"));
         colstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        colassigneddate.setCellValueFactory(new PropertyValueFactory<>("assignmentDate"));
 
         for (Transport transport : TransportManager.getTransportList()) {
 
@@ -58,8 +64,9 @@ public class G2_TLM_TransportAssignmentController
             label.setText("Search for a valid Transport ID first.");
             return;
         }
-        if (driver.getText().isEmpty()
-                || vehicle.getText().isEmpty()) {
+        if (driver.getText().trim().isEmpty()
+                || vehicle.getText().trim().isEmpty()
+                || assigneddate.getValue() == null) {
             label.setText("Please fill up all the fields.");
             return;
         }
@@ -67,6 +74,7 @@ public class G2_TLM_TransportAssignmentController
         selectedTransport.setDriverName(driver.getText());
         selectedTransport.setVehicleId(vehicle.getText());
         selectedTransport.setStatus("Assigned");
+        selectedTransport.setAssignmentDate(assigneddate.getValue());
 
         TransportManager.updateTransport();
         tableview.getItems().add(selectedTransport);

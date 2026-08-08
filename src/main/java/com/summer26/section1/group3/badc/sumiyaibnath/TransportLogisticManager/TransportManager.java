@@ -49,6 +49,12 @@ public class TransportManager {
                 "Assigned".equalsIgnoreCase(transport.getStatus());
     }
 
+    public static boolean isDispatched(String transportId) {
+        Transport transport = findTransport(transportId);
+        return transport != null &&
+                "Dispatched".equalsIgnoreCase(transport.getStatus());
+    }
+
     public static void updateTransport() {
         save();
     }
@@ -59,6 +65,16 @@ public class TransportManager {
 
     public static void reload() {
         transportList = FileManager.loadFromFile(FILE_NAME);
+    }
+
+    public static boolean canTrackShipment(String transportId) {
+        Transport transport = findTransport(transportId);
+        if (transport == null) {
+            return false;
+        }
+        return transport.getStatus().equalsIgnoreCase("Dispatched")
+                || transport.getStatus().equalsIgnoreCase("In Transit")
+                || transport.getStatus().equalsIgnoreCase("Delivered");
     }
 
 }

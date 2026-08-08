@@ -1,6 +1,5 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
-import com.summer26.section1.group3.badc.common.Employee;
 import com.summer26.section1.group3.badc.common.SceneSwitcher;
 import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
 import javafx.collections.FXCollections;
@@ -18,9 +17,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class G1_Employee_Info_ViewController {
-
-    @FXML
-    private TextField FilterEmployeeIDTextField;
 
     @FXML
     private ComboBox<String> DesignationComboBox;
@@ -45,6 +41,8 @@ public class G1_Employee_Info_ViewController {
 
     private final ObservableList<Employee> employeeList =
             FXCollections.observableArrayList();
+    @FXML
+    private TextField FilterEmployeeIDTextField;
 
     @FXML
     public void initialize() {
@@ -57,7 +55,7 @@ public class G1_Employee_Info_ViewController {
 
         ContactInformationColumn.setCellValueFactory(new PropertyValueFactory<>("contactInformation"));
 
-        DesignationComboBox.getItems().addAll("Account Officer", "Field Officer", "Procurement Officer", "Transport & Logistic Manager");
+        DesignationComboBox.getItems().addAll("Account Officer", "Field Officer", "Procurement Officer", "Transport and Logistic Manager");
         loadEmployees();
 
         Employee_Information_TableView.setItems(employeeList);
@@ -67,29 +65,23 @@ public class G1_Employee_Info_ViewController {
 
         employeeList.clear();
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/accountofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/accountofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/fieldofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/fieldofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/procurementofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/procurementofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/transportlogisticmanager.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/transportlogisticmanager.bin"));
     }
 
     @FXML
     public void HandleViewAllEmployeesButton(ActionEvent actionEvent) {
-
         loadEmployees();
         Employee_Information_TableView.setItems(employeeList);
     }
 
     @FXML
     public void HandleSearchFilterButton(ActionEvent actionEvent) {
-
         String employeeID = FilterEmployeeIDTextField.getText().trim();
         String designation = DesignationComboBox.getValue();
 
@@ -113,7 +105,6 @@ public class G1_Employee_Info_ViewController {
 
         Employee_Information_TableView.setItems(filteredList);
     }
-
     @FXML
     public void HandleBackToDashBoardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/HR_Manager/G0_HR Manager_Dashboard.fxml");
