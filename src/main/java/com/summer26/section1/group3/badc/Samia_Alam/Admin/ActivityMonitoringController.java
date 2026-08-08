@@ -23,8 +23,14 @@ public class ActivityMonitoringController {
     private TableView<ActivityMonitoring> activityTV;
     @FXML
     private DatePicker datepicker;
+    @FXML
+    private TextField userIdTF;
+    @FXML
+    private TextField timeTF;
+    @FXML
+    private ComboBox<String> actionComboBox;
 
-    File file = new File("activity.bin");
+    private final File file = new File("activity.bin");
 
     @FXML
     public void initialize() {
@@ -37,103 +43,122 @@ public class ActivityMonitoringController {
                 "Farmer"
         );
 
+        actionComboBox.getItems().addAll(
+                "User Login",
+                "Created User",
+                "Inventory Updated"
+        );
+
         userIdTableCol.setCellValueFactory(new PropertyValueFactory<>("userId"));
         actionTableCol.setCellValueFactory(new PropertyValueFactory<>("action"));
         timeStampTableCol.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
 
-        if (!file.exists()) {
+        if (!file.exists() || !hasValidData()) {
             writeSampleData();
         }
 
-        loadData(null);
+        loadData(null, null, null);
+    }
+
+    private boolean hasValidData() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            ois.readObject();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     private void writeSampleData() {
 
-        try {
-
-            ObjectOutputStream oos =
-                    new ObjectOutputStream(new FileOutputStream(file));
+        try (ObjectOutputStream oos =
+                     new ObjectOutputStream(new FileOutputStream(file))) {
 
             oos.writeObject(new ActivityMonitoring(
-                    "A001",
-                    "User Login",
-                    "07-08-2026 10:30 AM"
-            ));
+                    "A001", "User Login", "07/08/2026 10:30 AM"));
 
             oos.writeObject(new ActivityMonitoring(
-                    "A002",
-                    "Created User",
-                    "07-08-2026 11:00 AM"
-            ));
+                    "A002", "Created User", "07/08/2026 11:00 AM"));
 
             oos.writeObject(new ActivityMonitoring(
-                    "A003",
-                    "Inventory Updated",
-                    "07-08-2026 12:15 PM"
-            ));
-
-            oos.close();
+                    "A003", "Inventory Updated", "07/08/2026 12:15 PM"));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void loadData(String dateFilter) {
+    private void loadData(String dateFilter, String userIdFilter, String actionFilter) {
 
         activityTV.getItems().clear();
 
-        try {
+        // কোনো filter দেওয়া না থাকলে সব রেকর্ড দেখাও
+        boolean noFilter = (dateFilter == null && userIdFilter == null && actionFilter == null);
 
-            ObjectInputStream ois =
-                    new ObjectInputStream(new FileInputStream(file));
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(new FileInputStream(file))) {
 
             while (true) {
 
                 ActivityMonitoring activity =
                         (ActivityMonitoring) ois.readObject();
 
-                if (dateFilter == null ||
-                        activity.getTimestamp().startsWith(dateFilter)) {
-                    activityTV.getItems().add(activity);
+                boolean matches = noFilter;
+
+                if (!noFilter) {
+                    if (dateFilter != null && activity.getTimestamp().startsWith(dateFilter)) {
+                        matches = true;
+                    }
+                    if (userIdFilter != null && activity.getUserId().equalsIgnoreCase(userIdFilter)) {
+                        matches = true;
+                    }
+                    if (actionFilter != null && activity.getAction().equalsIgnoreCase(actionFilter)) {
+                        matches = true;
+                    }
                 }
 
+                if (matches) {
+                    activityTV.getItems().add(activity);
+                }
             }
 
         } catch (EOFException e) {
-
-            // End of File
+            // ফাইলের শেষ — স্বাভাবিক
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
     public void searchButton(ActionEvent actionEvent) {
 
-        if (datepicker.getValue() == null || userRoleCB.getValue() == null) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Search Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select a date and user role.");
-            alert.showAndWait();
-            return;
+        String dateFilter = null;
+        if (datepicker.getValue() != null) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            dateFilter = datepicker.getValue().format(formatter);
         }
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        String selectedDate = datepicker.getValue().format(formatter);
+        String userIdFilter = userIdTF.getText().trim();
+        if (userIdFilter.isEmpty()) userIdFilter = null;
 
-        loadData(selectedDate);
+        String actionFilter = actionComboBox.getValue();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Search");
-        alert.setHeaderText(null);
-        alert.setContentText("Activity logs loaded successfully.");
-        alert.showAndWait();
+        loadData(dateFilter, userIdFilter, actionFilter);
+
+        if (activityTV.getItems().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Search");
+            alert.setHeaderText(null);
+            alert.setContentText("No matching activity found.");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Search");
+            alert.setHeaderText(null);
+            alert.setContentText("Activity logs loaded successfully.");
+            alert.showAndWait();
+        }
     }
 
     @FXML
