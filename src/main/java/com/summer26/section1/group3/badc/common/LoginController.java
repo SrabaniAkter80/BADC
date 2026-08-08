@@ -41,7 +41,6 @@ public class LoginController
             label.setText("Please select a role.");
             return;
         }
-
         List<User> userList = UserManager.getUserList();
 
         for (User user : userList) {

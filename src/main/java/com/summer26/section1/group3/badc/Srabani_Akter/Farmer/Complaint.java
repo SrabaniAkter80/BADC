@@ -1,5 +1,7 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.Farmer;
 
+import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
+
 import java.io.Serializable;
 
 public class Complaint implements Serializable {
@@ -12,6 +14,16 @@ public class Complaint implements Serializable {
 
         this.complaintCategory = complaintCategory;
         this.complaintDetails = complaintDetails;
+    }
+
+        public static void main(String[] args){
+            Complaint complaint1 = new Complaint("Products","This products is unavailable");
+            Complaint complaint2 = new Complaint("Services","Must be active to give service");
+            Complaint complaint3 = new Complaint("Application Process","Have an error in this running process");
+
+            BinaryFileUtil.appendObject("data/complaints.bin",complaint1);
+            BinaryFileUtil.appendObject("data/complaints.bin",complaint2);
+            BinaryFileUtil.appendObject("data/complaints.bin",complaint3);
     }
 
     public String getComplaintCategory() {

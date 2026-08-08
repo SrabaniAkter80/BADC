@@ -35,11 +35,7 @@ public class G6_Leave_Request_Management_ViewController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        FilterbyLeaveStatusComboBox.getItems().addAll(
-                "Pending",
-                "Approved",
-                "Rejected"
-        );
+        FilterbyLeaveStatusComboBox.getItems().addAll("Pending", "Approved", "Rejected");
 
         ApplicationIDColumn.setCellValueFactory(
                 new PropertyValueFactory<>("applicationID"));
