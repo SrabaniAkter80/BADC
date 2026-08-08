@@ -122,7 +122,7 @@ public class ActivityMonitoringController {
             }
 
         } catch (EOFException e) {
-            // ফাইলের শেষ — স্বাভাবিক
+
 
         } catch (Exception e) {
             e.printStackTrace();
