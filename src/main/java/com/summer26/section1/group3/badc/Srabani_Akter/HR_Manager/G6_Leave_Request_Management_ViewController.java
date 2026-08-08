@@ -37,17 +37,13 @@ public class G6_Leave_Request_Management_ViewController {
 
         FilterbyLeaveStatusComboBox.getItems().addAll("Pending", "Approved", "Rejected");
 
-        ApplicationIDColumn.setCellValueFactory(
-                new PropertyValueFactory<>("applicationID"));
+        ApplicationIDColumn.setCellValueFactory(new PropertyValueFactory<>("applicationID"));
 
-        EmployeeIDColumn.setCellValueFactory(
-                new PropertyValueFactory<>("employeeID"));
+        EmployeeIDColumn.setCellValueFactory(new PropertyValueFactory<>("employeeID"));
 
-        LeaveTypeColumn.setCellValueFactory(
-                new PropertyValueFactory<>("leaveType"));
+        LeaveTypeColumn.setCellValueFactory(new PropertyValueFactory<>("leaveType"));
 
-        ApplicationStatusColumn.setCellValueFactory(
-                new PropertyValueFactory<>("applicationStatus"));
+        ApplicationStatusColumn.setCellValueFactory(new PropertyValueFactory<>("applicationStatus"));
 
         loadData();
 

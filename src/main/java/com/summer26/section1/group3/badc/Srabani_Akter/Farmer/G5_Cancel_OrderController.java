@@ -50,7 +50,6 @@ public class G5_Cancel_OrderController {
         ProductNameColumn.setCellValueFactory(new PropertyValueFactory<>("productCategory"));
 
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-
         loadOrders();
         CancelOrder_TableView.setItems(orders);
         confirmationMessageLabel.setText("");

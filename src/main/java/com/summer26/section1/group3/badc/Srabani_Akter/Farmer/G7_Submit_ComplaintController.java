@@ -33,12 +33,10 @@ public class G7_Submit_ComplaintController {
         if (category == null || category.isEmpty()) {
 
             confirmationMessageLabel.setText("Please select a complaint category");
-
             return;
         }
         if (details.isEmpty()) {
             confirmationMessageLabel.setText("Please enter complaint details");
-
             return;
         }
         Complaint complaint = new Complaint(category, details);

@@ -65,22 +65,17 @@ public class G1_Employee_Info_ViewController {
 
         employeeList.clear();
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/accountofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/accountofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/fieldofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/fieldofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/procurementofficer.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/procurementofficer.bin"));
 
-        employeeList.addAll(
-                BinaryFileUtil.readObjects("data/transportlogisticmanager.bin"));
+        employeeList.addAll(BinaryFileUtil.readObjects("data/transportlogisticmanager.bin"));
     }
 
     @FXML
     public void HandleViewAllEmployeesButton(ActionEvent actionEvent) {
-
         loadEmployees();
         Employee_Information_TableView.setItems(employeeList);
     }

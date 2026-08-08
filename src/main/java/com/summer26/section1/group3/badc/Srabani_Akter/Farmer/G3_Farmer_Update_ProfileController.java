@@ -35,106 +35,60 @@ public class G3_Farmer_Update_ProfileController {
     public void initialize() {
 
         loadFarmer();
-
         confirmationMessageLabel.setText("");
     }
 
     private void loadFarmer() {
 
-        ArrayList<Farmer> farmers =
-                BinaryFileUtil.readObjects(FILE_NAME);
+        ArrayList<Farmer> farmers = BinaryFileUtil.readObjects(FILE_NAME);
 
         if (farmers.isEmpty()) {
-            confirmationMessageLabel.setText(
-                    "Farmer information not found.");
+            confirmationMessageLabel.setText("Farmer information not found.");
             return;
         }
-
         farmer = farmers.get(0);
-
         NameTextField.setText(farmer.getName());
-        PhoneNumberTextField.setText(
-                farmer.getPhoneNumber()
-        );
-
+        PhoneNumberTextField.setText(farmer.getPhoneNumber());
         addressTextArea.setText(farmer.getAddress());
     }
-
     @javafx.fxml.FXML
     public void HandleUpdateInformationButton(ActionEvent actionEvent) {
         if (farmer == null) {
             confirmationMessageLabel.setText("Farmer information not found.");
             return;
         }
-
         String name = NameTextField.getText().trim();
-
         String phoneNumber = PhoneNumberTextField.getText().trim();
-
         String address = addressTextArea.getText().trim();
-
         if (name.isEmpty()) {
-
-            confirmationMessageLabel.setText(
-                    "Please enter your name."
-            );
-
+            confirmationMessageLabel.setText("Please enter your name");
             return;
         }
-
 
         if (phoneNumber.isEmpty()) {
 
-            confirmationMessageLabel.setText(
-                    "Please enter your phone number."
-            );
-
+            confirmationMessageLabel.setText("Please enter your phone number");
             return;
         }
-
-
         if (address.isEmpty()) {
-
-            confirmationMessageLabel.setText(
-                    "Please enter your address."
-            );
-
+            confirmationMessageLabel.setText("Please enter your address.");
             return;
         }
-
-
         farmer.setName(name);
         farmer.setPhoneNumber(phoneNumber);
         farmer.setAddress(address);
-
-
-        ArrayList<Farmer> farmers =
-                BinaryFileUtil.readObjects(FILE_NAME);
-
-
+        ArrayList<Farmer> farmers = BinaryFileUtil.readObjects(FILE_NAME);
         for (int i = 0; i < farmers.size(); i++) {
-
             if (farmers.get(i) == farmer) {
-
                 farmers.set(i, farmer);
-
                 break;
             }
         }
-
-        BinaryFileUtil.saveList(
-                FILE_NAME,
-                farmers
-        );
-
-
-        confirmationMessageLabel.setText(
-                "Profile information updated successfully."
-        );
+        BinaryFileUtil.saveList(FILE_NAME, farmers);
+        confirmationMessageLabel.setText("Profile information updated successfully");
     }
     @javafx.fxml.FXML
     public void HandleBacktoDashBoardButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/summer26/section1/group3/badc/Srabani_Akter/Farmer/G0_Farmer_Dashboard.fxml");
-
     }
 }

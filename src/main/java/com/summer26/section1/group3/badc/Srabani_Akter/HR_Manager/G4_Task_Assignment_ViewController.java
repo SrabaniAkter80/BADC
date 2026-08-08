@@ -52,18 +52,13 @@ public class G4_Task_Assignment_ViewController {
             MessageLabel.setText("Please enter Task Description.");
             return;
         }
-
         if (dueDate == null) {
             MessageLabel.setText("Please select Due Date.");
             return;
         }
-
         TaskAssignment task = new TaskAssignment(employeeID, taskDescription, dueDate);
-
         BinaryFileUtil.appendObject(FILE_NAME, task);
-
         MessageLabel.setText("Task successfully assigned.");
-
         employeeIDTextField.clear();
         taskDescriptionTextArea.clear();
         dueDateDatePicker.setValue(null);

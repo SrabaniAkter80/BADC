@@ -1,5 +1,7 @@
 package com.summer26.section1.group3.badc.Srabani_Akter.HR_Manager;
 
+import com.summer26.section1.group3.badc.utils.BinaryFileUtil;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -18,6 +20,19 @@ public class EmployeeAttendance implements Serializable {
         this.workingStatus = workingStatus;
         this.date = date;
     }
+    public static void main(String[] args) {
+        EmployeeAttendance employee1 = new EmployeeAttendance("1", "Samia Alam", "Good", "Present",LocalDate.of(2026,5,5));
+        EmployeeAttendance employee2 = new EmployeeAttendance("2", "Sumaiya Haque", "Always attend", "Present",LocalDate.of(2026,6,8));
+        EmployeeAttendance employee3 = new EmployeeAttendance("3", "Sumaiya Ibnath", "Sometimes absent", "Absent",LocalDate.of(2026,2,2));
+        EmployeeAttendance employee4 = new EmployeeAttendance("4", "Farjana Khusi", "Absent rate is hight", "absent",LocalDate.of(2025,4,3));
+        BinaryFileUtil.appendObject("data/EmployeeAttendance.bin", employee1);
+        BinaryFileUtil.appendObject("data/EmployeeAttendance.bin", employee2);
+        BinaryFileUtil.appendObject("data/EmployeeAttendance.bin", employee3);
+        BinaryFileUtil.appendObject("data/EmployeeAttendance.bin", employee4);
+
+
+    }
+
 
     public void setEmployeeID(String employeeID) {
         this.employeeID = employeeID;

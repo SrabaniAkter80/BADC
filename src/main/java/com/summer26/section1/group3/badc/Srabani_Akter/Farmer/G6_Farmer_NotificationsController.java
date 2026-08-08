@@ -49,8 +49,7 @@ public class G6_Farmer_NotificationsController {
     }
     private void loadNotifications() {
 
-        ArrayList<Notification> notificationList =
-                BinaryFileUtil.readObjects(FILE_NAME);
+        ArrayList<Notification> notificationList = BinaryFileUtil.readObjects(FILE_NAME);
 
         notifications.setAll(notificationList);
     }

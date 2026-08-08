@@ -57,52 +57,30 @@ public class G1_View_Product_ListController {
 
         loadProducts();
         displayedProducts.setAll(allProducts);
-
         Product_List_TableView.setItems(displayedProducts);
     }
-
     private void loadProducts() {
         ArrayList<Product> products = BinaryFileUtil.readObjects(FILE_NAME);
         allProducts.setAll(products);
     }
-
-
     @javafx.fxml.FXML
     public void HandleSearchFilterButton(ActionEvent actionEvent) {
 
-        String searchText =
-                FilterProductNameTextField.getText().trim().toLowerCase();
+        String searchText = FilterProductNameTextField.getText().trim().toLowerCase();
 
-        String selectedCategory =
-                ProductCategoryComboBox.getValue();
-
-
-        ObservableList<Product> filteredProducts =
-                FXCollections.observableArrayList();
-
-
+        String selectedCategory = ProductCategoryComboBox.getValue();
+        ObservableList<Product> filteredProducts = FXCollections.observableArrayList();
         for (Product product : allProducts) {
-
             boolean categoryMatches =
-                    selectedCategory == null
-                            || selectedCategory.isEmpty()
-                            || product.getCategory()
-                            .equalsIgnoreCase(selectedCategory);
-
-
+                    selectedCategory == null || selectedCategory.isEmpty() || product.getCategory().equalsIgnoreCase(selectedCategory);
             boolean searchMatches =
-                    searchText.isEmpty()
-                            || product.getProductName()
-                            .toLowerCase()
-                            .contains(searchText);
-
+                    searchText.isEmpty() || product.getProductName().toLowerCase().contains(searchText);
             if (categoryMatches && searchMatches) {
                 filteredProducts.add(product);
             }
         }
         displayedProducts.setAll(filteredProducts);
     }
-
     @javafx.fxml.FXML
     public void HandleResetFilter(ActionEvent actionEvent) {
         FilterProductNameTextField.clear();

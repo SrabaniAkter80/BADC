@@ -56,7 +56,6 @@ public class G5_Employee_Attendance_ViewController {
 
         loadAttendanceData();
     }
-
     private void loadAttendanceData() {
 
         attendanceList.clear();
@@ -78,7 +77,6 @@ public class G5_Employee_Attendance_ViewController {
             Employee_Attendance_TableView.setItems(attendanceList);
             return;
         }
-
         ObservableList<EmployeeAttendance> filteredList =
                 FXCollections.observableArrayList();
 
